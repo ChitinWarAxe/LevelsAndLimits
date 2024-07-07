@@ -1,4 +1,5 @@
 local ui = require('openmw.ui')
+local core = require('openmw.core')
 local self = require('openmw.self')
 local types = require('openmw.types')
 local I = require('openmw.interfaces')
@@ -38,28 +39,34 @@ local function showFailedSkillLevelUpMessage(method)
     end
 end
 
-I.SkillProgression.addSkillLevelUpHandler(function(skillid, options)
+local function getModifiedSkillMaximum(skillid, skillMaximum)
 
-    local majorMax = getSettingMajorSkillLimit()
-    local minorMax = getSettingMinorSkillLimit()
-    local miscMax = getSettingMiscSkillLimit()
+    local classSpecialization = types.NPC.classes.records[types.NPC.record(self).class].specialization
+    local skillSpecialization = core.stats.Skill.records[skillid].specialization
+    
+    print('specialization: ' .. classSpecialization .. ', ' .. skillSpecialization)
+    
+    if getSpecializationToggle() and classSpecialization ~= skillSpecialization then
+        skillMaximum = skillMaximum - getSpecializationMalus()
+    end
+    
+    print('Kalkuliertes Skill Maximum: ' .. skillMaximum)
+    
+    return skillMaximum
+    
+end
+
+I.SkillProgression.addSkillLevelUpHandler(function(skillid, options)
 
     local skillStat = types.NPC.stats.skills[skillid](self)
     local skillLevel = skillStat.base
     local skillLevelUpFailed = false
-    
-    local classSpecialization = types.NPC.classes.records[types.NPC.record(self).class].specialization
-    --local skillSpecialization = types.Skill.skill(skillid).specialization
-    
-    --print('specialization: ' .. classSpecialization .. ', ' .. skillSpecialization)
-    
-    --print("Leveling up skill: " .. skillid .. " to level " .. skillLevel)
 
-    if majorSkills[skillid] and skillLevel >= majorMax then
+    if majorSkills[skillid] and skillLevel >= getModifiedSkillMaximum(skillid, getSettingMajorSkillLimit()) then
         skillLevelUpFailed = true
-    elseif minorSkills[skillid] and skillLevel >= minorMax then
+    elseif minorSkills[skillid] and skillLevel >= getModifiedSkillMaximum(skillid, getSettingMinorSkillLimit()) then
         skillLevelUpFailed = true
-    elseif skillLevel >= miscMax then
+    elseif not majorSkills[skillid] and not minorSkills[skillid] and skillLevel >= getModifiedSkillMaximum(skillid, getSettingMiscSkillLimit()) then
         skillLevelUpFailed = true
     end
     

@@ -1,10 +1,3 @@
-local ui = require('openmw.ui')
-local self = require('openmw.self')
-local types = require('openmw.types')
-local time = require('openmw_aux.time')
-local ambient = require('openmw.ambient')
-local core = require('openmw.core')
-local storage = require('openmw.storage')
 local I = require('openmw.interfaces')
 
 print('registered Levels & Limits...')
@@ -27,52 +20,52 @@ I.Settings.registerGroup {
         {
             key = "lalLimitMajor",
             name = "Major Skill Level Limit",
-            description= "The major skill level limit.",
+            description = "Sets the maximum level for major skills.",
             default = 100,
             renderer = "number"
         },
         {
             key = "lalLimitMinor",
             name = "Minor Skill Level Limit",
-            description= "The minor skill level limit.",
+            description = "Sets the maximum level for minor skills.",
             default = 75,
             renderer = "number"
         },
         {
             key = "lalLimitMisc",
-            name = "Misc Skill Level Limit",
-            description= "The miscellaneous skill level limit.",
+            name = "Miscellaneous Skill Level Limit",
+            description = "Sets the maximum level for miscellaneous skills.",
             default = 35,
             renderer = "number"
         },
         {
             key = "lalSpecializationToggle",
-            name = "Factor in your specialization",
-            description= "If activated, your maximum skill level depends on if your skill is of the same specialization as of your class. Skills not of your specialization have a reduced max level.",
+            name = "Specialization Consideration",
+            description = "When enabled, your maximum skill level is influenced by whether the skill matches your class specialization. Skills outside your specialization have a reduced maximum level.",
             default = true,
             renderer = "checkbox"
         },
         {
             key = "lalSpecializationMalus",
-            name = "Skill not of class specialization malus",
-            description= "If your skill is not of the same specialization as of your class, the maximum skill level is reduced by this amount.",
+            name = "Specialization Malus",
+            description = "The amount by which the maximum skill level is reduced for skills that do not match your class specialization.",
             default = 5,
             renderer = "number"
         },
         {
             key = "lalFavoredAttributesToggle",
-            name = "Factor in favored attributes",
-            description= "If activated, your maximum skill level depends on if your skill is governed by your favored attribute. Skills not governed by your favored attribute have a reduced max level.",
+            name = "Favored Attributes Consideration",
+            description = "When enabled, your maximum skill level is influenced by whether the skill is governed by your favored attributes. Skills not governed by your favored attributes have a reduced maximum level.",
             default = true,
             renderer = "checkbox"
         },
         {
             key = "lalFavoredAttributesMalus",
-            name = "Skill not governed by favored attribute malus",
-            description= "If your skill is not governed by your favored attributes, the maximum skill level is reduced by this amount.",
+            name = "Favored Attributes Malus",
+            description = "The amount by which the maximum skill level is reduced for skills not governed by your favored attributes.",
             default = 5,
             renderer = "number"
-        }
+        }   
     }
 }
 
