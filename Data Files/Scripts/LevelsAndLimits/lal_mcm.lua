@@ -40,21 +40,21 @@ I.Settings.registerGroup {
         },
         {
             key = "lalSpecializationToggle",
-            name = "Specialization Consideration",
+            name = "Class Specialization Factor",
             description = "When enabled, your maximum skill level is influenced by whether the skill matches your class specialization. Skills outside your specialization have a reduced maximum level.",
             default = true,
             renderer = "checkbox"
         },
         {
             key = "lalSpecializationMalus",
-            name = "Specialization Malus",
+            name = "Class Specialization Malus",
             description = "The amount by which the maximum skill level is reduced for skills that do not match your class specialization.",
             default = 5,
             renderer = "number"
         },
         {
             key = "lalFavoredAttributesToggle",
-            name = "Favored Attributes Consideration",
+            name = "Favored Attributes Factor",
             description = "When enabled, your maximum skill level is influenced by whether the skill is governed by your favored attributes. Skills not governed by your favored attributes have a reduced maximum level.",
             default = true,
             renderer = "checkbox"
