@@ -1,0 +1,6 @@
+name: "Levels & Limits"
+description:
+"Configurable skill progression limits, depending on if they are major, minor or miscellaneous.\n\n
+Further limits can be configured for your skills if are not of the same specialization of your skill or not governed by your favored attributes."
+settingsTitle: "Options"
+settingsDesc: "Settings for this mod"
