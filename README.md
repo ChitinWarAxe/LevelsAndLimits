@@ -2,7 +2,7 @@
 
 Configurable class-based skill level limits.
 
-![Two n'was pondering their class choices](images/nwahs.png "Two n'was pondering their class choices")
+![Two n'wahs pondering their class choices](images/nwahs.png "Two n'wahs pondering their class choices")
 
 ## Features
 
