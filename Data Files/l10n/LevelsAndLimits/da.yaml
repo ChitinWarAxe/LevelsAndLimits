@@ -1,0 +1,35 @@
+name: "Niveauer & Grænser"
+description:
+"Konfigurerbare færdighedsniveaugrænser baseret på om færdighederne er hoved-, biprodukt- eller forskelligartede.\n\n
+Yderligere grænser kan konfigureres for færdigheder, der ikke matcher din klasse-specialisering eller ikke styres af dine foretrukne attributter."
+
+settingsTitle: "Indstillinger"
+settingsDesc: "Indstillinger for denne mod"
+
+lalLimitMajorName: "Hovedfærdighedsniveau Grænse"
+lalLimitMajorDesc: "Indstiller det maksimale niveau for hovedfærdigheder"
+
+lalLimitMinorName: "Biproduktfærdighedsniveau Grænse"
+lalLimitMinorDesc: "Indstiller det maksimale niveau for biproduktfærdigheder"
+
+lalLimitMiscName: "Forskelligartet Færdighedsniveau Grænse"
+lalLimitMiscDesc: "Indstiller det maksimale niveau for forskelligartede færdigheder"
+
+lalSpecializationName: "Aktivér Klasse-Specialiseringsjustering"
+lalSpecializationDesc: "Når aktiveret, påvirkes dit maksimale færdighedsniveau af, om færdigheden matcher din klasse-specialisering. Færdigheder uden for din specialisering har et reduceret maksimalt niveau."
+
+lalSpecializationToggleName: "Aktivér Klasse-Specialiseringsjustering"
+lalSpecializationToggleDesc: "Når aktiveret, påvirkes dit maksimale færdighedsniveau af, om færdigheden matcher din klasse-specialisering. Færdigheder uden for din specialisering har et reduceret maksimalt niveau."
+
+lalSpecializationMalusName: "Klasse-Specialiseringsmalus"
+lalSpecializationMalusDesc: "Det beløb, hvormed det maksimale færdighedsniveau reduceres for færdigheder, der ikke matcher din klasse-specialisering."
+
+lalFavoredAttributesToggleName: "Aktivér Foretrukne Attributsjustering"
+lalFavoredAttributesToggleDesc: "Når aktiveret, påvirkes dit maksimale færdighedsniveau af, om færdigheden styres af dine foretrukne attributter. Færdigheder, der ikke styres af dine foretrukne attributter, har et reduceret maksimalt niveau."
+
+lalFavoredAttributesMalusName: "Foretrukne Attributsmalus"
+lalFavoredAttributesMalusDesc: "Det beløb, hvormed det maksimale færdighedsniveau reduceres for færdigheder, der ikke styres af dine foretrukne attributter."
+
+levelUpFailTrainer: "Trods dine anstrengelser, resulterer træningen i ingen fremskridt."
+levelUpFailBook: "Viden i denne bog er uden for din rækkevidde."
+

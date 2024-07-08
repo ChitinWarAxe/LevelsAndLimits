@@ -1,0 +1,35 @@
+name: "Levels & Limits"
+description:
+"Aanpasbare vaardigheidsniveau limieten gebaseerd op of vaardigheden major, minor, of miscellaneous zijn.\n\n
+Aanvullende limieten kunnen worden ingesteld voor vaardigheden die niet overeenkomen met je klasse specialisatie of niet worden beheerd door je favoriete attributen."
+
+settingsTitle: "Opties"
+settingsDesc: "Instellingen voor deze mod"
+
+lalLimitMajorName: "Major Vaardigheidsniveau Limiet"
+lalLimitMajorDesc: "Stelt het maximum niveau in voor major vaardigheden"
+
+lalLimitMinorName: "Minor Vaardigheidsniveau Limiet"
+lalLimitMinorDesc: "Stelt het maximum niveau in voor minor vaardigheden"
+
+lalLimitMiscName: "Misc Vaardigheidsniveau Limiet"
+lalLimitMiscDesc: "Stelt het maximum niveau in voor overige vaardigheden"
+
+lalSpecializationName: "Schakel Klasse Specialisatie Modificator In"
+lalSpecializationDesc: "Wanneer ingeschakeld, wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid overeenkomt met je klasse specialisatie. Vaardigheden buiten je specialisatie hebben een verlaagd maximum niveau."
+
+lalSpecializationToggleName: "Schakel Klasse Specialisatie Modificator In"
+lalSpecializationToggleDesc: "Wanneer ingeschakeld, wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid overeenkomt met je klasse specialisatie. Vaardigheden buiten je specialisatie hebben een verlaagd maximum niveau."
+
+lalSpecializationMalusName: "Klasse Specialisatie Straf"
+lalSpecializationMalusDesc: "De hoeveelheid waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet overeenkomen met je klasse specialisatie."
+
+lalFavoredAttributesToggleName: "Schakel Favoriete Attributen Modificator In"
+lalFavoredAttributesToggleDesc: "Wanneer ingeschakeld, wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid wordt beheerd door je favoriete attributen. Vaardigheden die niet worden beheerd door je favoriete attributen hebben een verlaagd maximum niveau."
+
+lalFavoredAttributesMalusName: "Favoriete Attributen Straf"
+lalFavoredAttributesMalusDesc: "De hoeveelheid waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet worden beheerd door je favoriete attributen."
+
+levelUpFailTrainer: "Ondanks je inspanningen boekt de training geen vooruitgang."
+levelUpFailBook: "De kennis in dit boek is te hoog gegrepen."
+

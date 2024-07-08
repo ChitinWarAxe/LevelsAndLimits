@@ -1,0 +1,35 @@
+name: "Levels & Limits"
+description:
+"Konfigurowalne limity poziomów umiejętności w zależności od tego, czy umiejętności są główne, drugorzędne, czy pozostałe.\n\n
+Dodatkowe limity można ustawić dla umiejętności, które nie pasują do specjalizacji klasy lub nie są rządzone przez ulubione atrybuty."
+
+settingsTitle: "Opcje"
+settingsDesc: "Ustawienia dla tego modu"
+
+lalLimitMajorName: "Limit Poziomu Głównych Umiejętności"
+lalLimitMajorDesc: "Ustawia maksymalny poziom dla głównych umiejętności"
+
+lalLimitMinorName: "Limit Poziomu Drugorzędnych Umiejętności"
+lalLimitMinorDesc: "Ustawia maksymalny poziom dla drugorzędnych umiejętności"
+
+lalLimitMiscName: "Limit Poziomu Pozostałych Umiejętności"
+lalLimitMiscDesc: "Ustawia maksymalny poziom dla pozostałych umiejętności"
+
+lalSpecializationName: "Włącz Modyfikator Specjalizacji Klasy"
+lalSpecializationDesc: "Gdy włączone, maksymalny poziom umiejętności jest zależny od tego, czy umiejętność pasuje do specjalizacji klasy. Umiejętności spoza specjalizacji mają obniżony maksymalny poziom."
+
+lalSpecializationToggleName: "Włącz Modyfikator Specjalizacji Klasy"
+lalSpecializationToggleDesc: "Gdy włączone, maksymalny poziom umiejętności jest zależny od tego, czy umiejętność pasuje do specjalizacji klasy. Umiejętności spoza specjalizacji mają obniżony maksymalny poziom."
+
+lalSpecializationMalusName: "Kara za Brak Specjalizacji Klasy"
+lalSpecializationMalusDesc: "Ilość, o którą maksymalny poziom umiejętności jest obniżany dla umiejętności, które nie pasują do specjalizacji klasy."
+
+lalFavoredAttributesToggleName: "Włącz Modyfikator Ulubionych Atrybutów"
+lalFavoredAttributesToggleDesc: "Gdy włączone, maksymalny poziom umiejętności jest zależny od tego, czy umiejętność jest rządzona przez ulubione atrybuty. Umiejętności, które nie są rządzone przez ulubione atrybuty, mają obniżony maksymalny poziom."
+
+lalFavoredAttributesMalusName: "Kara za Brak Ulubionych Atrybutów"
+lalFavoredAttributesMalusDesc: "Ilość, o którą maksymalny poziom umiejętności jest obniżany dla umiejętności, które nie są rządzone przez ulubione atrybuty."
+
+levelUpFailTrainer: "Pomimo starań, trening nie przynosi postępów."
+levelUpFailBook: "Wiedza w tej książce jest poza twoim zasięgiem."
+

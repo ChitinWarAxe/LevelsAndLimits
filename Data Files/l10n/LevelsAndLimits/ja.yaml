@@ -1,0 +1,35 @@
+name: "レベルと制限"
+description:
+"スキルが主要、従属、またはその他のスキルかどうかに基づいて、設定可能なスキルレベルの制限。\n\n
+さらに、クラスの専門分野に一致しないスキルや、優先属性によって管理されていないスキルに対して追加の制限を設定できます。"
+
+settingsTitle: "オプション"
+settingsDesc: "このMODの設定"
+
+lalLimitMajorName: "主要スキルレベルの制限"
+lalLimitMajorDesc: "主要スキルの最大レベルを設定します"
+
+lalLimitMinorName: "従属スキルレベルの制限"
+lalLimitMinorDesc: "従属スキルの最大レベルを設定します"
+
+lalLimitMiscName: "その他スキルレベルの制限"
+lalLimitMiscDesc: "その他のスキルの最大レベルを設定します"
+
+lalSpecializationName: "クラス専門分野の修正を有効にする"
+lalSpecializationDesc: "有効にすると、スキルがクラスの専門分野に一致しているかどうかによって最大スキルレベルが影響を受けます。専門分野外のスキルは最大レベルが低くなります。"
+
+lalSpecializationToggleName: "クラス専門分野の修正を有効にする"
+lalSpecializationToggleDesc: "有効にすると、スキルがクラスの専門分野に一致しているかどうかによって最大スキルレベルが影響を受けます。専門分野外のスキルは最大レベルが低くなります。"
+
+lalSpecializationMalusName: "クラス専門分野のマイナス"
+lalSpecializationMalusDesc: "クラスの専門分野に一致しないスキルの最大スキルレベルがどれだけ減少するかの量を設定します。"
+
+lalFavoredAttributesToggleName: "優先属性の修正を有効にする"
+lalFavoredAttributesToggleDesc: "有効にすると、スキルが優先属性によって管理されているかどうかによって最大スキルレベルが影響を受けます。優先属性によって管理されていないスキルは最大レベルが低くなります。"
+
+lalFavoredAttributesMalusName: "優先属性のマイナス"
+lalFavoredAttributesMalusDesc: "優先属性によって管理されていないスキルの最大スキルレベルがどれだけ減少するかの量を設定します。"
+
+levelUpFailTrainer: "努力にもかかわらず、訓練は進歩しませんでした。"
+levelUpFailBook: "この本の知識はあなたには難しすぎます。"
+

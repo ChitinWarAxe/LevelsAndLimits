@@ -1,0 +1,35 @@
+name: "Szintek és Korlátok"
+description:
+"Beállítható képességszint-korlátok attól függően, hogy a képességek fő, másodlagos vagy egyéb kategóriába tartoznak.\n\n
+További korlátokat állíthat be olyan képességekre, amelyek nem felelnek meg osztályspecializációjának, vagy nem irányítanak a kedvelt attribútumai."
+
+settingsTitle: "Beállítások"
+settingsDesc: "Beállítások ehhez a módhoz"
+
+lalLimitMajorName: "Fő Képesség Szintkorlát"
+lalLimitMajorDesc: "Állítsa be a fő képességek maximális szintjét"
+
+lalLimitMinorName: "Másodlagos Képesség Szintkorlát"
+lalLimitMinorDesc: "Állítsa be a másodlagos képességek maximális szintjét"
+
+lalLimitMiscName: "Egyéb Képesség Szintkorlát"
+lalLimitMiscDesc: "Állítsa be az egyéb képességek maximális szintjét"
+
+lalSpecializationName: "Osztály Specializáció Módosító Engedélyezése"
+lalSpecializationDesc: "Amikor engedélyezve van, a maximális képességszint befolyásolja, hogy a képesség megegyezik-e az osztály specializációjával. Az osztály specializációjától eltérő képességek csökkentett maximális szinttel rendelkeznek."
+
+lalSpecializationToggleName: "Osztály Specializáció Módosító Engedélyezése"
+lalSpecializationToggleDesc: "Amikor engedélyezve van, a maximális képességszint befolyásolja, hogy a képesség megegyezik-e az osztály specializációjával. Az osztály specializációjától eltérő képességek csökkentett maximális szinttel rendelkeznek."
+
+lalSpecializationMalusName: "Osztály Specializáció Malusz"
+lalSpecializationMalusDesc: "Az összeg, amennyivel csökkentették a maximális képességszintet azoknak a képességeknek, amelyek nem egyeznek az osztály specializációjával."
+
+lalFavoredAttributesToggleName: "Kedvelt Attribútumok Módosító Engedélyezése"
+lalFavoredAttributesToggleDesc: "Amikor engedélyezve van, a maximális képességszint befolyásolja, hogy a képesség irányítása a kedvelt attribútumai által történik-e. A kedvelt attribútumok által nem irányított képességek csökkentett maximális szinttel rendelkeznek."
+
+lalFavoredAttributesMalusName: "Kedvelt Attribútumok Malusz"
+lalFavoredAttributesMalusDesc: "Az összeg, amennyivel csökkentették a maximális képességszintet azoknak a képességeknek, amelyek nem a kedvelt attribútumok által irányítottak."
+
+levelUpFailTrainer: "Erőfeszítéseid ellenére a képzés nem eredményez előrelépést."
+levelUpFailBook: "A tudás ebben a könyvben túlmutat a felfogásodon."
+

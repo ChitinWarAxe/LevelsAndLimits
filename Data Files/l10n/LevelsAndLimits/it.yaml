@@ -1,0 +1,35 @@
+name: "Livelli e Limiti"
+description:
+"Limiti di livello delle abilità configurabili in base al fatto che le abilità siano maggiori, minori o varie.\n\n
+Si possono configurare limiti aggiuntivi per le abilità che non corrispondono alla specializzazione della tua classe o che non sono governate dai tuoi attributi preferiti."
+
+settingsTitle: "Opzioni"
+settingsDesc: "Impostazioni per questo mod"
+
+lalLimitMajorName: "Limite di Livello delle Abilità Maggiori"
+lalLimitMajorDesc: "Imposta il livello massimo per le abilità maggiori"
+
+lalLimitMinorName: "Limite di Livello delle Abilità Minori"
+lalLimitMinorDesc: "Imposta il livello massimo per le abilità minori"
+
+lalLimitMiscName: "Limite di Livello delle Abilità Varie"
+lalLimitMiscDesc: "Imposta il livello massimo per le abilità varie"
+
+lalSpecializationName: "Abilita Modificatore di Specializzazione di Classe"
+lalSpecializationDesc: "Quando abilitato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità corrisponda o meno alla specializzazione della tua classe. Le abilità al di fuori della tua specializzazione hanno un livello massimo ridotto."
+
+lalSpecializationToggleName: "Abilita Modificatore di Specializzazione di Classe"
+lalSpecializationToggleDesc: "Quando abilitato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità corrisponda o meno alla specializzazione della tua classe. Le abilità al di fuori della tua specializzazione hanno un livello massimo ridotto."
+
+lalSpecializationMalusName: "Malus di Specializzazione di Classe"
+lalSpecializationMalusDesc: "La quantità di cui si riduce il livello massimo di abilità per le abilità che non corrispondono alla specializzazione della tua classe."
+
+lalFavoredAttributesToggleName: "Abilita Modificatore di Attributi Preferiti"
+lalFavoredAttributesToggleDesc: "Quando abilitato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità sia governata dai tuoi attributi preferiti. Le abilità che non sono governate dai tuoi attributi preferiti hanno un livello massimo ridotto."
+
+lalFavoredAttributesMalusName: "Malus di Attributi Preferiti"
+lalFavoredAttributesMalusDesc: "La quantità di cui si riduce il livello massimo di abilità per le abilità che non sono governate dai tuoi attributi preferiti."
+
+levelUpFailTrainer: "Nonostante i tuoi sforzi, l'allenamento non porta alcun progresso."
+levelUpFailBook: "La conoscenza in questo libro è fuori dalla tua portata."
+

@@ -1,0 +1,35 @@
+name: "Nivåer & Gränser"
+description:
+"Konfigurerbara begränsningar för färdighetsnivåer baserat på om färdigheter är huvud-, bi- eller övriga.\n\n
+Ytterligare begränsningar kan ställas in för färdigheter som inte matchar din klassspecialisering eller inte styrs av dina favoritattribut."
+
+settingsTitle: "Alternativ"
+settingsDesc: "Inställningar för denna mod"
+
+lalLimitMajorName: "Maximal nivå för huvudfärdigheter"
+lalLimitMajorDesc: "Ställer in den maximala nivån för huvudfärdigheter"
+
+lalLimitMinorName: "Maximal nivå för bifärdigheter"
+lalLimitMinorDesc: "Ställer in den maximala nivån för bifärdigheter"
+
+lalLimitMiscName: "Maximal nivå för övriga färdigheter"
+lalLimitMiscDesc: "Ställer in den maximala nivån för övriga färdigheter"
+
+lalSpecializationName: "Aktivera klassspecialiseringsmodifierare"
+lalSpecializationDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten matchar din klassspecialisering. Färdigheter utanför din specialisering har en reducerad maximal nivå."
+
+lalSpecializationToggleName: "Aktivera klassspecialiseringsmodifierare"
+lalSpecializationToggleDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten matchar din klassspecialisering. Färdigheter utanför din specialisering har en reducerad maximal nivå."
+
+lalSpecializationMalusName: "Klassspecialiseringsmalus"
+lalSpecializationMalusDesc: "Summan med vilken den maximala färdighetsnivån minskas för färdigheter som inte matchar din klassspecialisering."
+
+lalFavoredAttributesToggleName: "Aktivera favoritattributsmodifierare"
+lalFavoredAttributesToggleDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten styrs av dina favoritattribut. Färdigheter som inte styrs av dina favoritattribut har en reducerad maximal nivå."
+
+lalFavoredAttributesMalusName: "Favoritattributsmalus"
+lalFavoredAttributesMalusDesc: "Summan med vilken den maximala färdighetsnivån minskas för färdigheter som inte styrs av dina favoritattribut."
+
+levelUpFailTrainer: "Trots dina ansträngningar ger träningen inga framsteg."
+levelUpFailBook: "Kunskapen i denna bok överstiger din förmåga att förstå den."
+

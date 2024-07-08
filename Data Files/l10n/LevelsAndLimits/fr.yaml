@@ -1,0 +1,35 @@
+name: "Niveaux & Limites"
+description:
+"Limites de niveau de compétence configurables en fonction du type de compétences : majeures, mineures ou diverses.\n\n
+Des limites supplémentaires peuvent être configurées pour les compétences qui ne correspondent pas à la spécialisation de votre classe ou qui ne sont pas régies par vos attributs favoris."
+
+settingsTitle: "Options"
+settingsDesc: "Paramètres pour ce mod"
+
+lalLimitMajorName: "Limite de Niveau des Compétences Majeures"
+lalLimitMajorDesc: "Définit le niveau maximum pour les compétences majeures"
+
+lalLimitMinorName: "Limite de Niveau des Compétences Mineures"
+lalLimitMinorDesc: "Définit le niveau maximum pour les compétences mineures"
+
+lalLimitMiscName: "Limite de Niveau des Compétences Diverses"
+lalLimitMiscDesc: "Définit le niveau maximum pour les compétences diverses"
+
+lalSpecializationName: "Activer le Modificateur de Spécialisation de Classe"
+lalSpecializationDesc: "Lorsque activé, votre niveau de compétence maximum est influencé par la correspondance de la compétence avec la spécialisation de votre classe. Les compétences en dehors de votre spécialisation ont un niveau maximum réduit."
+
+lalSpecializationToggleName: "Activer le Modificateur de Spécialisation de Classe"
+lalSpecializationToggleDesc: "Lorsque activé, votre niveau de compétence maximum est influencé par la correspondance de la compétence avec la spécialisation de votre classe. Les compétences en dehors de votre spécialisation ont un niveau maximum réduit."
+
+lalSpecializationMalusName: "Malus de Spécialisation de Classe"
+lalSpecializationMalusDesc: "Le montant de la réduction du niveau maximum pour les compétences qui ne correspondent pas à la spécialisation de votre classe."
+
+lalFavoredAttributesToggleName: "Activer le Modificateur des Attributs Favoris"
+lalFavoredAttributesToggleDesc: "Lorsque activé, votre niveau de compétence maximum est influencé par la correspondance de la compétence avec vos attributs favoris. Les compétences qui ne sont pas régies par vos attributs favoris ont un niveau maximum réduit."
+
+lalFavoredAttributesMalusName: "Malus des Attributs Favoris"
+lalFavoredAttributesMalusDesc: "Le montant de la réduction du niveau maximum pour les compétences qui ne sont pas régies par vos attributs favoris."
+
+levelUpFailTrainer: "Malgré tous vos efforts, l'entraînement n'apporte aucun progrès."
+levelUpFailBook: "Les connaissances de ce livre sont hors de votre portée."
+

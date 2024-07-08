@@ -5,6 +5,8 @@ local types = require('openmw.types')
 local storage = require('openmw.storage')
 local settings = storage.playerSection("SettingsLevelsAndLimits")
 
+local L = core.l10n("LevelsAndLimits")
+
 function getSettingMajorSkillLimit()
     return settings:get("lalLimitMajor")
 end
@@ -42,9 +44,9 @@ end
 
 function showFailedSkillLevelUpMessage(method)
     if method == 'trainer' then
-        ui.showMessage('Despite your efforts, the training yields no progress.')
+        ui.showMessage(string.format(L("levelUpFailTrainer")))
     elseif method == 'book' then
-        ui.showMessage('The knowledge in this book is beyond your grasp.')
+        ui.showMessage(string.format(L("levelUpFailBook")))
     end
 end
 

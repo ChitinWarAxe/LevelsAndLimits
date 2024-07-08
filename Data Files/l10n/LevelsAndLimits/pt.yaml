@@ -1,0 +1,35 @@
+name: "Levels & Limits"
+description:
+"Limites de nível de habilidade configuráveis com base em se as habilidades são principais, secundárias ou diversas.\n\n
+Limites adicionais podem ser configurados para habilidades que não correspondem à especialização de sua classe ou não são regidas por seus atributos favoritos."
+
+settingsTitle: "Opções"
+settingsDesc: "Configurações para este mod"
+
+lalLimitMajorName: "Limite de Nível de Habilidade Principal"
+lalLimitMajorDesc: "Define o nível máximo para habilidades principais"
+
+lalLimitMinorName: "Limite de Nível de Habilidade Secundária"
+lalLimitMinorDesc: "Define o nível máximo para habilidades secundárias"
+
+lalLimitMiscName: "Limite de Nível de Habilidade Diversa"
+lalLimitMiscDesc: "Define o nível máximo para habilidades diversas"
+
+lalSpecializationName: "Ativar Modificador de Especialização de Classe"
+lalSpecializationDesc: "Quando ativado, seu nível máximo de habilidade é influenciado por se a habilidade corresponde à especialização de sua classe. Habilidades fora da sua especialização têm um nível máximo reduzido."
+
+lalSpecializationToggleName: "Ativar Modificador de Especialização de Classe"
+lalSpecializationToggleDesc: "Quando ativado, seu nível máximo de habilidade é influenciado por se a habilidade corresponde à especialização de sua classe. Habilidades fora da sua especialização têm um nível máximo reduzido."
+
+lalSpecializationMalusName: "Penalidade de Especialização de Classe"
+lalSpecializationMalusDesc: "A quantidade pela qual o nível máximo de habilidade é reduzido para habilidades que não correspondem à especialização de sua classe."
+
+lalFavoredAttributesToggleName: "Ativar Modificador de Atributos Favoritos"
+lalFavoredAttributesToggleDesc: "Quando ativado, seu nível máximo de habilidade é influenciado por se a habilidade é regida por seus atributos favoritos. Habilidades que não são regidas por seus atributos favoritos têm um nível máximo reduzido."
+
+lalFavoredAttributesMalusName: "Penalidade de Atributos Favoritos"
+lalFavoredAttributesMalusDesc: "A quantidade pela qual o nível máximo de habilidade é reduzido para habilidades que não são regidas por seus atributos favoritos."
+
+levelUpFailTrainer: "Apesar dos seus esforços, o treinamento não traz progresso."
+levelUpFailBook: "O conhecimento neste livro está além da sua compreensão."
+

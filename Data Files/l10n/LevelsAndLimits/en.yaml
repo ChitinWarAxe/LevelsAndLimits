@@ -2,5 +2,33 @@ name: "Levels & Limits"
 description:
 "Configurable skill level limits based on whether skills are major, minor, or miscellaneous.\n\n
 Additional limits can be configured for skills that do not match your class specialization or are not governed by your favored attributes."
+
 settingsTitle: "Options"
 settingsDesc: "Settings for this mod"
+
+lalLimitMajorName: "Major Skill Level Limit"
+lalLimitMajorDesc: "Sets the maximum level for major skills"
+
+lalLimitMinorName: "Minor Skill Level Limit"
+lalLimitMinorDesc: "Sets the maximum level for minor skills"
+
+lalLimitMiscName: "Misc Skill Level Limit"
+lalLimitMiscDesc: "Sets the maximum level for miscellaneous skills"
+
+lalSpecializationName: "Enable Class Specialization Modifier"
+lalSpecializationDesc: "When enabled, your maximum skill level is influenced by whether the skill matches your class specialization. Skills outside your specialization have a reduced maximum level."
+
+lalSpecializationToggleName: "Enable Class Specialization Modifier"
+lalSpecializationToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill matches your class specialization. Skills outside your specialization have a reduced maximum level."
+
+lalSpecializationMalusName: "Class Specialization Malus"
+lalSpecializationMalusDesc: "The amount by which the maximum skill level is reduced for skills that do not match your class specialization."
+
+lalFavoredAttributesToggleName: "Enable Class Favored Attributes Modifier"
+lalFavoredAttributesToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is governed by your favored attributes. Skills not governed by your favored attributes have a reduced maximum level."
+
+lalFavoredAttributesMalusName: "Favored Attributes Malus"
+lalFavoredAttributesMalusDesc: "The amount by which the maximum skill level is reduced for skills not governed by your favored attributes."
+
+levelUpFailTrainer: "Despite your efforts, the training yields no progress."
+levelUpFailBook: "The knowledge in this book is beyond your grasp."

@@ -1,7 +1,5 @@
 local I = require('openmw.interfaces')
 
-print('registered Levels & Limits...')
-
 I.Settings.registerPage {
     key = "LevelsAndLimits",
     l10n = "LevelsAndLimits",
@@ -19,50 +17,50 @@ I.Settings.registerGroup {
     settings = {
         {
             key = "lalLimitMajor",
-            name = "Major Skill Level Limit",
-            description = "Sets the maximum level for major skills.",
+            name = "lalLimitMajorName",
+            description = "lalLimitMajorDesc",
             default = 100,
             renderer = "number"
         },
         {
             key = "lalLimitMinor",
-            name = "Minor Skill Level Limit",
-            description = "Sets the maximum level for minor skills.",
+            name = "lalLimitMinorName",
+            description = "lalLimitMinorDesc",
             default = 75,
             renderer = "number"
         },
         {
             key = "lalLimitMisc",
-            name = "Miscellaneous Skill Level Limit",
-            description = "Sets the maximum level for miscellaneous skills.",
+            name = "lalLimitMiscName",
+            description = "lalLimitMiscDesc",
             default = 35,
             renderer = "number"
         },
         {
             key = "lalSpecializationToggle",
-            name = "Class Specialization Factor",
-            description = "When enabled, your maximum skill level is influenced by whether the skill matches your class specialization. Skills outside your specialization have a reduced maximum level.",
+            name = "lalSpecializationToggleName",
+            description = "lalSpecializationToggleDesc",
             default = true,
             renderer = "checkbox"
         },
         {
             key = "lalSpecializationMalus",
-            name = "Class Specialization Malus",
-            description = "The amount by which the maximum skill level is reduced for skills that do not match your class specialization.",
+            name = "lalSpecializationMalusName",
+            description = "lalSpecializationMalusDesc",
             default = 5,
             renderer = "number"
         },
         {
             key = "lalFavoredAttributesToggle",
-            name = "Favored Attributes Factor",
-            description = "When enabled, your maximum skill level is influenced by whether the skill is governed by your favored attributes. Skills not governed by your favored attributes have a reduced maximum level.",
+            name = "lalFavoredAttributesToggleName",
+            description = "lalFavoredAttributesToggleDesc",
             default = true,
             renderer = "checkbox"
         },
         {
             key = "lalFavoredAttributesMalus",
-            name = "Favored Attributes Malus",
-            description = "The amount by which the maximum skill level is reduced for skills not governed by your favored attributes.",
+            name = "lalFavoredAttributesMalusName",
+            description = "lalFavoredAttributesMalusDesc",
             default = 5,
             renderer = "number"
         }   

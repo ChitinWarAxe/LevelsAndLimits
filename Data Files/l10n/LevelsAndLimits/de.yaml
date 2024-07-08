@@ -1,0 +1,35 @@
+name: "Levels & Limits"
+description:
+"Konfigurierbare Fähigkeitsstufenbeschränkungen basierend darauf, ob die Fähigkeiten Haupt-, Neben- oder Sonstige-Fähigkeiten sind.\n\n
+Zusätzliche Beschränkungen können für Fähigkeiten konfiguriert werden, die nicht zu deiner Klassenspezialisierung passen oder nicht von deinen bevorzugten Attributen beeinflusst werden."
+
+settingsTitle: "Optionen"
+settingsDesc: "Einstellungen für dieses Mod"
+
+lalLimitMajorName: "Maximale Stufe für Hauptfähigkeiten"
+lalLimitMajorDesc: "Legt das maximale Level für Hauptfähigkeiten fest."
+
+lalLimitMinorName: "Maximale Stufe für Nebenfähigkeiten"
+lalLimitMinorDesc: "Legt das maximale Level für Nebenfähigkeiten fest."
+
+lalLimitMiscName: "Maximale Stufe für Sonstige Fähigkeiten"
+lalLimitMiscDesc: "Legt das maximale Level für sonstige Fähigkeiten fest."
+
+lalSpecializationName: "Spezialisierungs-Modifikator aktivieren"
+lalSpecializationDesc: "Wenn aktiviert, wird dein maximales Fähigkeitslevel davon beeinflusst, ob die Fähigkeit zu deiner Klassenspezialisierung passt. Fähigkeiten außerhalb deiner Spezialisierung haben ein reduziertes maximales Level."
+
+lalSpecializationToggleName: "Spezialisierungs-Modifikator aktivieren"
+lalSpecializationToggleDesc: "Wenn aktiviert, wird dein maximales Fähigkeitslevel davon beeinflusst, ob die Fähigkeit zu deiner Klassenspezialisierung passt. Fähigkeiten außerhalb deiner Spezialisierung haben ein reduziertes maximales Level."
+
+lalSpecializationMalusName: "Malus für falsche Spezialisierung"
+lalSpecializationMalusDesc: "Die Höhe, um die das maximale Fähigkeitslevel für Fähigkeiten reduziert wird, die nicht zu deiner Klassenspezialisierung passen."
+
+lalFavoredAttributesToggleName: "Modifikator für bevorzugte Attribute aktivieren"
+lalFavoredAttributesToggleDesc: "Wenn aktiviert, wird dein maximales Fähigkeitslevel davon beeinflusst, ob die Fähigkeit von deinen bevorzugten Attributen beeinflusst wird. Fähigkeiten, die nicht von deinen bevorzugten Attributen beeinflusst werden, haben ein reduziertes maximales Level."
+
+lalFavoredAttributesMalusName: "Malus für falsche Attribute"
+lalFavoredAttributesMalusDesc: "Die Höhe, um die das maximale Fähigkeitslevel für Fähigkeiten reduziert wird, die nicht von deinen bevorzugten Attributen beeinflusst werden."
+
+levelUpFailTrainer: "Das Training bringt dir keine neuen Erkenntnisse."
+levelUpFailBook: "Das Wissen in diesem Buch bleibt dir verschlossen."
+

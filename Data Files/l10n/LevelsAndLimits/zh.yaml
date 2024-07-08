@@ -1,0 +1,35 @@
+name: "技能等级与限制"
+description:
+"根据技能是否为主要、次要或其他类别配置可调整的技能等级限制。\n\n
+还可以为不符合您职业专长或不受偏爱属性控制的技能配置额外限制。"
+
+settingsTitle: "选项"
+settingsDesc: "此模组的设置"
+
+lalLimitMajorName: "主要技能等级上限"
+lalLimitMajorDesc: "设置主要技能的最大等级"
+
+lalLimitMinorName: "次要技能等级上限"
+lalLimitMinorDesc: "设置次要技能的最大等级"
+
+lalLimitMiscName: "其他技能等级上限"
+lalLimitMiscDesc: "设置其他技能的最大等级"
+
+lalSpecializationName: "启用职业专长调整器"
+lalSpecializationDesc: "启用后，您的最大技能等级将受到技能是否符合您的职业专长的影响。不符合专长的技能具有降低的最大等级。"
+
+lalSpecializationToggleName: "启用职业专长调整器"
+lalSpecializationToggleDesc: "启用后，您的最大技能等级将受到技能是否符合您的职业专长的影响。不符合专长的技能具有降低的最大等级。"
+
+lalSpecializationMalusName: "职业专长惩罚"
+lalSpecializationMalusDesc: "不符合您职业专长的技能最大等级降低的数量。"
+
+lalFavoredAttributesToggleName: "启用偏爱属性调整器"
+lalFavoredAttributesToggleDesc: "启用后，您的最大技能等级将受到技能是否受您偏爱属性控制的影响。不受偏爱属性控制的技能具有降低的最大等级。"
+
+lalFavoredAttributesMalusName: "偏爱属性惩罚"
+lalFavoredAttributesMalusDesc: "不受您偏爱属性控制的技能最大等级降低的数量。"
+
+levelUpFailTrainer: "尽管您努力了，训练未能取得进展。"
+levelUpFailBook: "这本书中的知识超出了您的理解能力。"
+
