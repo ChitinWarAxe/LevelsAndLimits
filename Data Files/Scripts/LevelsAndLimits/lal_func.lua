@@ -77,8 +77,6 @@ function getModifiedSkillMaximum(skillid, skillMaximum)
         end
     end
     
-    print('Kalkuliertes Skill Maximum: ' .. skillMaximum)
-    
     return skillMaximum
     
 end
