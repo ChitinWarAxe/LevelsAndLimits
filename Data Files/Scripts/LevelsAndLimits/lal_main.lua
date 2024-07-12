@@ -1,21 +1,22 @@
 local self = require('openmw.self')
 local types = require('openmw.types')
 local I = require('openmw.interfaces')
-local sasUtil = require('scripts.levelsandlimits.lal_func')
+local lalFunc = require('scripts.levelsandlimits.lal_func')
 
 local majorSkills = {}
 local minorSkills = {}
 
-for _, skill in pairs(types.NPC.classes.records[types.NPC.record(self).class].majorSkills) do 
+local playerClass = types.NPC.classes.records[types.NPC.record(self).class]
+
+for _, skill in ipairs(playerClass.majorSkills) do 
     majorSkills[skill] = true
 end
 
-for _, skill in pairs(types.NPC.classes.records[types.NPC.record(self).class].minorSkills) do 
+for _, skill in ipairs(playerClass.minorSkills) do 
     minorSkills[skill] = true
 end
 
-I.SkillProgression.addSkillLevelUpHandler(function(skillid, options)
-
+local function skillLevelUpHandler(skillid, options)
     local skillStat = types.NPC.stats.skills[skillid](self)
     local skillLevel = skillStat.base
     local skillLevelUpFailed = false
@@ -33,6 +34,6 @@ I.SkillProgression.addSkillLevelUpHandler(function(skillid, options)
         showFailedSkillLevelUpMessage(options)
         return false
     end
+end
 
-end)
-
+I.SkillProgression.addSkillLevelUpHandler(skillLevelUpHandler)
