@@ -23,6 +23,6 @@ Here are some examples of how specialization and favored attributes affect the m
 
 ## Recommendations
 
-I recommend using this mod together with [“Class Restricted Leveling”](https://www.nexusmods.com/morrowind/mods/54832) and [“Skill Uses Scaled”](https://www.nexusmods.com/morrowind/mods/54267).
+I recommend using this mod together with [“Class Restricted Leveling”](https://www.nexusmods.com/morrowind/mods/54832).
 
 *I hope you'll enjoy my mod!*
