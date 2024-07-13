@@ -6,6 +6,9 @@ description:
 settingsTitle: "选项"
 settingsDesc: "此模组的设置"
 
+lalToggleName: "启用/禁用技能等级限制"
+lalToggleDesc: "启用或禁用技能等级进展的限制。"
+
 lalLimitMajorName: "主要技能等级上限"
 lalLimitMajorDesc: "设置主要技能的最大等级"
 

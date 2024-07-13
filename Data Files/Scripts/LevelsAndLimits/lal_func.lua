@@ -7,6 +7,10 @@ local settings = storage.playerSection("SettingsLevelsAndLimits")
 
 local L = core.l10n("LevelsAndLimits")
 
+function getLaLToggle()
+    return settings:get("lalToggle")
+end
+
 function getSettingMajorSkillLimit()
     return settings:get("lalLimitMajor")
 end

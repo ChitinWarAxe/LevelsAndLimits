@@ -6,6 +6,9 @@ description:
 settingsTitle: "オプション"
 settingsDesc: "このMODの設定"
 
+lalToggleName: "スキルレベルの制限の有効化/無効化"
+lalToggleDesc: "スキルレベルの進行に対する制限を有効または無効にします。"
+
 lalLimitMajorName: "主要スキルレベルの制限"
 lalLimitMajorDesc: "主要スキルの最大レベルを設定します"
 

@@ -6,6 +6,9 @@ Des limites supplémentaires peuvent être configurées pour les compétences qu
 settingsTitle: "Options"
 settingsDesc: "Paramètres pour ce mod"
 
+lalToggleName: "Activer/Désactiver les limites de niveau de compétence"
+lalToggleDesc: "Activez ou désactivez les limites pour la progression de votre niveau de compétence."
+
 lalLimitMajorName: "Limite de Niveau des Compétences Majeures"
 lalLimitMajorDesc: "Définit le niveau maximum pour les compétences majeures"
 

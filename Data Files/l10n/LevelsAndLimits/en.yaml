@@ -6,6 +6,9 @@ Additional limits can be configured for skills that do not match your class spec
 settingsTitle: "Options"
 settingsDesc: "Settings for this mod"
 
+lalToggleName: "Enable/Disable Skill Level Limits"
+lalToggleDesc: "Enable or disable limits for your skill level progression."
+
 lalLimitMajorName: "Major Skill Level Limit"
 lalLimitMajorDesc: "Sets the maximum level for major skills"
 

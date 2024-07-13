@@ -6,6 +6,9 @@ Zusätzliche Beschränkungen können für Fähigkeiten konfiguriert werden, die 
 settingsTitle: "Optionen"
 settingsDesc: "Einstellungen für dieses Mod"
 
+lalToggleName: "Aktivieren/Deaktivieren der Fähigkeitslevel-Limits"
+lalToggleDesc: "Aktivieren oder deaktivieren der Limits für Ihren Fähigkeitslevel-Fortschritt."
+
 lalLimitMajorName: "Maximale Stufe für Hauptfähigkeiten"
 lalLimitMajorDesc: "Legt das maximale Level für Hauptfähigkeiten fest."
 

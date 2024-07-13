@@ -6,6 +6,9 @@ További korlátokat állíthat be olyan képességekre, amelyek nem felelnek me
 settingsTitle: "Beállítások"
 settingsDesc: "Beállítások ehhez a módhoz"
 
+lalToggleName: "Képességszint-korlátok Engedélyezése/Tiltása"
+lalToggleDesc: "Engedélyezze vagy tiltsa le a képességszintek fejlődésére vonatkozó korlátokat."
+
 lalLimitMajorName: "Fő Képesség Szintkorlát"
 lalLimitMajorDesc: "Állítsa be a fő képességek maximális szintjét"
 

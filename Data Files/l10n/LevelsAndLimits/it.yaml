@@ -6,6 +6,9 @@ Si possono configurare limiti aggiuntivi per le abilità che non corrispondono a
 settingsTitle: "Opzioni"
 settingsDesc: "Impostazioni per questo mod"
 
+lalToggleName: "Abilita/Disabilita i Limiti di Livello di Abilità"
+lalToggleDesc: "Abilita o disabilita i limiti per la progressione del livello di abilità."
+
 lalLimitMajorName: "Limite di Livello delle Abilità Maggiori"
 lalLimitMajorDesc: "Imposta il livello massimo per le abilità maggiori"
 

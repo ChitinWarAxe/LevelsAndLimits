@@ -17,6 +17,12 @@ for _, skill in ipairs(playerClass.minorSkills) do
 end
 
 local function skillLevelUpHandler(skillid, options)
+
+    -- Check if the mod is enabled
+    if not getLaLToggle() then
+        return  -- If disabled, allow normal skill progression
+    end
+
     local skillStat = types.NPC.stats.skills[skillid](self)
     local skillLevel = skillStat.base
     local skillLevelUpFailed = false

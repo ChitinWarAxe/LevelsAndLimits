@@ -6,6 +6,9 @@ Ytterligare begränsningar kan ställas in för färdigheter som inte matchar di
 settingsTitle: "Alternativ"
 settingsDesc: "Inställningar för denna mod"
 
+lalToggleName: "Aktivera/Inaktivera gränser för färdighetsnivåer"
+lalToggleDesc: "Aktivera eller inaktivera gränser för progression av färdighetsnivåer."
+
 lalLimitMajorName: "Maximal nivå för huvudfärdigheter"
 lalLimitMajorDesc: "Ställer in den maximala nivån för huvudfärdigheter"
 

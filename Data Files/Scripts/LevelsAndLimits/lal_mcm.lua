@@ -16,6 +16,13 @@ I.Settings.registerGroup {
     permanentStorage = false,
     settings = {
         {
+            key = "lalToggle",
+            name = "lalToggleName",
+            description = "lalToggleDesc",
+            default = true,
+            renderer = "checkbox"
+        },
+        {
             key = "lalLimitMajor",
             name = "lalLimitMajorName",
             description = "lalLimitMajorDesc",

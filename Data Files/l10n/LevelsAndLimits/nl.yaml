@@ -6,6 +6,9 @@ Aanvullende limieten kunnen worden ingesteld voor vaardigheden die niet overeenk
 settingsTitle: "Opties"
 settingsDesc: "Instellingen voor deze mod"
 
+lalToggleName: "In-/Uitschakelen van Vaardigheidsniveaulimieten"
+lalToggleDesc: "Schakel de limieten voor je vaardigheidsniveau vooruitgang in of uit."
+
 lalLimitMajorName: "Major Vaardigheidsniveau Limiet"
 lalLimitMajorDesc: "Stelt het maximum niveau in voor major vaardigheden"
 

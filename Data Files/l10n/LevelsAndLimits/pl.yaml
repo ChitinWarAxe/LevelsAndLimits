@@ -6,6 +6,9 @@ Dodatkowe limity można ustawić dla umiejętności, które nie pasują do specj
 settingsTitle: "Opcje"
 settingsDesc: "Ustawienia dla tego modu"
 
+lalToggleName: "Włącz/Wyłącz Limity Poziomu Umiejętności"
+lalToggleDesc: "Włącz lub wyłącz limity dla postępu poziomu umiejętności."
+
 lalLimitMajorName: "Limit Poziomu Głównych Umiejętności"
 lalLimitMajorDesc: "Ustawia maksymalny poziom dla głównych umiejętności"
 

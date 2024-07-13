@@ -6,6 +6,9 @@ Se pueden configurar límites adicionales para las habilidades que no coinciden 
 settingsTitle: "Opciones"
 settingsDesc: "Configuración para este mod"
 
+lalToggleName: "Activar/Desactivar Límites de Nivel de Habilidad"
+lalToggleDesc: "Activa o desactiva los límites para la progresión de nivel de habilidad."
+
 lalLimitMajorName: "Límite de Nivel de Habilidad Mayor"
 lalLimitMajorDesc: "Establece el nivel máximo para las habilidades mayores"
 

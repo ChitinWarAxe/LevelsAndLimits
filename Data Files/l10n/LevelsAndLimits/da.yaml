@@ -6,6 +6,9 @@ Yderligere grænser kan konfigureres for færdigheder, der ikke matcher din klas
 settingsTitle: "Indstillinger"
 settingsDesc: "Indstillinger for denne mod"
 
+lalToggleName: "Aktiver/Deaktiver grænser for færdighedsniveauer"
+lalToggleDesc: "Aktiver eller deaktiver grænser for din færdighedsniveaufremgang."
+
 lalLimitMajorName: "Hovedfærdighedsniveau Grænse"
 lalLimitMajorDesc: "Indstiller det maksimale niveau for hovedfærdigheder"
 
