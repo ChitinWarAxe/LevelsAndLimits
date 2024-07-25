@@ -1,7 +1,7 @@
 local self = require('openmw.self')
 local types = require('openmw.types')
 local I = require('openmw.interfaces')
-local lalFunc = require('scripts.levelsandlimits.lal_func')
+--local f = require('scripts.levelsandlimits.lal_func')
 
 local majorSkills = {}
 local minorSkills = {}
@@ -18,8 +18,7 @@ end
 
 local function skillLevelUpHandler(skillid, options)
 
-    -- Check if the mod is enabled
-    if not getLaLToggle() then
+    if not I.lalUtil.getLaLToggle() then
         return  -- If disabled, allow normal skill progression
     end
 
@@ -27,17 +26,22 @@ local function skillLevelUpHandler(skillid, options)
     local skillLevel = skillStat.base
     local skillLevelUpFailed = false
 
-    if majorSkills[skillid] and skillLevel >= getModifiedSkillMaximum(skillid, getSettingMajorSkillLimit()) then
+    print("skill up! " .. skillid .. ": " .. skillLevel)
+
+    if majorSkills[skillid] and skillLevel >= I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMajorSkillLimit()) then
         skillLevelUpFailed = true
-    elseif minorSkills[skillid] and skillLevel >= getModifiedSkillMaximum(skillid, getSettingMinorSkillLimit()) then
+        print("major: " .. I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMajorSkillLimit()))
+    elseif minorSkills[skillid] and skillLevel >= I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMinorSkillLimit()) then
         skillLevelUpFailed = true
-    elseif not majorSkills[skillid] and not minorSkills[skillid] and skillLevel >= getModifiedSkillMaximum(skillid, getSettingMiscSkillLimit()) then
+        print("minor: " .. I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMinorSkillLimit()))
+    elseif not majorSkills[skillid] and not minorSkills[skillid] and skillLevel >= I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMiscSkillLimit()) then
         skillLevelUpFailed = true
+        print("misc: " .. I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMiscSkillLimit()))
     end
     
     if skillLevelUpFailed then
-        resetSkillExperience(skillid)
-        showFailedSkillLevelUpMessage(options)
+        I.lalUtil.resetSkillExperience(skillid)
+        I.lalUtil.showFailedSkillLevelUpMessage(options)
         return false
     end
 end

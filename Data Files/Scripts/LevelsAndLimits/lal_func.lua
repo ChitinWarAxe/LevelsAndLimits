@@ -7,46 +7,46 @@ local settings = storage.playerSection("SettingsLevelsAndLimits")
 
 local L = core.l10n("LevelsAndLimits")
 
-function getLaLToggle()
+local function getLaLToggle()
     return settings:get("lalToggle")
 end
 
-function getSettingMajorSkillLimit()
+local function getSettingMajorSkillLimit()
     return settings:get("lalLimitMajor")
 end
 
-function getSettingMinorSkillLimit()
+local function getSettingMinorSkillLimit()
     return settings:get("lalLimitMinor")
 end
 
-function getSettingMiscSkillLimit()
+local function getSettingMiscSkillLimit()
     return settings:get("lalLimitMisc")
 end
 
-function getSpecializationToggle()
+local function getSpecializationToggle()
     return settings:get("lalSpecializationToggle")
 end
 
-function getSpecializationMalus()
+local function getSpecializationMalus()
     return settings:get("lalSpecializationMalus")
 end
 
-function getFavoredAttributesToggle()
+local function getFavoredAttributesToggle()
     return settings:get("lalFavoredAttributesToggle")
 end
 
-function getFavoredAttributesMalus()
+local function getFavoredAttributesMalus()
     return settings:get("lalFavoredAttributesMalus")
 end
 
-function resetSkillExperience(skillid)
+local function resetSkillExperience(skillid)
     local skillStat = types.NPC.stats.skills[skillid](self)
     if skillStat.progress > 1 then
         skillStat.progress = 1
     end
 end
 
-function showFailedSkillLevelUpMessage(method)
+local function showFailedSkillLevelUpMessage(method)
     if method == 'trainer' then
         ui.showMessage(string.format(L("levelUpFailTrainer")))
     elseif method == 'book' then
@@ -54,7 +54,7 @@ function showFailedSkillLevelUpMessage(method)
     end
 end
 
-function getModifiedSkillMaximum(skillid, skillMaximum)
+local function getModifiedSkillMaximum(skillid, skillMaximum)
 
     local classSpecialization = types.NPC.classes.records[types.NPC.record(self).class].specialization
     local skillSpecialization = core.stats.Skill.records[skillid].specialization
@@ -80,7 +80,24 @@ function getModifiedSkillMaximum(skillid, skillMaximum)
             skillMaximum = skillMaximum - getFavoredAttributesMalus()
         end
     end
-    
+
     return skillMaximum
     
 end
+
+return {
+    interfaceName = "lalUtil",
+    interface = {
+        getLaLToggle = getLaLToggle,
+        getSettingMajorSkillLimit = getSettingMajorSkillLimit,
+        getSettingMinorSkillLimit = getSettingMinorSkillLimit,
+        getSettingMiscSkillLimit = getSettingMiscSkillLimit,
+        getSpecializationToggle = getSpecializationToggle,
+        getSpecializationMalus = getSpecializationMalus,
+        getFavoredAttributesToggle = getFavoredAttributesToggle,
+        getFavoredAttributesMalus = getFavoredAttributesMalus,
+        resetSkillExperience = resetSkillExperience,
+        showFailedSkillLevelUpMessage = showFailedSkillLevelUpMessage,
+        getModifiedSkillMaximum = getModifiedSkillMaximum
+    }
+}
