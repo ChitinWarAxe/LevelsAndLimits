@@ -1,5 +1,6 @@
 local self = require('openmw.self')
 local types = require('openmw.types')
+local core = require('openmw.core')
 local I = require('openmw.interfaces')
 --local f = require('scripts.levelsandlimits.lal_func')
 
@@ -26,17 +27,15 @@ local function skillLevelUpHandler(skillid, options)
     local skillLevel = skillStat.base
     local skillLevelUpFailed = false
 
-    print("skill up! " .. skillid .. ": " .. skillLevel)
-
     if majorSkills[skillid] and skillLevel >= I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMajorSkillLimit()) then
         skillLevelUpFailed = true
-        print("major: " .. I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMajorSkillLimit()))
+        --print("major: " .. I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMajorSkillLimit()))
     elseif minorSkills[skillid] and skillLevel >= I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMinorSkillLimit()) then
         skillLevelUpFailed = true
-        print("minor: " .. I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMinorSkillLimit()))
+        --print("minor: " .. I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMinorSkillLimit()))
     elseif not majorSkills[skillid] and not minorSkills[skillid] and skillLevel >= I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMiscSkillLimit()) then
         skillLevelUpFailed = true
-        print("misc: " .. I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMiscSkillLimit()))
+        --print("misc: " .. I.lalUtil.getModifiedSkillMaximum(skillid, I.lalUtil.getSettingMiscSkillLimit()))
     end
     
     if skillLevelUpFailed then

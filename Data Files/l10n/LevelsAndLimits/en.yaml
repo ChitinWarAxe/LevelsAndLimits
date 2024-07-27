@@ -33,5 +33,11 @@ lalFavoredAttributesToggleDesc: "When enabled, your maximum skill level is influ
 lalFavoredAttributesMalusName: "Favored Attributes Malus"
 lalFavoredAttributesMalusDesc: "The amount by which the maximum skill level is reduced for skills not governed by your favored attributes."
 
+lalRacialSkillToggleName: "Enable Racial Skill Modifier"
+lalRacialSkillToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is matching the skills from the race bonus. Skill that did not receive a bonus by your race have a reduced maximum level. The bonus amount doesn't matter, only if there is a bonus at all for that skill."
+
+lalRacialSkillMalusName: "Favored Attributes Malus"
+lalRacialSkillMalusDesc: "The amount by which the maximum skill level is reduced for skills not matching your race bonus."
+
 levelUpFailTrainer: "Despite your efforts, the training yields no progress."
 levelUpFailBook: "The knowledge in this book is beyond your grasp."

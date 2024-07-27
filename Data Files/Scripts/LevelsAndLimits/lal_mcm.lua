@@ -70,7 +70,21 @@ I.Settings.registerGroup {
             description = "lalFavoredAttributesMalusDesc",
             default = 5,
             renderer = "number"
-        }   
+        },
+        {
+            key = "lalRacialSkillToggle",
+            name = "lalRacialSkillToggleName",
+            description = "lalRacialSkillToggleDesc",
+            default = true,
+            renderer = "checkbox"
+        },
+        {
+            key = "lalRacialSkillMalus",
+            name = "lalRacialSkillMalusName",
+            description = "lalRacialSkillMalusDesc",
+            default = 5,
+            renderer = "number"
+        }
     }
 }
 

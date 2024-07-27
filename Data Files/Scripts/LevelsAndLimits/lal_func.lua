@@ -7,6 +7,13 @@ local settings = storage.playerSection("SettingsLevelsAndLimits")
 
 local L = core.l10n("LevelsAndLimits")
 
+local racialSkills = {}
+local playerRace = types.NPC.races.records[types.NPC.record(self).race]
+
+for skill in pairs(playerRace.skills) do
+    racialSkills[skill] = true
+end
+
 local function getLaLToggle()
     return settings:get("lalToggle")
 end
@@ -39,6 +46,14 @@ local function getFavoredAttributesMalus()
     return settings:get("lalFavoredAttributesMalus")
 end
 
+local function getRacialSkillToggle()
+    return settings:get("lalRacialSkillToggle")
+end
+
+local function getRacialSkillMalus()
+    return settings:get("lalRacialSkillMalus")
+end
+
 local function resetSkillExperience(skillid)
     local skillStat = types.NPC.stats.skills[skillid](self)
     if skillStat.progress > 1 then
@@ -59,10 +74,15 @@ local function getModifiedSkillMaximum(skillid, skillMaximum)
     local classSpecialization = types.NPC.classes.records[types.NPC.record(self).class].specialization
     local skillSpecialization = core.stats.Skill.records[skillid].specialization
     
-    if getSpecializationToggle() and classSpecialization ~= skillSpecialization then
-        skillMaximum = skillMaximum - getSpecializationMalus()
+    -- check Specialization
+    if getSpecializationToggle() then
+        if getSpecializationToggle() and classSpecialization ~= skillSpecialization then
+            --print("nope, not a specialization skill")
+            skillMaximum = skillMaximum - getSpecializationMalus()
+        end
     end
     
+    -- check Favored Attributes
     if getFavoredAttributesToggle() then
     
         local favoredAttributes = types.NPC.classes.records[types.NPC.record(self).class].attributes
@@ -77,9 +97,20 @@ local function getModifiedSkillMaximum(skillid, skillMaximum)
         end
         
         if not isFavoredAttribute then
+            --print("nop, not favored either!")
             skillMaximum = skillMaximum - getFavoredAttributesMalus()
         end
     end
+    
+    -- check Racial Skills
+    if getRacialSkillToggle() then
+        if not racialSkills[skillid] then
+            --print("eh, thats not a racial skill.")
+            skillMaximum = skillMaximum - getRacialSkillMalus()
+        end
+    end
+
+    --print("skill maximum: " .. skillMaximum)
 
     return skillMaximum
     
