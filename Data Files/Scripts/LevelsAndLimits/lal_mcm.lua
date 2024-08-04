@@ -84,7 +84,22 @@ I.Settings.registerGroup {
             description = "lalRacialSkillMalusDesc",
             default = 5,
             renderer = "number"
-        }
+        },
+        {
+            key = "lalLevelProgressLimitToggle",
+            name = "lalLevelProgressLimitToggleName",
+            description = "lalLevelProgressLimitToggleDesc",
+            default = true,
+            renderer = "checkbox"
+        },
+        {
+            key = "lalLevelProgressLimit",
+            name = "lalLevelProgressLimitName",
+            description = "lalLevelProgressLimitDesc",
+            default = 10,
+            renderer = "number"
+        },
+        
     }
 }
 

@@ -6,7 +6,7 @@ Additional limits can be configured for skills that do not match your class spec
 settingsTitle: "Options"
 settingsDesc: "Settings for this mod"
 
-lalToggleName: "Enable/Disable Skill Level Limits"
+lalToggleName: "Enable Skill Level Limits"
 lalToggleDesc: "Enable or disable limits for your skill level progression."
 
 lalLimitMajorName: "Major Skill Level Limit"
@@ -34,10 +34,16 @@ lalFavoredAttributesMalusName: "Favored Attributes Malus"
 lalFavoredAttributesMalusDesc: "The amount by which the maximum skill level is reduced for skills not governed by your favored attributes."
 
 lalRacialSkillToggleName: "Enable Racial Skill Modifier"
-lalRacialSkillToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is matching the skills from the race bonus. Skill that did not receive a bonus by your race have a reduced maximum level. The bonus amount doesn't matter, only if there is a bonus at all for that skill."
+lalRacialSkillToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is matching the skills from the race bonus. Skills that did not receive a bonus by your race have a reduced maximum level. The bonus amount doesn't matter, only if there is a bonus for that skill at all."
 
-lalRacialSkillMalusName: "Favored Attributes Malus"
+lalRacialSkillMalusName: "Racial Skill Malus"
 lalRacialSkillMalusDesc: "The amount by which the maximum skill level is reduced for skills not matching your race bonus."
 
+lalLevelProgressLimitToggleName: "Enable Level Up Progress Limit"
+lalLevelProgressLimitToggleDesc: "When enabled, stops skills from levelling up once your level progress reaches the configured limit."
+
+lalLevelProgressLimitName: "Level Up Progress Limit"
+lalLevelProgressLimitDesc: "The maximum amount of level up progress allowed before skill leveling is halted."
+
 levelUpFailTrainer: "Despite your efforts, the training yields no progress."
-levelUpFailBook: "The knowledge in this book is beyond your grasp."
+levelUpFailBook: "The knowledge in this book eludes you."

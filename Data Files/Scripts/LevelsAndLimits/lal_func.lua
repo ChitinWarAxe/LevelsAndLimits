@@ -7,6 +7,8 @@ local settings = storage.playerSection("SettingsLevelsAndLimits")
 
 local L = core.l10n("LevelsAndLimits")
 
+local favoredAttributes = types.NPC.classes.records[types.NPC.record(self).class].attributes
+
 local racialSkills = {}
 local playerRace = types.NPC.races.records[types.NPC.record(self).race]
 
@@ -54,6 +56,16 @@ local function getRacialSkillMalus()
     return settings:get("lalRacialSkillMalus")
 end
 
+local function getLevelProgressLimitToggle()
+    return settings:get("lalLevelProgressLimitToggle")
+end
+
+local function getLevelProgressLimit()
+    return settings:get("lalLevelProgressLimit")
+end
+
+--
+
 local function resetSkillExperience(skillid)
     local skillStat = types.NPC.stats.skills[skillid](self)
     if skillStat.progress > 1 then
@@ -85,7 +97,6 @@ local function getModifiedSkillMaximum(skillid, skillMaximum)
     -- check Favored Attributes
     if getFavoredAttributesToggle() then
     
-        local favoredAttributes = types.NPC.classes.records[types.NPC.record(self).class].attributes
         local skillAttribute = core.stats.Skill.records[skillid].attribute
         local isFavoredAttribute = false
         
@@ -127,6 +138,8 @@ return {
         getSpecializationMalus = getSpecializationMalus,
         getFavoredAttributesToggle = getFavoredAttributesToggle,
         getFavoredAttributesMalus = getFavoredAttributesMalus,
+        getLevelProgressLimitToggle = getLevelProgressLimitToggle,
+        getLevelProgressLimit = getLevelProgressLimit,
         resetSkillExperience = resetSkillExperience,
         showFailedSkillLevelUpMessage = showFailedSkillLevelUpMessage,
         getModifiedSkillMaximum = getModifiedSkillMaximum
