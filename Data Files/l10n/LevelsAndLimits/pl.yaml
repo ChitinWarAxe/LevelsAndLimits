@@ -33,6 +33,18 @@ lalFavoredAttributesToggleDesc: "Gdy włączone, maksymalny poziom umiejętnośc
 lalFavoredAttributesMalusName: "Kara za Brak Ulubionych Atrybutów"
 lalFavoredAttributesMalusDesc: "Ilość, o którą maksymalny poziom umiejętności jest obniżany dla umiejętności, które nie są rządzone przez ulubione atrybuty."
 
+lalRacialSkillToggleName: "Włącz Modyfikator Umiejętności Rasowych"
+lalRacialSkillToggleDesc: "Gdy włączone, maksymalny poziom umiejętności zależy od tego, czy umiejętność odpowiada bonusom rasowym. Umiejętności, które nie otrzymały bonusu od twojej rasy, mają obniżony poziom maksymalny. Wielkość bonusu nie ma znaczenia, liczy się tylko to, czy w ogóle jest bonus do danej umiejętności."
+
+lalRacialSkillMalusName: "Kara do Umiejętności Rasowych"
+lalRacialSkillMalusDesc: "Wartość, o jaką zostaje obniżony maksymalny poziom umiejętności dla umiejętności nieodpowiadających twojemu bonusowi rasowemu."
+
+lalLevelProgressLimitToggleName: "Włącz Limit Postępu Poziomów"
+lalLevelProgressLimitToggleDesc: "Gdy włączone, zatrzymuje rozwój umiejętności, gdy twój postęp osiągnie skonfigurowany limit."
+
+lalLevelProgressLimitName: "Limit Postępu Poziomów"
+lalLevelProgressLimitDesc: "Maksymalna dozwolona ilość postępu poziomów przed zatrzymaniem rozwoju umiejętności."
+
 levelUpFailTrainer: "Pomimo starań, trening nie przynosi postępów."
 levelUpFailBook: "Wiedza w tej książce jest poza twoim zasięgiem."
 

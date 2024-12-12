@@ -33,6 +33,18 @@ lalFavoredAttributesToggleDesc: "Wanneer ingeschakeld, wordt je maximale vaardig
 lalFavoredAttributesMalusName: "Favoriete Attributen Straf"
 lalFavoredAttributesMalusDesc: "De hoeveelheid waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet worden beheerd door je favoriete attributen."
 
+lalRacialSkillToggleName: "Rasvaardigheden Modificator Inschakelen"
+lalRacialSkillToggleDesc: "Wanneer ingeschakeld, wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid overeenkomt met de bonussen van je ras. Vaardigheden die geen bonus van je ras hebben ontvangen, hebben een verlaagd maximumniveau. De hoeveelheid bonus maakt niet uit, alleen of er überhaupt een bonus voor die vaardigheid is."
+
+lalRacialSkillMalusName: "Rasvaardigheden Malus"
+lalRacialSkillMalusDesc: "De hoeveelheid waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet overeenkomen met je rasbonus."
+
+lalLevelProgressLimitToggleName: "Niveau Vooruitgangslimiet Inschakelen"
+lalLevelProgressLimitToggleDesc: "Wanneer ingeschakeld, stopt vaardigheden met stijgen zodra je vooruitgang de geconfigureerde limiet bereikt."
+
+lalLevelProgressLimitName: "Niveau Vooruitgangslimiet"
+lalLevelProgressLimitDesc: "De maximale hoeveelheid niveau-vooruitgang toegestaan voordat vaardigheidsstijging wordt gestopt."
+
 levelUpFailTrainer: "Ondanks je inspanningen boekt de training geen vooruitgang."
 levelUpFailBook: "De kennis in dit boek is te hoog gegrepen."
 

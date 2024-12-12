@@ -2,7 +2,6 @@ local self = require('openmw.self')
 local types = require('openmw.types')
 local core = require('openmw.core')
 local I = require('openmw.interfaces')
---local f = require('scripts.levelsandlimits.lal_func')
 
 local repeatedFailedSkillUpSkillId = '' -- save the skill name on skill level up, to reduce unnecessary skill level up checks.
 
@@ -24,9 +23,7 @@ local function skillLevelUpHandler(skillid, options)
     local skillLevelUpFailed = false
 
     if I.lalUtil.getLevelProgressLimitToggle() then
-        --print("progress limit aktiviert!")
         if (types.Actor.stats.level(self).progress >= I.lalUtil.getLevelProgressLimit()) then
-            --print("OOF - better go find a bed!")
             skillLevelUpFailed = true
         else
             repeatedFailedSkillUpSkillId = ''
@@ -34,7 +31,6 @@ local function skillLevelUpHandler(skillid, options)
     end
     
     if repeatedFailedSkillUpSkillId == skillid then
-        --print("repeated skill id fail: " .. repeatedFailedSkillUpSkillId .. " = skillid: " .. skillid)
         skillLevelUpFailed = true
     end
 

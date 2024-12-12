@@ -33,6 +33,18 @@ lalFavoredAttributesToggleDesc: "Quando abilitato, il tuo livello massimo di abi
 lalFavoredAttributesMalusName: "Malus di Attributi Preferiti"
 lalFavoredAttributesMalusDesc: "La quantità di cui si riduce il livello massimo di abilità per le abilità che non sono governate dai tuoi attributi preferiti."
 
+lalRacialSkillToggleName: "Attiva Modificatore Abilità Razziale"
+lalRacialSkillToggleDesc: "Quando attivato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità corrisponda ai bonus della razza. Le abilità che non hanno ricevuto un bonus dalla tua razza hanno un livello massimo ridotto. L'importo del bonus non conta, solo se esiste un bonus per quell'abilità."
+
+lalRacialSkillMalusName: "Malus Abilità Razziale"
+lalRacialSkillMalusDesc: "La quantità di cui viene ridotto il livello massimo di abilità per le abilità che non corrispondono al tuo bonus razziale."
+
+lalLevelProgressLimitToggleName: "Attiva Limite Progressione Livello"
+lalLevelProgressLimitToggleDesc: "Quando attivato, impedisce alle abilità di aumentare di livello una volta che la progressione raggiunge il limite configurato."
+
+lalLevelProgressLimitName: "Limite Progressione Livello"
+lalLevelProgressLimitDesc: "La quantità massima di progressione di livello consentita prima che l'aumento delle abilità venga interrotto."
+
 levelUpFailTrainer: "Nonostante i tuoi sforzi, l'allenamento non porta alcun progresso."
 levelUpFailBook: "La conoscenza in questo libro è fuori dalla tua portata."
 

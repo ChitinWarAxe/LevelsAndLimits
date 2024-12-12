@@ -33,6 +33,18 @@ lalFavoredAttributesToggleDesc: "启用后，您的最大技能等级将受到�
 lalFavoredAttributesMalusName: "偏爱属性惩罚"
 lalFavoredAttributesMalusDesc: "不受您偏爱属性控制的技能最大等级降低的数量。"
 
+lalRacialSkillToggleName: "启用种族技能修正"
+lalRacialSkillToggleDesc: "启用后，你的最大技能等级将受到该技能是否与种族加成相匹配的影响。未从你的种族获得加成的技能将有较低的最大等级。加成数值不重要，只要该技能有加成即可。"
+
+lalRacialSkillMalusName: "种族技能减益"
+lalRacialSkillMalusDesc: "不符合你种族加成的技能，其最大技能等级降低的数值。"
+
+lalLevelProgressLimitToggleName: "启用等级进度限制"
+lalLevelProgressLimitToggleDesc: "启用后，当你的进度达到配置的限制时，技能将停止升级。"
+
+lalLevelProgressLimitName: "等级进度限制"
+lalLevelProgressLimitDesc: "在技能升级停止之前允许的最大等级进度。"
+
 levelUpFailTrainer: "尽管您努力了，训练未能取得进展。"
 levelUpFailBook: "这本书中的知识超出了您的理解能力。"
 

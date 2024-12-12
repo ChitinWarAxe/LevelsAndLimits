@@ -33,6 +33,18 @@ lalFavoredAttributesToggleDesc: "Wenn aktiviert, wird dein maximales Fähigkeits
 lalFavoredAttributesMalusName: "Malus für falsche Attribute"
 lalFavoredAttributesMalusDesc: "Die Höhe, um die das maximale Fähigkeitslevel für Fähigkeiten reduziert wird, die nicht von deinen bevorzugten Attributen beeinflusst werden."
 
+lalRacialSkillToggleName: "Rassenbasierten Fertigkeitsmodifikator aktivieren"
+lalRacialSkillToggleDesc: "Wenn aktiviert, wird das maximale Fertigkeitsniveau davon beeinflusst, ob die Fertigkeit mit den Boni der Rasse übereinstimmt. Fertigkeiten, die keinen Bonus durch deine Rasse erhalten, haben ein reduziertes Maximum. Die Höhe des Bonus spielt keine Rolle, nur ob überhaupt ein Bonus für diese Fertigkeit existiert."
+
+lalRacialSkillMalusName: "Rassenbasierter Fertigkeitsmalus"
+lalRacialSkillMalusDesc: "Der Wert, um den das maximale Fertigkeitsniveau für Fertigkeiten reduziert wird, die nicht mit deinem Rassenbonus übereinstimmen."
+
+lalLevelProgressLimitToggleName: "Stufenaufstieg-Fortschrittslimit aktivieren"
+lalLevelProgressLimitToggleDesc: "Wenn aktiviert, werden Fertigkeiten nicht mehr aufsteigen, sobald dein Fortschritt das konfigurierte Limit erreicht."
+
+lalLevelProgressLimitName: "Stufenaufstieg-Fortschrittslimit"
+lalLevelProgressLimitDesc: "Der maximale Fortschrittswert, der erlaubt ist, bevor die Fertigkeitssteigerung gestoppt wird."
+
 levelUpFailTrainer: "Das Training bringt dir keine neuen Erkenntnisse."
 levelUpFailBook: "Das Wissen in diesem Buch bleibt dir verschlossen."
 

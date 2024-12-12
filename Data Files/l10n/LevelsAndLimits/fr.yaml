@@ -33,6 +33,18 @@ lalFavoredAttributesToggleDesc: "Lorsque activé, votre niveau de compétence ma
 lalFavoredAttributesMalusName: "Malus des Attributs Favoris"
 lalFavoredAttributesMalusDesc: "Le montant de la réduction du niveau maximum pour les compétences qui ne sont pas régies par vos attributs favoris."
 
+lalRacialSkillToggleName: "Activer le Modificateur de Compétence Raciale"
+lalRacialSkillToggleDesc: "Lorsqu'activé, votre niveau maximum de compétence est influencé selon que la compétence correspond aux bonus raciaux. Les compétences qui n'ont pas reçu de bonus de votre race ont un niveau maximum réduit. Le montant du bonus n'importe pas, seule la présence d'un bonus pour cette compétence compte."
+
+lalRacialSkillMalusName: "Malus de Compétence Raciale"
+lalRacialSkillMalusDesc: "La valeur de réduction du niveau maximum de compétence pour les compétences ne correspondant pas à votre bonus racial."
+
+lalLevelProgressLimitToggleName: "Activer la Limite de Progression de Niveau"
+lalLevelProgressLimitToggleDesc: "Lorsqu'activé, empêche les compétences d'augmenter une fois que votre progression atteint la limite configurée."
+
+lalLevelProgressLimitName: "Limite de Progression de Niveau"
+lalLevelProgressLimitDesc: "La quantité maximale de progression de niveau autorisée avant que l'augmentation des compétences ne soit arrêtée."
+
 levelUpFailTrainer: "Malgré tous vos efforts, l'entraînement n'apporte aucun progrès."
 levelUpFailBook: "Les connaissances de ce livre sont hors de votre portée."
 

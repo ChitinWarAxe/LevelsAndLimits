@@ -33,6 +33,18 @@ lalFavoredAttributesToggleDesc: "Når aktiveret, påvirkes dit maksimale færdig
 lalFavoredAttributesMalusName: "Foretrukne Attributsmalus"
 lalFavoredAttributesMalusDesc: "Det beløb, hvormed det maksimale færdighedsniveau reduceres for færdigheder, der ikke styres af dine foretrukne attributter."
 
+lalRacialSkillToggleName: "Aktiver Race-færdighedsmodifikator"
+lalRacialSkillToggleDesc: "Når aktiveret, påvirkes dit maksimale færdighedsniveau af, om færdigheden matcher bonusserne fra din race. Færdigheder, der ikke modtog en bonus fra din race, har et reduceret maksimumniveau. Bonusbeløbet er ligegyldigt, kun om der overhovedet er en bonus for den færdighed."
+
+lalRacialSkillMalusName: "Race-færdighedsmalus"
+lalRacialSkillMalusDesc: "Den mængde hvormed det maksimale færdighedsniveau reduceres for færdigheder, der ikke matcher din racebonus."
+
+lalLevelProgressLimitToggleName: "Aktiver Level-op Fremskridtsgrænse"
+lalLevelProgressLimitToggleDesc: "Når aktiveret, stopper færdigheder med at stige i niveau, når din fremgang når den konfigurerede grænse."
+
+lalLevelProgressLimitName: "Level-op Fremskridtsgrænse"
+lalLevelProgressLimitDesc: "Den maksimale mængde level-op fremskridt tilladt før færdighedsforøgelse stoppes."
+
 levelUpFailTrainer: "Trods dine anstrengelser, resulterer træningen i ingen fremskridt."
 levelUpFailBook: "Viden i denne bog er uden for din rækkevidde."
 

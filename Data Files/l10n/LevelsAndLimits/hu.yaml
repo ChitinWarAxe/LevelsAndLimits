@@ -33,6 +33,18 @@ lalFavoredAttributesToggleDesc: "Amikor engedélyezve van, a maximális képess�
 lalFavoredAttributesMalusName: "Kedvelt Attribútumok Malusz"
 lalFavoredAttributesMalusDesc: "Az összeg, amennyivel csökkentették a maximális képességszintet azoknak a képességeknek, amelyek nem a kedvelt attribútumok által irányítottak."
 
+lalRacialSkillToggleName: "Faji Képességmódosító Engedélyezése"
+lalRacialSkillToggleDesc: "Ha engedélyezve van, a maximális képességszintet befolyásolja, hogy a képesség egyezik-e a faji bónuszokkal. Azok a képességek, amelyek nem kaptak bónuszt a fajtól, csökkentett maximális szinttel rendelkeznek. A bónusz mértéke nem számít, csak az, hogy van-e egyáltalán bónusz az adott képességre."
+
+lalRacialSkillMalusName: "Faji Képességmalusz"
+lalRacialSkillMalusDesc: "Az az érték, amennyivel csökken a maximális képességszint azoknál a képességeknél, amelyek nem egyeznek a faji bónuszokkal."
+
+lalLevelProgressLimitToggleName: "Szintlépési Korlát Engedélyezése"
+lalLevelProgressLimitToggleDesc: "Ha engedélyezve van, megállítja a képességek fejlődését, amikor a szintlépési haladás eléri a beállított határt."
+
+lalLevelProgressLimitName: "Szintlépési Haladási Korlát"
+lalLevelProgressLimitDesc: "A maximálisan megengedett szintlépési haladás, mielőtt a képességfejlődés leáll."
+
 levelUpFailTrainer: "Erőfeszítéseid ellenére a képzés nem eredményez előrelépést."
 levelUpFailBook: "A tudás ebben a könyvben túlmutat a felfogásodon."
 
