@@ -3,47 +3,69 @@ description:
 "Configurable skill level limits based on whether skills are major, minor, or miscellaneous.\n\n
 Additional limits can be configured for skills that do not match your class specialization or are not governed by your favored attributes."
 
-settingsTitle: "Options"
-settingsDesc: "Settings for this mod"
+settingsTitle: "Skill Level Options"
+settingsDesc: "Options for setting skill level caps and more."
 
 lalToggleName: "Enable Skill Level Limits"
-lalToggleDesc: "Enable or disable limits for your skill level progression."
+lalToggleDesc: "Enable limits for your skill level progression."
 
-lalLimitMajorName: "Major Skill Level Limit"
-lalLimitMajorDesc: "Sets the maximum level for major skills"
+lalLimitMajorName: "Major Skill Level Cap"
+lalLimitMajorDesc: "Sets the maximum level for major skills.\n\nSetting values above 100 won't uncap your skills."
 
-lalLimitMinorName: "Minor Skill Level Limit"
-lalLimitMinorDesc: "Sets the maximum level for minor skills"
+lalLimitMinorName: "Minor Skill Level Cap"
+lalLimitMinorDesc: "Sets the maximum level for minor skills."
 
-lalLimitMiscName: "Misc Skill Level Limit"
-lalLimitMiscDesc: "Sets the maximum level for miscellaneous skills"
-
-lalSpecializationName: "Enable Class Specialization Modifier"
-lalSpecializationDesc: "When enabled, your maximum skill level is influenced by whether the skill matches your class specialization. Skills outside your specialization have a reduced maximum level."
+lalLimitMiscName: "Misc Skill Level Cap"
+lalLimitMiscDesc: "Sets the maximum level for misc skills."
 
 lalSpecializationToggleName: "Enable Class Specialization Modifier"
-lalSpecializationToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill matches your class specialization. Skills outside your specialization have a reduced maximum level."
+lalSpecializationToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill matches your class specialization.\n\nSkills outside your specialization have a reduced maximum level."
 
 lalSpecializationMalusName: "Class Specialization Malus"
 lalSpecializationMalusDesc: "The amount by which the maximum skill level is reduced for skills that do not match your class specialization."
 
 lalFavoredAttributesToggleName: "Enable Class Favored Attributes Modifier"
-lalFavoredAttributesToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is governed by your favored attributes. Skills not governed by your favored attributes have a reduced maximum level."
+lalFavoredAttributesToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is governed by your favored attributes.\n\nSkills not governed by your favored attributes have a reduced maximum level."
 
 lalFavoredAttributesMalusName: "Favored Attributes Malus"
 lalFavoredAttributesMalusDesc: "The amount by which the maximum skill level is reduced for skills not governed by your favored attributes."
 
 lalRacialSkillToggleName: "Enable Racial Skill Modifier"
-lalRacialSkillToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is matching the skills from the race bonus. Skills that did not receive a bonus by your race have a reduced maximum level. The bonus amount doesn't matter, only if there is a bonus for that skill at all."
+lalRacialSkillToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is matching the skills from the race bonus.\n\nSkills that did not receive a bonus by your race have a reduced maximum level.\n\nThe bonus amount doesn't matter, only if there is a bonus for that skill at all."
 
 lalRacialSkillMalusName: "Racial Skill Malus"
 lalRacialSkillMalusDesc: "The amount by which the maximum skill level is reduced for skills not matching your race bonus."
 
 lalLevelProgressLimitToggleName: "Enable Level Up Progress Limit"
-lalLevelProgressLimitToggleDesc: "When enabled, stops skills from levelling up once your level progress reaches the configured limit."
+lalLevelProgressLimitToggleDesc: "When enabled, stops skills from levelling up once your level progress reaches the configured limit.\n\nWill also stop any new skill experience gain if Skill Experience Options are enabled."
 
 lalLevelProgressLimitName: "Level Up Progress Limit"
-lalLevelProgressLimitDesc: "The maximum amount of level up progress allowed before skill leveling is halted."
+lalLevelProgressLimitDesc: "The maximum amount of level up progress allowed before skill levelling is halted.\n\nIf skill experience options are enabled, will further stop any skill experience gain."
 
-levelUpFailTrainer: "Despite your efforts, the training yields no progress."
+levelUpFailTrainer: "Despite your efforts, the training yields no result."
 levelUpFailBook: "The knowledge in this book eludes you."
+
+settingsTitleXP: "Skill Experience Options"
+settingsDescXP: "Options for skill experience gain.\n\nDisabled by default.\n\nIncompatible with any mod that meddles with experience gain via Lua."
+
+lalXPToggleName: "Enable Skill Experience Options"
+lalXPToggleDesc: "Enable or disable options for skill experience gain options"
+
+lalXPGlobalDivisorName: "Global Skill Experience Divisor"
+lalXPGlobalDivisorDesc: "Any gained experience will be divided by this divisor.\n\nExample: A divisor of 2 will half all gained skill experience."
+
+lalXPDiminishingToggleName: "Diminishing Returns With Increasing Skill Levels"
+lalXPDiminishingToggleDesc: "Enable or disable diminishing returns. The higher the skill level, the less experience is gained for this skill.\nWill be applied after the global skill divisor.\n\nExample: Experience gained for a skill with the level of 47 will be divided by 4.7, skill experience with level 20 will be divided by 2."
+
+lalXPLessImpactfulDRDivisorName: "Less Impactful Diminishing Returns Divisor"
+lalXPLessImpactfulDRDivisorDesc: "Add a divisor to make the diminishing returns less impactful.\n\nExample: If set to 2, a calculated diminishing returns divisor of 4.7 would then become 2.35."
+
+lalXPDisableToggleName: "Disable Skill Gain"
+lalXPDisableToggleDesc: "Disable any skill experience gain. Increasing skill levels via training or books is still possible."
+
+lalDisableTrainingToggleName: "Disable Skill Training"
+lalDisableTrainingToggleDesc: "When enabled, skills cannot be improved using a trainer."
+
+lalDisableBooksToggleName: "Disable Skill Books"
+lalDisableBooksToggleDesc: "When enabled, skills cannot be improved using skill books."
+

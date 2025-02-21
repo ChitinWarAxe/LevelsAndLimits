@@ -99,8 +99,67 @@ I.Settings.registerGroup {
             default = 10,
             renderer = "number"
         },
-        
+        {
+            key = "lalDisableTrainingToggle",
+            name = "lalDisableTrainingToggleName",
+            description = "lalDisableTrainingToggleDesc",
+            default = false,
+            renderer = "checkbox"
+        },
+        {
+            key = "lalDisableBooksToggle",
+            name = "lalDisableBooksToggleName",
+            description = "lalDisableBooksToggleDesc",
+            default = false,
+            renderer = "checkbox"
+        },
     }
 }
-
+    
+    
+I.Settings.registerGroup {
+    key = "SettingsLevelsAndLimitsXP",
+    l10n = "LevelsAndLimits",
+    name = "settingsTitleXP",
+    page = "LevelsAndLimits",
+    description = "settingsDescXP",
+    permanentStorage = false,
+    settings = {
+        {
+            key = "lalXPToggle",
+            name = "lalXPToggleName",
+            description = "lalXPToggleDesc",
+            default = false,
+            renderer = "checkbox"
+        },
+        {
+            key = "lalXPGlobalDivisor",
+            name = "lalXPGlobalDivisorName",
+            description = "lalXPGlobalDivisorDesc",
+            default = 1,
+            renderer = "number"
+        },
+        {
+            key = "lalXPDiminishingToggle",
+            name = "lalXPDiminishingToggleName",
+            description = "lalXPDiminishingToggleDesc",
+            default = true,
+            renderer = "checkbox"
+        },
+        {
+            key = "lalXPLessImpactfulDRDivisor",
+            name = "lalXPLessImpactfulDRDivisorName",
+            description = "lalXPLessImpactfulDRDivisorDesc",
+            default = 1,
+            renderer = "number"
+        },
+        {
+            key = "lalXPDisableToggle",
+            name = "lalXPDisableToggleName",
+            description = "lalXPDisableToggleDesc",
+            default = false,
+            renderer = "checkbox"
+        }
+    }
+}
 
