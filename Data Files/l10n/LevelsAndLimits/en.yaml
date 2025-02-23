@@ -1,9 +1,8 @@
 name: "Levels & Limits"
 description:
-"Configurable skill level limits based on whether skills are major, minor, or miscellaneous.\n\n
-Additional limits can be configured for skills that do not match your class specialization or are not governed by your favored attributes."
+"Options for setting skill level caps and skill experience gain reduction."
 
-settingsTitle: "Skill Level Options"
+settingsTitle: "Skill Level Cap Options"
 settingsDesc: "Options for setting skill level caps and more."
 
 lalToggleName: "Enable Skill Level Limits"
@@ -37,25 +36,29 @@ lalRacialSkillMalusName: "Racial Skill Malus"
 lalRacialSkillMalusDesc: "The amount by which the maximum skill level is reduced for skills not matching your race bonus."
 
 lalLevelProgressLimitToggleName: "Enable Level Up Progress Limit"
-lalLevelProgressLimitToggleDesc: "When enabled, stops skills from levelling up once your level progress reaches the configured limit.\n\nWill also stop any new skill experience gain if Skill Experience Options are enabled."
+lalLevelProgressLimitToggleDesc: "Requires Skill Level Cap Options and/or Skill Experience Options to be enabled to have any effect.
+\n\nWith Skill Level Cap Options enabled, skills stop levelling up once your level progress reaches the configured limit.
+\n\nWith Skill Experience Options enabled, skills stop gaining experience.
+\n\nIf only the latter is enabled, skill won't gain experience, but can still be increased using trainers and books."
 
 lalLevelProgressLimitName: "Level Up Progress Limit"
-lalLevelProgressLimitDesc: "The maximum amount of level up progress allowed before skill levelling is halted.\n\nIf skill experience options are enabled, will further stop any skill experience gain."
+lalLevelProgressLimitDesc: "The maximum amount of level up progress allowed before skill levelling is halted."
 
 levelUpFailTrainer: "Despite your efforts, the training yields no result."
 levelUpFailBook: "The knowledge in this book eludes you."
 
 settingsTitleXP: "Skill Experience Options"
-settingsDescXP: "Options for skill experience gain.\n\nDisabled by default.\n\nIncompatible with any mod that meddles with experience gain via Lua."
+settingsDescXP: "Options related to skill experience gain.\n\nIncompatible with any mod that meddles with experience gain via Lua."
 
 lalXPToggleName: "Enable Skill Experience Options"
-lalXPToggleDesc: "Enable or disable options for skill experience gain options"
+lalXPToggleDesc: "Enable options for skill experience gain."
 
 lalXPGlobalDivisorName: "Global Skill Experience Divisor"
 lalXPGlobalDivisorDesc: "Any gained experience will be divided by this divisor.\n\nExample: A divisor of 2 will half all gained skill experience."
 
 lalXPDiminishingToggleName: "Diminishing Returns With Increasing Skill Levels"
-lalXPDiminishingToggleDesc: "Enable or disable diminishing returns. The higher the skill level, the less experience is gained for this skill.\nWill be applied after the global skill divisor.\n\nExample: Experience gained for a skill with the level of 47 will be divided by 4.7, skill experience with level 20 will be divided by 2."
+lalXPDiminishingToggleDesc: "Enable diminishing returns on skill experience gain. The higher the skill level, the less experience is gained for this skill.\nWill be applied after the Global Skill Experience Divisor.
+\n\nExample: Experience gained for a skill with the level of 47 will be divided by 4.7, skill experience with level 20 will be divided by 2. The calculated divisor will always be at least 1."
 
 lalXPLessImpactfulDRDivisorName: "Less Impactful Diminishing Returns Divisor"
 lalXPLessImpactfulDRDivisorDesc: "Add a divisor to make the diminishing returns less impactful.\n\nExample: If set to 2, a calculated diminishing returns divisor of 4.7 would then become 2.35."
@@ -68,4 +71,7 @@ lalDisableTrainingToggleDesc: "When enabled, skills cannot be improved using a t
 
 lalDisableBooksToggleName: "Disable Skill Books"
 lalDisableBooksToggleDesc: "When enabled, skills cannot be improved using skill books."
+
+settingsTitleY: "Some More Options!"
+settingsDescY: "Options that affect both Skill Level Cap and Skill Experience Options."
 

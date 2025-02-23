@@ -5,7 +5,7 @@ local types = require('openmw.types')
 local storage = require('openmw.storage')
 local settings = storage.playerSection("SettingsLevelsAndLimits")
 local settingsXP = storage.playerSection("SettingsLevelsAndLimitsXP")
-local settingsMisc = storage.playerSection("SettingsLevelsAndLimitsY")
+local settingsY = storage.playerSection("SettingsLevelsAndLimitsY")
 
 local L = core.l10n("LevelsAndLimits")
 
@@ -83,11 +83,11 @@ end
 --
 
 local function getLevelProgressLimitToggle()
-    return settings:get("lalLevelProgressLimitToggle")
+    return settingsY:get("lalLevelProgressLimitToggle")
 end
 
 local function getLevelProgressLimit()
-    return settings:get("lalLevelProgressLimit")
+    return settingsY:get("lalLevelProgressLimit")
 end
 
 local function getDisableTrainingToggle()
@@ -113,6 +113,10 @@ local function showFailedSkillLevelUpMessage(method)
     elseif method == 'book' then
         ui.showMessage(string.format(L("levelUpFailBook")))
     end
+end
+
+local function isLevelUpProgressLimitReached(progress)
+    return progress >= getLevelProgressLimit()
 end
 
 local function getModifiedSkillMaximum(skillid, skillMaximum)
@@ -175,7 +179,7 @@ local function isSkillLevelUpPossible(skillid, options, majorSkills, minorSkills
     end
 
     if getLevelProgressLimitToggle() then
-        if (types.Actor.stats.level(self).progress >= getLevelProgressLimit()) then
+        if ( isLevelUpProgressLimitReached(types.Actor.stats.level(self).progress) ) then
             print('Progress Limit reached, no further skill ups possible until rested!')
             return false
         end
@@ -242,23 +246,10 @@ return {
     interfaceName = "lalUtil",
     interface = {
         getLaLToggle = getLaLToggle,
-        getSettingMajorSkillLimit = getSettingMajorSkillLimit,
-        getSettingMinorSkillLimit = getSettingMinorSkillLimit,
-        getSettingMiscSkillLimit = getSettingMiscSkillLimit,
-        getSpecializationToggle = getSpecializationToggle,
-        getSpecializationMalus = getSpecializationMalus,
-        getFavoredAttributesToggle = getFavoredAttributesToggle,
-        getFavoredAttributesMalus = getFavoredAttributesMalus,
-        getLevelProgressLimitToggle = getLevelProgressLimitToggle,
-        getLevelProgressLimit = getLevelProgressLimit,
         resetSkillExperience = resetSkillExperience,
         showFailedSkillLevelUpMessage = showFailedSkillLevelUpMessage,
-        getModifiedSkillMaximum = getModifiedSkillMaximum,
         getXPToggle = getXPToggle,
-        getXPDisableToggle = getXPDisableToggle,
         getModifiedSkillGain = getModifiedSkillGain,
-        getDisableTrainingToggle = getDisableTrainingToggle,
-        getDisableBooksToggle = getDisableBooksToggle,
         isSkillLevelUpPossible = isSkillLevelUpPossible,
         isSkillGainPossible = isSkillGainPossible
     }

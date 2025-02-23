@@ -86,20 +86,6 @@ I.Settings.registerGroup {
             renderer = "number"
         },
         {
-            key = "lalLevelProgressLimitToggle",
-            name = "lalLevelProgressLimitToggleName",
-            description = "lalLevelProgressLimitToggleDesc",
-            default = true,
-            renderer = "checkbox"
-        },
-        {
-            key = "lalLevelProgressLimit",
-            name = "lalLevelProgressLimitName",
-            description = "lalLevelProgressLimitDesc",
-            default = 10,
-            renderer = "number"
-        },
-        {
             key = "lalDisableTrainingToggle",
             name = "lalDisableTrainingToggleName",
             description = "lalDisableTrainingToggleDesc",
@@ -150,7 +136,7 @@ I.Settings.registerGroup {
             key = "lalXPLessImpactfulDRDivisor",
             name = "lalXPLessImpactfulDRDivisorName",
             description = "lalXPLessImpactfulDRDivisorDesc",
-            default = 1,
+            default = 2,
             renderer = "number"
         },
         {
@@ -160,6 +146,31 @@ I.Settings.registerGroup {
             default = false,
             renderer = "checkbox"
         }
+    }
+}
+    
+I.Settings.registerGroup {
+    key = "SettingsLevelsAndLimitsY",
+    l10n = "LevelsAndLimits",
+    name = "settingsTitleY",
+    page = "LevelsAndLimits",
+    description = "settingsDescY",
+    permanentStorage = false,
+    settings = {
+                {
+            key = "lalLevelProgressLimitToggle",
+            name = "lalLevelProgressLimitToggleName",
+            description = "lalLevelProgressLimitToggleDesc",
+            default = true,
+            renderer = "checkbox"
+        },
+        {
+            key = "lalLevelProgressLimit",
+            name = "lalLevelProgressLimitName",
+            description = "lalLevelProgressLimitDesc",
+            default = 10,
+            renderer = "number"
+        },
     }
 }
 
