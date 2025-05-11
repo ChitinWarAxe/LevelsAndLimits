@@ -4,7 +4,18 @@ Configurable maximum skill levels.
 
 ![Two n'wahs pondering their class choices](images/nwahs.png "Two n'wahs pondering their class choices")
 
+## Mod Overview
+
+This mod lets you make your playthrough more challenging by setting skills caps, reducing gained experience and more!
+
 ## Features
+
+**Skill Caps Options** You can can set maximum skill levels for your major, minor and miscellaneous skills. You can further reduce these maximum levels based on your class, favored attributes and race.
+
+**Skill Experience Options** You can reduce the gained experience to make your playthrough more challenging. You can make the amount of gained experience based on individual skills!
+
+There are many more options and ways to customize your experience. Make sure to open the mod configuration and review the possibilities!
+
 
 This mod limits the maximum skill levels based on whether the skills are major, minor, or miscellaneous. By default, the maximum levels are set to 100 for major skills, 75 for minor skills, and 35 for miscellaneous skills.
 

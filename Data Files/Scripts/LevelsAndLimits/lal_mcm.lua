@@ -119,9 +119,9 @@ I.Settings.registerGroup {
             renderer = "checkbox"
         },
         {
-            key = "lalXPGlobalDivisor",
-            name = "lalXPGlobalDivisorName",
-            description = "lalXPGlobalDivisorDesc",
+            key = "lalXPGlobalMultiplier",
+            name = "lalXPGlobalMultiplierName",
+            description = "lalXPGlobalMultiplierDesc",
             default = 1,
             renderer = "number"
         },
@@ -133,10 +133,10 @@ I.Settings.registerGroup {
             renderer = "checkbox"
         },
         {
-            key = "lalXPLessImpactfulDRDivisor",
-            name = "lalXPLessImpactfulDRDivisorName",
-            description = "lalXPLessImpactfulDRDivisorDesc",
-            default = 2,
+            key = "lalXPDiminishingMultiplier",
+            name = "lalXPDiminishingMultiplierName",
+            description = "lalXPDiminishingMultiplierDesc",
+            default = 0.5,
             renderer = "number"
         },
         {

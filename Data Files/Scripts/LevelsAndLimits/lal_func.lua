@@ -64,16 +64,16 @@ local function getXPToggle()
     return settingsXP:get("lalXPToggle")
 end
 
-local function getXPGlobalDivisor()
-    return settingsXP:get("lalXPGlobalDivisor")
+local function getXPGlobalMultiplier()
+    return settingsXP:get("lalXPGlobalMultiplier")
 end
 
 local function getXPDiminishingToggle()
     return settingsXP:get("lalXPDiminishingToggle")
 end
 
-local function getXPLessImpactfulDRDivisor()
-    return settingsXP:get("lalXPLessImpactfulDRDivisor")
+local function getXPDiminishingMultiplier()
+    return settingsXP:get("lalXPDiminishingMultiplier")
 end
 
 local function getXPDisableToggle()
@@ -204,21 +204,25 @@ end
 
 local function getModifiedSkillGain(skillid, skillGain)
     
-    print(skillid .. ': gain vorher ' .. skillGain )
+    print('-----------------------------------------')
+    print(skillid .. ': Initital Skillgain ' .. skillGain )
     
-    local globalDivisor = math.max(1, getXPGlobalDivisor() )
+    local globalMultiplier= math.max(1, getXPGlobalMultiplier() )
     local diminDivisor = 1
     
     if getXPDiminishingToggle() then
-        diminDivisor = math.max(1, (types.NPC.stats.skills[skillid](self).base / 10) / getXPLessImpactfulDRDivisor() )
+        diminDivisor = math.max(1, (types.NPC.stats.skills[skillid](self).base / 10) * getXPDiminishingMultiplier() )
     end
     
-    skillGain = ( skillGain / globalDivisor ) / diminDivisor
+    print('GLobal multiplier: ' .. globalMultiplier )
+    print('Calculated Diminishing returns Divisor: ' .. diminDivisor )
     
-    print('global divisor: ' .. globalDivisor .. ' diminDivisor: ' .. diminDivisor .. ' lessDiminDivisor: ' .. getXPLessImpactfulDRDivisor())
-    print(skillid .. ':gain nachher ' .. skillGain)
-    print("-----------------------------")
+    skillGain = ( skillGain * globalMultiplier ) / diminDivisor
     
+    print('Calculated Skillgain (Skill Gain * Global Multiplier) / Diminishing returns Divisor: ' .. skillGain )
+    print('-----------------------------------------')
+    print('')
+
     return skillGain
 end
 

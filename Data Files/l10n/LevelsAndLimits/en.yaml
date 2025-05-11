@@ -20,29 +20,29 @@ lalLimitMiscDesc: "Sets the maximum level for misc skills."
 lalSpecializationToggleName: "Enable Class Specialization Modifier"
 lalSpecializationToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill matches your class specialization.\n\nSkills outside your specialization have a reduced maximum level."
 
-lalSpecializationMalusName: "Class Specialization Malus"
+lalSpecializationMalusName: "Class Specialization Modifier"
 lalSpecializationMalusDesc: "The amount by which the maximum skill level is reduced for skills that do not match your class specialization."
 
 lalFavoredAttributesToggleName: "Enable Class Favored Attributes Modifier"
 lalFavoredAttributesToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is governed by your favored attributes.\n\nSkills not governed by your favored attributes have a reduced maximum level."
 
-lalFavoredAttributesMalusName: "Favored Attributes Malus"
+lalFavoredAttributesMalusName: "Favored Attributes Modifier"
 lalFavoredAttributesMalusDesc: "The amount by which the maximum skill level is reduced for skills not governed by your favored attributes."
 
 lalRacialSkillToggleName: "Enable Racial Skill Modifier"
 lalRacialSkillToggleDesc: "When enabled, your maximum skill level is influenced by whether the skill is matching the skills from the race bonus.\n\nSkills that did not receive a bonus by your race have a reduced maximum level.\n\nThe bonus amount doesn't matter, only if there is a bonus for that skill at all."
 
-lalRacialSkillMalusName: "Racial Skill Malus"
+lalRacialSkillMalusName: "Racial Skill Modifier"
 lalRacialSkillMalusDesc: "The amount by which the maximum skill level is reduced for skills not matching your race bonus."
 
 lalLevelProgressLimitToggleName: "Enable Level Up Progress Limit"
 lalLevelProgressLimitToggleDesc: "Requires Skill Level Cap Options and/or Skill Experience Options to be enabled to have any effect.
 \n\nWith Skill Level Cap Options enabled, skills stop levelling up once your level progress reaches the configured limit.
 \n\nWith Skill Experience Options enabled, skills stop gaining experience.
-\n\nIf only the latter is enabled, skill won't gain experience, but can still be increased using trainers and books."
+\n\nIf only the latter is enabled, skills won't gain experience, but can still be increased using trainers and books."
 
 lalLevelProgressLimitName: "Level Up Progress Limit"
-lalLevelProgressLimitDesc: "The maximum amount of level up progress allowed before skill levelling is halted."
+lalLevelProgressLimitDesc: "The maximum amount of level up progress allowed before skill increases are halted."
 
 levelUpFailTrainer: "Despite your efforts, the training yields no result."
 levelUpFailBook: "The knowledge in this book eludes you."
@@ -53,15 +53,15 @@ settingsDescXP: "Options related to skill experience gain.\n\nIncompatible with 
 lalXPToggleName: "Enable Skill Experience Options"
 lalXPToggleDesc: "Enable options for skill experience gain."
 
-lalXPGlobalDivisorName: "Global Skill Experience Divisor"
-lalXPGlobalDivisorDesc: "Any gained experience will be divided by this divisor.\n\nExample: A divisor of 2 will half all gained skill experience."
+lalXPGlobalMultiplierName: "Global Skill Experience Multiplier"
+lalXPGlobalMultiplierDesc: "Any gained experience will be multiplied by this divisor.\n\nExample: A multiplier of 0.5 will half all gained skill experience."
 
 lalXPDiminishingToggleName: "Diminishing Returns With Increasing Skill Levels"
 lalXPDiminishingToggleDesc: "Enable diminishing returns on skill experience gain. The higher the skill level, the less experience is gained for this skill.\nWill be applied after the Global Skill Experience Divisor.
 \n\nExample: Experience gained for a skill with the level of 47 will be divided by 4.7, skill experience with level 20 will be divided by 2. The calculated divisor will always be at least 1."
 
-lalXPLessImpactfulDRDivisorName: "Less Impactful Diminishing Returns Divisor"
-lalXPLessImpactfulDRDivisorDesc: "Add a divisor to make the diminishing returns less impactful.\n\nExample: If set to 2, a calculated diminishing returns divisor of 4.7 would then become 2.35."
+lalXPDiminishingMultiplierName: "Diminishing Returns Multiplier"
+lalXPDiminishingMultiplierDesc: "Adds a multiplier to modify the diminishing returns.\n\nExample: If set to 0.5, a calculated diminishing returns divisor of 4.7 would then become 2.35."
 
 lalXPDisableToggleName: "Disable Skill Gain"
 lalXPDisableToggleDesc: "Disable any skill experience gain. Increasing skill levels via training or books is still possible."
