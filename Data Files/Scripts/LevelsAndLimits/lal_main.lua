@@ -36,7 +36,7 @@ end
 local function skillUsedHandler(skillid, params)
 
     if I.lalUtil.getXPToggle() then
-    
+
         if I.lalUtil.isSkillGainPossible() then
             params.skillGain = I.lalUtil.getModifiedSkillGain(skillid, params.skillGain)
         else
@@ -46,6 +46,8 @@ local function skillUsedHandler(skillid, params)
     end
     
 end
+
+I.lalUtil.printDebugInfo()
 
 I.SkillProgression.addSkillLevelUpHandler(skillLevelUpHandler)
 I.SkillProgression.addSkillUsedHandler(skillUsedHandler)

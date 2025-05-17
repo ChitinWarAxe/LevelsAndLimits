@@ -75,3 +75,6 @@ lalDisableBooksToggleDesc: "When enabled, skills cannot be improved using skill 
 settingsTitleY: "Some More Options!"
 settingsDescY: "Options that affect both Skill Level Cap and Skill Experience Options."
 
+lalShowDebugInfoName: "Show Debug Info"
+lalShowDebugInfoDesc: "Gain more insight into your maximum skill levels and gained experience."
+

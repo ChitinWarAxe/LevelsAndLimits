@@ -171,6 +171,13 @@ I.Settings.registerGroup {
             default = 10,
             renderer = "number"
         },
+        {
+            key = "lalShowDebugInfo",
+            name = "lalShowDebugInfoName",
+            description = "lalShowDebugInfoDesc",
+            default = false,
+            renderer = "checkbox"
+        }
     }
 }
 

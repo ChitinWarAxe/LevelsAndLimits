@@ -14,6 +14,20 @@ local favoredAttributes = types.NPC.classes.records[types.NPC.record(self).class
 local racialSkills = {}
 local playerRace = types.NPC.races.records[types.NPC.record(self).race]
 
+local playerClass = types.NPC.classes.records[types.NPC.record(self).class]
+local playerSkills = playerClass.skills
+
+local majorSkills = {}
+local minorSkills = {}
+
+for _, skill in ipairs(playerClass.majorSkills) do 
+    majorSkills[skill] = true
+end
+
+for _, skill in ipairs(playerClass.minorSkills) do 
+    minorSkills[skill] = true
+end
+
 for skill in pairs(playerRace.skills) do
     racialSkills[skill] = true
 end
@@ -95,6 +109,10 @@ local function getDisableTrainingToggle()
 end
 
 local function getDisableBooksToggle()
+    return settings:get("lalDisableBooksToggle")
+end
+
+local function getDebugInfoToggle()
     return settings:get("lalDisableBooksToggle")
 end
 
@@ -202,24 +220,42 @@ local function isSkillLevelUpPossible(skillid, options, majorSkills, minorSkills
     return true
 end
 
+local function getSkillMaximum(skillid)
+
+    if majorSkills[skillid] then
+        return getSettingMajorSkillLimit()
+    end
+    
+    if minorSkills[skillid] then
+        return getSettingMinorSkillLimit()
+    end
+    
+    return getSettingMiscSkillLimit()
+
+end
+
+local function getSkillGainMultiplier(skillid)
+    local globalMultiplier = getXPGlobalMultiplier()
+    local finalMultiplier = globalMultiplier
+    
+    if getXPDiminishingToggle() then
+        local skillLevel = types.NPC.stats.skills[skillid](self).base
+        print(skillid .. ' ' .. (skillLevel / 10) * getXPDiminishingMultiplier())
+        local diminishMultiplier = 1 / math.max(1, (skillLevel / 10) * getXPDiminishingMultiplier()) 
+        finalMultiplier = globalMultiplier * diminishMultiplier
+    end
+
+    return finalMultiplier
+end
+
 local function getModifiedSkillGain(skillid, skillGain)
     
     print('-----------------------------------------')
     print(skillid .. ': Initital Skillgain ' .. skillGain )
     
-    local globalMultiplier= math.max(1, getXPGlobalMultiplier() )
-    local diminDivisor = 1
+    skillGain = skillGain * getSkillGainMultiplier(skillid)
     
-    if getXPDiminishingToggle() then
-        diminDivisor = math.max(1, (types.NPC.stats.skills[skillid](self).base / 10) * getXPDiminishingMultiplier() )
-    end
-    
-    print('GLobal multiplier: ' .. globalMultiplier )
-    print('Calculated Diminishing returns Divisor: ' .. diminDivisor )
-    
-    skillGain = ( skillGain * globalMultiplier ) / diminDivisor
-    
-    print('Calculated Skillgain (Skill Gain * Global Multiplier) / Diminishing returns Divisor: ' .. skillGain )
+    print('Calculated Skillgain (Skill Gain * Global Multiplier) / Diminishing returns Divisor: ' .. skillGain)
     print('-----------------------------------------')
     print('')
 
@@ -246,6 +282,24 @@ local function isSkillGainPossible()
 
 end
 
+local function printDebugInfo()
+ 
+    local printout = '\n--- DEBUG INFO---'
+
+    for i, skill in ipairs(core.stats.Skill.records) do
+    
+        local multiplier = tonumber(string.format("%.3f", getSkillGainMultiplier(skill.id)))
+        
+        printout = printout .. '\n ' .. skill.id .. ', maximum skill level: ' .. getModifiedSkillMaximum(skill.id, getSkillMaximum(skill.id) ) .. ', experience gain multiplier: ' .. multiplier .. 'x'
+        
+    end
+    
+    printout = printout .. '\n--- DEBUG END ---'
+    
+    print(printout);
+
+end
+
 return {
     interfaceName = "lalUtil",
     interface = {
@@ -255,6 +309,8 @@ return {
         getXPToggle = getXPToggle,
         getModifiedSkillGain = getModifiedSkillGain,
         isSkillLevelUpPossible = isSkillLevelUpPossible,
-        isSkillGainPossible = isSkillGainPossible
+        isSkillGainPossible = isSkillGainPossible,
+        printDebugInfo = printDebugInfo
+        
     }
 }
