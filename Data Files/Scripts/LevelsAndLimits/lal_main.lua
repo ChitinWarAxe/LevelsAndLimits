@@ -3,24 +3,11 @@ local types = require('openmw.types')
 local core = require('openmw.core')
 local I = require('openmw.interfaces')
 
-local majorSkills = {}
-local minorSkills = {}
-
-local playerClass = types.NPC.classes.records[types.NPC.record(self).class]
-
-for _, skill in ipairs(playerClass.majorSkills) do 
-    majorSkills[skill] = true
-end
-
-for _, skill in ipairs(playerClass.minorSkills) do 
-    minorSkills[skill] = true
-end
-
 local function skillLevelUpHandler(skillid, options)
 
     if I.lalUtil.getLaLToggle() then
     
-        local skillLevelUpPossible = I.lalUtil.isSkillLevelUpPossible(skillid, options, majorSkills, minorSkills)
+        local skillLevelUpPossible = I.lalUtil.isSkillLevelUpPossible(skillid, options)
         
         if skillLevelUpPossible == false then
             I.lalUtil.resetSkillExperience(skillid)

@@ -137,6 +137,20 @@ local function isLevelUpProgressLimitReached(progress)
     return progress >= getLevelProgressLimit()
 end
 
+local function getSkillMaximum(skillid)
+
+    if majorSkills[skillid] then
+        return getSettingMajorSkillLimit()
+    end
+    
+    if minorSkills[skillid] then
+        return getSettingMinorSkillLimit()
+    end
+    
+    return getSettingMiscSkillLimit()
+
+end
+
 local function getModifiedSkillMaximum(skillid, skillMaximum)
 
     local classSpecialization = types.NPC.classes.records[types.NPC.record(self).class].specialization
@@ -184,55 +198,36 @@ local function getModifiedSkillMaximum(skillid, skillMaximum)
     
 end
 
-local function isSkillLevelUpPossible(skillid, options, majorSkills, minorSkills)
+local function isSkillLevelUpPossible(skillid, options)
 
     if getDisableTrainingToggle() and options == 'trainer' then
-        print('training disabled, trainer used!')
+        -- print('training disabled, trainer used!')
         return false
     end
     
     if getDisableBooksToggle() and options == 'book' then
-        print('books disabled, book used!')
+        -- print('books disabled, book used!')
         return false
     end
 
     if getLevelProgressLimitToggle() then
         if ( isLevelUpProgressLimitReached(types.Actor.stats.level(self).progress) ) then
-            print('Progress Limit reached, no further skill ups possible until rested!')
+            -- print('Progress Limit reached, no further skill ups possible until rested!')
             return false
         end
     end
     
     local skillStat = types.NPC.stats.skills[skillid](self)
     local skillLevel = skillStat.base
-
-    if majorSkills[skillid] and skillLevel >= getModifiedSkillMaximum(skillid, getSettingMajorSkillLimit()) then
-        print('major skill, skill maximum reached! ' .. getModifiedSkillMaximum(skillid, getSettingMajorSkillLimit() ) )
-        return false
-    elseif minorSkills[skillid] and skillLevel >= getModifiedSkillMaximum(skillid, getSettingMinorSkillLimit()) then
-        print('minor skill, skill maximum reached! ' .. getModifiedSkillMaximum(skillid, getSettingMinorSkillLimit() ) )
-        return false
-    elseif not majorSkills[skillid] and not minorSkills[skillid] and skillLevel >= getModifiedSkillMaximum(skillid, getSettingMiscSkillLimit()) then
-        print('misc skill, skill maximum reached! ' .. getModifiedSkillMaximum(skillid, getSettingMiscSkillLimit() ) )
+    
+    if skillLevel >= getSkillMaximum(skillid) then
         return false
     end
 
     return true
 end
 
-local function getSkillMaximum(skillid)
 
-    if majorSkills[skillid] then
-        return getSettingMajorSkillLimit()
-    end
-    
-    if minorSkills[skillid] then
-        return getSettingMinorSkillLimit()
-    end
-    
-    return getSettingMiscSkillLimit()
-
-end
 
 local function getSkillGainMultiplier(skillid)
     local globalMultiplier = getXPGlobalMultiplier()
@@ -240,7 +235,6 @@ local function getSkillGainMultiplier(skillid)
     
     if getXPDiminishingToggle() then
         local skillLevel = types.NPC.stats.skills[skillid](self).base
-        print(skillid .. ' ' .. (skillLevel / 10) * getXPDiminishingMultiplier())
         local diminishMultiplier = 1 / math.max(1, (skillLevel / 10) * getXPDiminishingMultiplier()) 
         finalMultiplier = globalMultiplier * diminishMultiplier
     end
@@ -250,14 +244,14 @@ end
 
 local function getModifiedSkillGain(skillid, skillGain)
     
-    print('-----------------------------------------')
-    print(skillid .. ': Initital Skillgain ' .. skillGain )
+    -- print('-----------------------------------------')
+    -- print(skillid .. ': Initital Skillgain: ' .. skillGain )
     
     skillGain = skillGain * getSkillGainMultiplier(skillid)
     
-    print('Calculated Skillgain (Skill Gain * Global Multiplier) / Diminishing returns Divisor: ' .. skillGain)
-    print('-----------------------------------------')
-    print('')
+    -- print('Calculated Skillgain:' .. skillGain)
+    -- print('-----------------------------------------')
+    -- print('')
 
     return skillGain
 end
@@ -265,18 +259,18 @@ end
 local function isSkillGainPossible()
 
     if getXPDisableToggle() then
-        print('skillgain was disabled')
+        -- print('skillgain was disabled')
         return false
     end
     
     if getLevelProgressLimitToggle() then
         if (types.Actor.stats.level(self).progress >= getLevelProgressLimit()) then
-            print('skillgain was disabled, rest first!')
+            -- print('skillgain is not possible, rest first!')
             return false
         end
     end
     
-    print('skillgain possible!')
+    -- print('skillgain is possible!')
     
     return true
 
@@ -284,7 +278,15 @@ end
 
 local function printDebugInfo()
  
-    local printout = '\n--- DEBUG INFO---'
+    local printout = '\n--- LEVELS AND LIMITS DEBUG INFO---'
+    
+    if isSkillGainPossible() then
+        print('skillgain is possible!')
+    end
+
+    --if isSkillLevelUpPossible(skillid, 'trainer') then
+    --    print('skill up is possible ')
+    --end
 
     for i, skill in ipairs(core.stats.Skill.records) do
     
@@ -294,7 +296,7 @@ local function printDebugInfo()
         
     end
     
-    printout = printout .. '\n--- DEBUG END ---'
+    printout = printout .. '\n--- LEVELS AND LIMITS DEBUG END ---'
     
     print(printout);
 
