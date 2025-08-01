@@ -115,7 +115,7 @@ I.Settings.registerGroup {
             key = "lalXPToggle",
             name = "lalXPToggleName",
             description = "lalXPToggleDesc",
-            default = false,
+            default = true,
             renderer = "checkbox"
         },
         {
@@ -129,14 +129,14 @@ I.Settings.registerGroup {
             key = "lalXPDiminishingToggle",
             name = "lalXPDiminishingToggleName",
             description = "lalXPDiminishingToggleDesc",
-            default = true,
+            default = false,
             renderer = "checkbox"
         },
         {
             key = "lalXPDiminishingMultiplier",
             name = "lalXPDiminishingMultiplierName",
             description = "lalXPDiminishingMultiplierDesc",
-            default = 0.5,
+            default = 1,
             renderer = "number"
         },
         {

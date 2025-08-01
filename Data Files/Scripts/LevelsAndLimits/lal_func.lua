@@ -72,6 +72,14 @@ local function getRacialSkillMalus()
     return settings:get("lalRacialSkillMalus")
 end
 
+local function getDisableTrainingToggle()
+    return settings:get("lalDisableTrainingToggle")
+end
+
+local function getDisableBooksToggle()
+    return settings:get("lalDisableBooksToggle")
+end
+
 --
 
 local function getXPToggle()
@@ -104,16 +112,8 @@ local function getLevelProgressLimit()
     return settingsY:get("lalLevelProgressLimit")
 end
 
-local function getDisableTrainingToggle()
-    return settings:get("lalDisableTrainingToggle")
-end
-
-local function getDisableBooksToggle()
-    return settings:get("lalDisableBooksToggle")
-end
-
 local function getDebugInfoToggle()
-    return settings:get("lalDisableBooksToggle")
+    return settingsY:get("lalShowDebugInfo")
 end
 
 --
@@ -244,14 +244,18 @@ end
 
 local function getModifiedSkillGain(skillid, skillGain)
     
-    -- print('-----------------------------------------')
-    -- print(skillid .. ': Initital Skillgain: ' .. skillGain )
+    if getDebugInfoToggle() then
+        print('-----------------------------------------')
+        print(skillid .. ': Initital Skillgain: ' .. skillGain )
+    end
     
     skillGain = skillGain * getSkillGainMultiplier(skillid)
     
-    -- print('Calculated Skillgain:' .. skillGain)
-    -- print('-----------------------------------------')
-    -- print('')
+    if getDebugInfoToggle() then
+        print('Calculated Skillgain:' .. skillGain .. ' skillgain multiplier: ' .. getSkillGainMultiplier(skillid))
+        print('-----------------------------------------')
+        print('')
+    end
 
     return skillGain
 end
@@ -292,7 +296,10 @@ local function printDebugInfo()
     
         local multiplier = tonumber(string.format("%.3f", getSkillGainMultiplier(skill.id)))
         
-        printout = printout .. '\n ' .. skill.id .. ', maximum skill level: ' .. getModifiedSkillMaximum(skill.id, getSkillMaximum(skill.id) ) .. ', experience gain multiplier: ' .. multiplier .. 'x'
+        printout = printout .. '\n ' .. skill.id .. ', maximum skill level: ' 
+          .. getModifiedSkillMaximum(skill.id, getSkillMaximum(skill.id) ) 
+          .. ', xp gain multiplier: ' 
+          .. multiplier .. 'x'
         
     end
     
@@ -312,6 +319,7 @@ return {
         getModifiedSkillGain = getModifiedSkillGain,
         isSkillLevelUpPossible = isSkillLevelUpPossible,
         isSkillGainPossible = isSkillGainPossible,
+        getDebugInfoToggle = getDebugInfoToggle,
         printDebugInfo = printDebugInfo
         
     }

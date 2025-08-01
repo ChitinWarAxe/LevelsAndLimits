@@ -26,6 +26,7 @@ local function skillUsedHandler(skillid, params)
 
         if I.lalUtil.isSkillGainPossible() then
             params.skillGain = I.lalUtil.getModifiedSkillGain(skillid, params.skillGain)
+            print(params.skillGain)
         else
             return false
         end
@@ -34,7 +35,11 @@ local function skillUsedHandler(skillid, params)
     
 end
 
-I.lalUtil.printDebugInfo()
+if I.lalUtil.getDebugInfoToggle() then
+
+    I.lalUtil.printDebugInfo()
+
+end
 
 I.SkillProgression.addSkillLevelUpHandler(skillLevelUpHandler)
 I.SkillProgression.addSkillUsedHandler(skillUsedHandler)

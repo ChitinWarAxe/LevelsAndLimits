@@ -1,6 +1,6 @@
 name: "Levels & Limits"
 description:
-"Options for setting skill level caps and skill experience gain reduction."
+"Options for setting skill level caps and modifying skill experience gain."
 
 settingsTitle: "Skill Level Cap Options"
 settingsDesc: "Options for setting skill level caps and more."
@@ -9,7 +9,7 @@ lalToggleName: "Enable Skill Level Limits"
 lalToggleDesc: "Enable limits for your skill level progression."
 
 lalLimitMajorName: "Major Skill Level Cap"
-lalLimitMajorDesc: "Sets the maximum level for major skills.\n\nSetting values above 100 won't uncap your skills."
+lalLimitMajorDesc: "Sets the maximum level for major skills.\n\n! Setting values above 100 won't uncap your skills!"
 
 lalLimitMinorName: "Minor Skill Level Cap"
 lalLimitMinorDesc: "Sets the maximum level for minor skills."
@@ -37,7 +37,7 @@ lalRacialSkillMalusDesc: "The amount by which the maximum skill level is reduced
 
 lalLevelProgressLimitToggleName: "Enable Level Up Progress Limit"
 lalLevelProgressLimitToggleDesc: "Requires Skill Level Cap Options and/or Skill Experience Options to be enabled to have any effect.
-\n\nWith Skill Level Cap Options enabled, skills stop levelling up once your level progress reaches the configured limit.
+\n\nWith Skill Level Cap Options enabled, skills stop levelling up once your level progress reaches the configured limit. (By default 10/10 progress.)
 \n\nWith Skill Experience Options enabled, skills stop gaining experience.
 \n\nIf only the latter is enabled, skills won't gain experience, but can still be increased using trainers and books."
 
@@ -48,20 +48,26 @@ levelUpFailTrainer: "Despite your efforts, the training yields no result."
 levelUpFailBook: "The knowledge in this book eludes you."
 
 settingsTitleXP: "Skill Experience Options"
-settingsDescXP: "Options related to skill experience gain.\n\nIncompatible with any mod that meddles with experience gain via Lua."
+settingsDescXP: "Options for modifying skill experience gain.\n\nIncompatible with any mod that meddles with experience gain via Lua."
 
 lalXPToggleName: "Enable Skill Experience Options"
 lalXPToggleDesc: "Enable options for skill experience gain."
 
 lalXPGlobalMultiplierName: "Global Skill Experience Multiplier"
-lalXPGlobalMultiplierDesc: "Any gained experience will be multiplied by this divisor.\n\nExample: A multiplier of 0.5 will half all gained skill experience."
+lalXPGlobalMultiplierDesc: "Any gained experience will be multiplied with this multiplier.
+\n\nExample: A multiplier of 0.5 will half all gained skill experience. Anything above 1 will increase your skill gain!"
 
 lalXPDiminishingToggleName: "Diminishing Returns With Increasing Skill Levels"
-lalXPDiminishingToggleDesc: "Enable diminishing returns on skill experience gain. The higher the skill level, the less experience is gained for this skill.\nWill be applied after the Global Skill Experience Divisor.
-\n\nExample: Experience gained for a skill with the level of 47 will be divided by 4.7, skill experience with level 20 will be divided by 2. The calculated divisor will always be at least 1."
+lalXPDiminishingToggleDesc: "Enable diminishing returns on skill experience gain. The higher the skill level, the less experience is gained for this skill.\nWill be applied after the Global Skill Experience Multiplier.
+\n\nExample: A skill with the skill level 25 would become a diminishing returns multiplier of 0.4!
+\nThe calculation would be as follows:
+\n1 / ( Skill level / 10 )
+\n\nThe calculated multiplier can further be modified the diminishing returns modifier."
 
-lalXPDiminishingMultiplierName: "Diminishing Returns Multiplier"
-lalXPDiminishingMultiplierDesc: "Adds a multiplier to modify the diminishing returns.\n\nExample: If set to 0.5, a calculated diminishing returns divisor of 4.7 would then become 2.35."
+lalXPDiminishingMultiplierName: "Diminishing Returns Modifier"
+lalXPDiminishingMultiplierDesc: "Adds a multiplier to modify the diminishing returns.
+\n\nExample: If set to 0.5, a calculated diminishing returns multiplier of 0.4 would then become 0.8, making the diminishing returns less severe.
+\nIf set to 2, the diminishing returns would be even more impactful!"
 
 lalXPDisableToggleName: "Disable Skill Gain"
 lalXPDisableToggleDesc: "Disable any skill experience gain. Increasing skill levels via training or books is still possible."
@@ -76,5 +82,5 @@ settingsTitleY: "Some More Options!"
 settingsDescY: "Options that affect both Skill Level Cap and Skill Experience Options."
 
 lalShowDebugInfoName: "Show Debug Info"
-lalShowDebugInfoDesc: "Gain more insight into your maximum skill levels and gained experience."
+lalShowDebugInfoDesc: "Gain more insight into your maximum skill levels and gained experience. Printed to the log when loading a save or reloading Lua."
 
