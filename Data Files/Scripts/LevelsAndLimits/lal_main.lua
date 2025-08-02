@@ -7,6 +7,7 @@ local function skillLevelUpHandler(skillid, options)
 
     if I.lalUtil.getLaLToggle() then
     
+        print(I.lalUtil.isSkillLevelUpPossible(skillid, options))
         local skillLevelUpPossible = I.lalUtil.isSkillLevelUpPossible(skillid, options)
         
         if skillLevelUpPossible == false then

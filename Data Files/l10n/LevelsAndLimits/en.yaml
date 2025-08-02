@@ -35,13 +35,14 @@ lalRacialSkillToggleDesc: "When enabled, your maximum skill level is influenced 
 lalRacialSkillMalusName: "Racial Skill Modifier"
 lalRacialSkillMalusDesc: "The amount by which the maximum skill level is reduced for skills not matching your race bonus."
 
-lalLevelProgressLimitToggleName: "Enable Level Up Progress Limit"
-lalLevelProgressLimitToggleDesc: "Requires Skill Level Cap Options and/or Skill Experience Options to be enabled to have any effect.
-\n\nWith Skill Level Cap Options enabled, skills stop levelling up once your level progress reaches the configured limit. (By default 10/10 progress.)
-\n\nWith Skill Experience Options enabled, skills stop gaining experience.
+lalLevelProgressLimitToggleName: "Level Up Progress Limit"
+lalLevelProgressLimitToggleDesc: "Stops progress towards a new level once the defined amount is reached. (The default would be 10/10).
+\n\nRequires to have at least Skill Level Cap Options or Skill Experience Options enabled. The actual effect is depending on which options are set.
+\n\nWith Skill Level Cap Options enabled, all skills stop levelling up once your level progress reaches the configured limit.
+\n\nWith Skill Experience Options enabled, all skills stop gaining experience once your level progress reaches the configured limit.
 \n\nIf only the latter is enabled, skills won't gain experience, but can still be increased using trainers and books."
 
-lalLevelProgressLimitName: "Level Up Progress Limit"
+lalLevelProgressLimitName: "Level Up Progress Limit Amount"
 lalLevelProgressLimitDesc: "The maximum amount of level up progress allowed before skill increases are halted."
 
 levelUpFailTrainer: "Despite your efforts, the training yields no result."

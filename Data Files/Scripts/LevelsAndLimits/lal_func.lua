@@ -220,7 +220,8 @@ local function isSkillLevelUpPossible(skillid, options)
     local skillStat = types.NPC.stats.skills[skillid](self)
     local skillLevel = skillStat.base
     
-    if skillLevel >= getSkillMaximum(skillid) then
+    -- print('skill level: '.. skillLevel .. ' max skill lvl: ' .. getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) )
+    if skillLevel >= getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) then
         return false
     end
 
