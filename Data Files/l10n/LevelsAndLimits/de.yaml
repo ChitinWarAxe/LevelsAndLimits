@@ -1,50 +1,86 @@
 name: "Levels & Limits"
 description:
-"Konfigurierbare Fähigkeitsstufenbeschränkungen basierend darauf, ob die Fähigkeiten Haupt-, Neben- oder Sonstige-Fähigkeiten sind.\n\n
-Zusätzliche Beschränkungen können für Fähigkeiten konfiguriert werden, die nicht zu deiner Klassenspezialisierung passen oder nicht von deinen bevorzugten Attributen beeinflusst werden."
+"Optionen zum Festlegen von Fertigkeits-Level-Begrenzungen und zur Änderung des Fertigkeitserfahrungsgewinns."
 
-settingsTitle: "Optionen"
-settingsDesc: "Einstellungen für dieses Mod"
+settingsTitle: "Fertigkeits-Level-Begrenzungsoptionen"
+settingsDesc: "Optionen zum Festlegen von Fertigkeits-Level-Begrenzungen und mehr."
 
-lalToggleName: "Aktivieren/Deaktivieren der Fähigkeitslevel-Limits"
-lalToggleDesc: "Aktivieren oder deaktivieren der Limits für Ihren Fähigkeitslevel-Fortschritt."
+lalToggleName: "Fertigkeits-Level-Grenzen aktivieren"
+lalToggleDesc: "Aktiviert Grenzen für deinen Fertigkeits-Level-Fortschritt."
 
-lalLimitMajorName: "Maximale Stufe für Hauptfähigkeiten"
-lalLimitMajorDesc: "Legt das maximale Level für Hauptfähigkeiten fest."
+lalLimitMajorName: "Hauptfertigkeits-Level-Begrenzung"
+lalLimitMajorDesc: "Legt das maximale Level für Hauptfertigkeiten fest.\n\nWerte über 100 werden deine Fertigkeiten nicht entgrenzen!"
 
-lalLimitMinorName: "Maximale Stufe für Nebenfähigkeiten"
-lalLimitMinorDesc: "Legt das maximale Level für Nebenfähigkeiten fest."
+lalLimitMinorName: "Nebenfertigkeits-Level-Begrenzung"
+lalLimitMinorDesc: "Legt das maximale Level für Nebenfertigkeiten fest."
 
-lalLimitMiscName: "Maximale Stufe für Sonstige Fähigkeiten"
-lalLimitMiscDesc: "Legt das maximale Level für sonstige Fähigkeiten fest."
+lalLimitMiscName: "Sonstige Fertigkeits-Level-Begrenzung"
+lalLimitMiscDesc: "Legt das maximale Level für sonstige Fertigkeiten fest."
 
-lalSpecializationName: "Spezialisierungs-Modifikator aktivieren"
-lalSpecializationDesc: "Wenn aktiviert, wird dein maximales Fähigkeitslevel davon beeinflusst, ob die Fähigkeit zu deiner Klassenspezialisierung passt. Fähigkeiten außerhalb deiner Spezialisierung haben ein reduziertes maximales Level."
+lalSpecializationToggleName: "Klassenspezialisierungs-Modifikator aktivieren"
+lalSpecializationToggleDesc: "Wenn aktiviert, wird dein maximales Fertigkeits-Level davon beeinflusst, ob die Fertigkeit zu deiner Klassenspezialisierung passt.\n\nFertigkeiten außerhalb deiner Spezialisierung haben ein reduziertes maximales Level."
 
-lalSpecializationToggleName: "Spezialisierungs-Modifikator aktivieren"
-lalSpecializationToggleDesc: "Wenn aktiviert, wird dein maximales Fähigkeitslevel davon beeinflusst, ob die Fähigkeit zu deiner Klassenspezialisierung passt. Fähigkeiten außerhalb deiner Spezialisierung haben ein reduziertes maximales Level."
+lalSpecializationMalusName: "Klassenspezialisierungs-Modifikator"
+lalSpecializationMalusDesc: "Der Betrag, um den das maximale Fertigkeits-Level für Fertigkeiten reduziert wird, die nicht zu deiner Klassenspezialisierung passen."
 
-lalSpecializationMalusName: "Malus für falsche Spezialisierung"
-lalSpecializationMalusDesc: "Die Höhe, um die das maximale Fähigkeitslevel für Fähigkeiten reduziert wird, die nicht zu deiner Klassenspezialisierung passen."
+lalFavoredAttributesToggleName: "Bevorzugte Attribute-Modifikator aktivieren"
+lalFavoredAttributesToggleDesc: "Wenn aktiviert, wird dein maximales Fertigkeits-Level davon beeinflusst, ob die Fertigkeit von deinen bevorzugten Attributen gesteuert wird.\n\nFertigkeiten, die nicht von deinen bevorzugten Attributen gesteuert werden, haben ein reduziertes maximales Level."
 
-lalFavoredAttributesToggleName: "Modifikator für bevorzugte Attribute aktivieren"
-lalFavoredAttributesToggleDesc: "Wenn aktiviert, wird dein maximales Fähigkeitslevel davon beeinflusst, ob die Fähigkeit von deinen bevorzugten Attributen beeinflusst wird. Fähigkeiten, die nicht von deinen bevorzugten Attributen beeinflusst werden, haben ein reduziertes maximales Level."
+lalFavoredAttributesMalusName: "Bevorzugte Attribute-Modifikator"
+lalFavoredAttributesMalusDesc: "Der Betrag, um den das maximale Fertigkeits-Level für Fertigkeiten reduziert wird, die nicht von deinen bevorzugten Attributen gesteuert werden."
 
-lalFavoredAttributesMalusName: "Malus für falsche Attribute"
-lalFavoredAttributesMalusDesc: "Die Höhe, um die das maximale Fähigkeitslevel für Fähigkeiten reduziert wird, die nicht von deinen bevorzugten Attributen beeinflusst werden."
+lalRacialSkillToggleName: "Rassenfertigkeit-Modifikator aktivieren"
+lalRacialSkillToggleDesc: "Wenn aktiviert, wird dein maximales Fertigkeits-Level davon beeinflusst, ob die Fertigkeit mit den Fertigkeiten aus dem Rassenbonus übereinstimmt.\n\nFertigkeiten, die keinen Bonus durch deine Rasse erhalten haben, haben ein reduziertes maximales Level.\n\nDie Bonushöhe spielt keine Rolle, nur ob überhaupt ein Bonus für diese Fertigkeit vorhanden ist."
 
-lalRacialSkillToggleName: "Rassenbasierten Fertigkeitsmodifikator aktivieren"
-lalRacialSkillToggleDesc: "Wenn aktiviert, wird das maximale Fertigkeitsniveau davon beeinflusst, ob die Fertigkeit mit den Boni der Rasse übereinstimmt. Fertigkeiten, die keinen Bonus durch deine Rasse erhalten, haben ein reduziertes Maximum. Die Höhe des Bonus spielt keine Rolle, nur ob überhaupt ein Bonus für diese Fertigkeit existiert."
+lalRacialSkillMalusName: "Rassenfertigkeit-Modifikator"
+lalRacialSkillMalusDesc: "Der Betrag, um den das maximale Fertigkeits-Level für Fertigkeiten reduziert wird, die nicht zu deinem Rassenbonus passen."
 
-lalRacialSkillMalusName: "Rassenbasierter Fertigkeitsmalus"
-lalRacialSkillMalusDesc: "Der Wert, um den das maximale Fertigkeitsniveau für Fertigkeiten reduziert wird, die nicht mit deinem Rassenbonus übereinstimmen."
+lalLevelProgressLimitToggleName: "Level-Aufstiegs-Fortschrittsbegrenzung"
+lalLevelProgressLimitToggleDesc: "Stoppt den Fortschritt zu einem neuen Level, sobald der definierte Betrag erreicht ist. (Standard wäre 10/10).
+\n\nErfordert, dass mindestens Fertigkeits-Level-Begrenzungsoptionen oder Fertigkeitserfahrungsoptionen aktiviert sind. Der tatsächliche Effekt hängt davon ab, welche Optionen gesetzt sind.
+\n\nMit aktivierten Fertigkeits-Level-Begrenzungsoptionen hören alle Fertigkeiten auf zu leveln, sobald dein Level-Fortschritt die konfigurierte Grenze erreicht.
+\n\nMit aktivierten Fertigkeitserfahrungsoptionen hören alle Fertigkeiten auf, Erfahrung zu sammeln, sobald dein Level-Fortschritt die konfigurierte Grenze erreicht.
+\n\nWenn nur letzteres aktiviert ist, sammeln Fertigkeiten keine Erfahrung, können aber trotzdem durch Trainer und Bücher erhöht werden."
 
-lalLevelProgressLimitToggleName: "Stufenaufstieg-Fortschrittslimit aktivieren"
-lalLevelProgressLimitToggleDesc: "Wenn aktiviert, werden Fertigkeiten nicht mehr aufsteigen, sobald dein Fortschritt das konfigurierte Limit erreicht."
+lalLevelProgressLimitName: "Level-Aufstiegs-Fortschrittsbegrenzungsanzahl"
+lalLevelProgressLimitDesc: "Die maximale Anzahl des Level-Aufstiegs-Fortschritts, die erlaubt ist, bevor Fertigkeitssteigerungen gestoppt werden."
 
-lalLevelProgressLimitName: "Stufenaufstieg-Fortschrittslimit"
-lalLevelProgressLimitDesc: "Der maximale Fortschrittswert, der erlaubt ist, bevor die Fertigkeitssteigerung gestoppt wird."
-
-levelUpFailTrainer: "Das Training bringt dir keine neuen Erkenntnisse."
+levelUpFailTrainer: "Trotz deiner Bemühungen bringt das Training kein Ergebnis."
 levelUpFailBook: "Das Wissen in diesem Buch bleibt dir verschlossen."
 
+settingsTitleXP: "Fertigkeitserfahrungsoptionen"
+settingsDescXP: "Optionen zur Änderung des Fertigkeitserfahrungsgewinns.\n\nInkompatibel mit allen Mods, die den Erfahrungsgewinn über Lua manipulieren."
+
+lalXPToggleName: "Fertigkeitserfahrungsoptionen aktivieren"
+lalXPToggleDesc: "Aktiviert Optionen für den Fertigkeitserfahrungsgewinn."
+
+lalXPGlobalMultiplierName: "Globaler Fertigkeitserfahrungs-Multiplikator"
+lalXPGlobalMultiplierDesc: "Jede gewonnene Erfahrung wird mit diesem Multiplikator multipliziert.
+\n\nBeispiel: Ein Multiplikator von 0,5 halbiert alle gewonnene Fertigkeitserfahrung. Alles über 1 erhöht deinen Fertigkeitsgewinn!"
+
+lalXPDiminishingToggleName: "Abnehmende Erträge bei steigenden Fertigkeits-Leveln"
+lalXPDiminishingToggleDesc: "Aktiviert abnehmende Erträge beim Fertigkeitserfahrungsgewinn. Je höher das Fertigkeits-Level, desto weniger Erfahrung wird für diese Fertigkeit gewonnen.\nWird nach dem Globalen Fertigkeitserfahrungs-Multiplikator angewendet.
+\n\nBeispiel: Eine Fertigkeit mit Fertigkeits-Level 25 würde einen Multiplikator für abnehmende Erträge von 0,4 erhalten!
+\nDie Berechnung wäre wie folgt:
+\n1 / ( Fertigkeits-Level / 10 )
+\n\nDer berechnete Multiplikator kann weiter durch den Modifikator für abnehmende Erträge geändert werden."
+
+lalXPDiminishingMultiplierName: "Modifikator für abnehmende Erträge"
+lalXPDiminishingMultiplierDesc: "Fügt einen Multiplikator hinzu, um die abnehmenden Erträge zu modifizieren.
+\n\nBeispiel: Wenn auf 0,5 gesetzt, würde ein berechneter Multiplikator für abnehmende Erträge von 0,4 dann zu 0,8 werden, wodurch die abnehmenden Erträge weniger schwerwiegend werden.
+\nWenn auf 2 gesetzt, wären die abnehmenden Erträge noch einflussreicher!"
+
+lalXPDisableToggleName: "Fertigkeitsgewinn deaktivieren"
+lalXPDisableToggleDesc: "Deaktiviert jeglichen Fertigkeitserfahrungsgewinn. Das Erhöhen von Fertigkeits-Leveln durch Training oder Bücher ist weiterhin möglich."
+
+lalDisableTrainingToggleName: "Fertigkeitstraining deaktivieren"
+lalDisableTrainingToggleDesc: "Wenn aktiviert, können Fertigkeiten nicht mit einem Trainer verbessert werden."
+
+lalDisableBooksToggleName: "Fertigkeitsbücher deaktivieren"
+lalDisableBooksToggleDesc: "Wenn aktiviert, können Fertigkeiten nicht mit Fertigkeitsbüchern verbessert werden."
+
+settingsTitleY: "Weitere Optionen!"
+settingsDescY: "Optionen, die sowohl Fertigkeits-Level-Begrenzung als auch Fertigkeitserfahrungsoptionen betreffen."
+
+lalShowDebugInfoName: "Debug-Informationen anzeigen"
+lalShowDebugInfoDesc: "Gewinne mehr Einblick in deine maximalen Fertigkeits-Level und gewonnene Erfahrung. Wird ins Log geschrieben beim Laden eines Spielstands oder beim Neuladen von Lua."

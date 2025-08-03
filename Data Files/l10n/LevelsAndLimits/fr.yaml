@@ -1,50 +1,86 @@
-name: "Niveaux & Limites"
+name: "Levels & Limits"
 description:
-"Limites de niveau de compétence configurables en fonction du type de compétences : majeures, mineures ou diverses.\n\n
-Des limites supplémentaires peuvent être configurées pour les compétences qui ne correspondent pas à la spécialisation de votre classe ou qui ne sont pas régies par vos attributs favoris."
+"Options pour définir les limites de niveau de compétences et modifier le gain d'expérience des compétences."
 
-settingsTitle: "Options"
-settingsDesc: "Paramètres pour ce mod"
+settingsTitle: "Options de limite de niveau de compétences"
+settingsDesc: "Options pour définir les limites de niveau de compétences et plus."
 
-lalToggleName: "Activer/Désactiver les limites de niveau de compétence"
-lalToggleDesc: "Activez ou désactivez les limites pour la progression de votre niveau de compétence."
+lalToggleName: "Activer les limites de niveau de compétences"
+lalToggleDesc: "Active les limites pour la progression de votre niveau de compétences."
 
-lalLimitMajorName: "Limite de Niveau des Compétences Majeures"
-lalLimitMajorDesc: "Définit le niveau maximum pour les compétences majeures"
+lalLimitMajorName: "Limite de niveau des compétences principales"
+lalLimitMajorDesc: "Définit le niveau maximum pour les compétences principales.\n\nDéfinir des valeurs au-dessus de 100 ne supprimera pas la limite de vos compétences !"
 
-lalLimitMinorName: "Limite de Niveau des Compétences Mineures"
-lalLimitMinorDesc: "Définit le niveau maximum pour les compétences mineures"
+lalLimitMinorName: "Limite de niveau des compétences mineures"
+lalLimitMinorDesc: "Définit le niveau maximum pour les compétences mineures."
 
-lalLimitMiscName: "Limite de Niveau des Compétences Diverses"
-lalLimitMiscDesc: "Définit le niveau maximum pour les compétences diverses"
+lalLimitMiscName: "Limite de niveau des compétences diverses"
+lalLimitMiscDesc: "Définit le niveau maximum pour les compétences diverses."
 
-lalSpecializationName: "Activer le Modificateur de Spécialisation de Classe"
-lalSpecializationDesc: "Lorsque activé, votre niveau de compétence maximum est influencé par la correspondance de la compétence avec la spécialisation de votre classe. Les compétences en dehors de votre spécialisation ont un niveau maximum réduit."
+lalSpecializationToggleName: "Activer le modificateur de spécialisation de classe"
+lalSpecializationToggleDesc: "Lorsqu'activé, votre niveau maximum de compétence est influencé par le fait que la compétence corresponde à votre spécialisation de classe.\n\nLes compétences en dehors de votre spécialisation ont un niveau maximum réduit."
 
-lalSpecializationToggleName: "Activer le Modificateur de Spécialisation de Classe"
-lalSpecializationToggleDesc: "Lorsque activé, votre niveau de compétence maximum est influencé par la correspondance de la compétence avec la spécialisation de votre classe. Les compétences en dehors de votre spécialisation ont un niveau maximum réduit."
+lalSpecializationMalusName: "Modificateur de spécialisation de classe"
+lalSpecializationMalusDesc: "Le montant par lequel le niveau maximum de compétence est réduit pour les compétences qui ne correspondent pas à votre spécialisation de classe."
 
-lalSpecializationMalusName: "Malus de Spécialisation de Classe"
-lalSpecializationMalusDesc: "Le montant de la réduction du niveau maximum pour les compétences qui ne correspondent pas à la spécialisation de votre classe."
+lalFavoredAttributesToggleName: "Activer le modificateur d'attributs favorisés de classe"
+lalFavoredAttributesToggleDesc: "Lorsqu'activé, votre niveau maximum de compétence est influencé par le fait que la compétence soit gouvernée par vos attributs favorisés.\n\nLes compétences non gouvernées par vos attributs favorisés ont un niveau maximum réduit."
 
-lalFavoredAttributesToggleName: "Activer le Modificateur des Attributs Favoris"
-lalFavoredAttributesToggleDesc: "Lorsque activé, votre niveau de compétence maximum est influencé par la correspondance de la compétence avec vos attributs favoris. Les compétences qui ne sont pas régies par vos attributs favoris ont un niveau maximum réduit."
+lalFavoredAttributesMalusName: "Modificateur d'attributs favorisés"
+lalFavoredAttributesMalusDesc: "Le montant par lequel le niveau maximum de compétence est réduit pour les compétences non gouvernées par vos attributs favorisés."
 
-lalFavoredAttributesMalusName: "Malus des Attributs Favoris"
-lalFavoredAttributesMalusDesc: "Le montant de la réduction du niveau maximum pour les compétences qui ne sont pas régies par vos attributs favoris."
+lalRacialSkillToggleName: "Activer le modificateur de compétence raciale"
+lalRacialSkillToggleDesc: "Lorsqu'activé, votre niveau maximum de compétence est influencé par le fait que la compétence corresponde aux compétences du bonus racial.\n\nLes compétences qui n'ont pas reçu de bonus par votre race ont un niveau maximum réduit.\n\nLe montant du bonus n'a pas d'importance, seulement s'il y a un bonus pour cette compétence."
 
-lalRacialSkillToggleName: "Activer le Modificateur de Compétence Raciale"
-lalRacialSkillToggleDesc: "Lorsqu'activé, votre niveau maximum de compétence est influencé selon que la compétence correspond aux bonus raciaux. Les compétences qui n'ont pas reçu de bonus de votre race ont un niveau maximum réduit. Le montant du bonus n'importe pas, seule la présence d'un bonus pour cette compétence compte."
+lalRacialSkillMalusName: "Modificateur de compétence raciale"
+lalRacialSkillMalusDesc: "Le montant par lequel le niveau maximum de compétence est réduit pour les compétences qui ne correspondent pas à votre bonus racial."
 
-lalRacialSkillMalusName: "Malus de Compétence Raciale"
-lalRacialSkillMalusDesc: "La valeur de réduction du niveau maximum de compétence pour les compétences ne correspondant pas à votre bonus racial."
+lalLevelProgressLimitToggleName: "Limite de progression de montée de niveau"
+lalLevelProgressLimitToggleDesc: "Arrête la progression vers un nouveau niveau une fois que le montant défini est atteint. (La valeur par défaut serait 10/10).
+\n\nNécessite d'avoir au moins les options de limite de niveau de compétences ou les options d'expérience de compétences activées. L'effet réel dépend des options configurées.
+\n\nAvec les options de limite de niveau de compétences activées, toutes les compétences arrêtent de monter en niveau une fois que votre progression de niveau atteint la limite configurée.
+\n\nAvec les options d'expérience de compétences activées, toutes les compétences arrêtent de gagner de l'expérience une fois que votre progression de niveau atteint la limite configurée.
+\n\nSi seule cette dernière est activée, les compétences ne gagneront pas d'expérience, mais peuvent toujours être augmentées en utilisant des entraîneurs et des livres."
 
-lalLevelProgressLimitToggleName: "Activer la Limite de Progression de Niveau"
-lalLevelProgressLimitToggleDesc: "Lorsqu'activé, empêche les compétences d'augmenter une fois que votre progression atteint la limite configurée."
+lalLevelProgressLimitName: "Montant de la limite de progression de montée de niveau"
+lalLevelProgressLimitDesc: "Le montant maximum de progression de montée de niveau autorisé avant que les augmentations de compétences soient arrêtées."
 
-lalLevelProgressLimitName: "Limite de Progression de Niveau"
-lalLevelProgressLimitDesc: "La quantité maximale de progression de niveau autorisée avant que l'augmentation des compétences ne soit arrêtée."
+levelUpFailTrainer: "Malgré vos efforts, l'entraînement ne donne aucun résultat."
+levelUpFailBook: "La connaissance de ce livre vous échappe."
 
-levelUpFailTrainer: "Malgré tous vos efforts, l'entraînement n'apporte aucun progrès."
-levelUpFailBook: "Les connaissances de ce livre sont hors de votre portée."
+settingsTitleXP: "Options d'expérience de compétences"
+settingsDescXP: "Options pour modifier le gain d'expérience des compétences.\n\nIncompatible avec tout mod qui manipule le gain d'expérience via Lua."
 
+lalXPToggleName: "Activer les options d'expérience de compétences"
+lalXPToggleDesc: "Active les options pour le gain d'expérience des compétences."
+
+lalXPGlobalMultiplierName: "Multiplicateur global d'expérience de compétences"
+lalXPGlobalMultiplierDesc: "Toute expérience gagnée sera multipliée par ce multiplicateur.
+\n\nExemple : Un multiplicateur de 0,5 réduira de moitié toute l'expérience de compétences gagnée. Toute valeur au-dessus de 1 augmentera votre gain de compétences !"
+
+lalXPDiminishingToggleName: "Rendements décroissants avec des niveaux de compétences croissants"
+lalXPDiminishingToggleDesc: "Active les rendements décroissants sur le gain d'expérience des compétences. Plus le niveau de compétence est élevé, moins d'expérience est gagnée pour cette compétence.\nSera appliqué après le multiplicateur global d'expérience de compétences.
+\n\nExemple : Une compétence avec le niveau de compétence 25 obtiendrait un multiplicateur de rendements décroissants de 0,4 !
+\nLe calcul serait le suivant :
+\n1 / ( Niveau de compétence / 10 )
+\n\nLe multiplicateur calculé peut être modifié davantage par le modificateur de rendements décroissants."
+
+lalXPDiminishingMultiplierName: "Modificateur de rendements décroissants"
+lalXPDiminishingMultiplierDesc: "Ajoute un multiplicateur pour modifier les rendements décroissants.
+\n\nExemple : Si défini à 0,5, un multiplicateur de rendements décroissants calculé de 0,4 deviendrait alors 0,8, rendant les rendements décroissants moins sévères.
+\nSi défini à 2, les rendements décroissants seraient encore plus impactants !"
+
+lalXPDisableToggleName: "Désactiver le gain de compétences"
+lalXPDisableToggleDesc: "Désactive tout gain d'expérience de compétences. Augmenter les niveaux de compétences via l'entraînement ou les livres reste possible."
+
+lalDisableTrainingToggleName: "Désactiver l'entraînement de compétences"
+lalDisableTrainingToggleDesc: "Lorsqu'activé, les compétences ne peuvent pas être améliorées en utilisant un entraîneur."
+
+lalDisableBooksToggleName: "Désactiver les livres de compétences"
+lalDisableBooksToggleDesc: "Lorsqu'activé, les compétences ne peuvent pas être améliorées en utilisant des livres de compétences."
+
+settingsTitleY: "Plus d'options !"
+settingsDescY: "Options qui affectent à la fois les limites de niveau de compétences et les options d'expérience de compétences."
+
+lalShowDebugInfoName: "Afficher les informations de débogage"
+lalShowDebugInfoDesc: "Obtenez plus d'informations sur vos niveaux maximum de compétences et l'expérience gagnée. Imprimé dans le journal lors du chargement d'une sauvegarde ou du rechargement de Lua."

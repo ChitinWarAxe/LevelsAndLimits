@@ -1,50 +1,86 @@
-name: "Niveauer & Grænser"
+name: "Levels & Limits"
 description:
-"Konfigurerbare færdighedsniveaugrænser baseret på om færdighederne er hoved-, biprodukt- eller forskelligartede.\n\n
-Yderligere grænser kan konfigureres for færdigheder, der ikke matcher din klasse-specialisering eller ikke styres af dine foretrukne attributter."
+"Muligheder for at sætte færdighedsniveau-grænser og ændre færdighedserfaring."
 
-settingsTitle: "Indstillinger"
-settingsDesc: "Indstillinger for denne mod"
+settingsTitle: "Færdighedsniveau-grænse muligheder"
+settingsDesc: "Muligheder for at sætte færdighedsniveau-grænser og mere."
 
-lalToggleName: "Aktiver/Deaktiver grænser for færdighedsniveauer"
-lalToggleDesc: "Aktiver eller deaktiver grænser for din færdighedsniveaufremgang."
+lalToggleName: "Aktivér færdighedsniveau-grænser"
+lalToggleDesc: "Aktivér grænser for din færdighedsniveau-progression."
 
-lalLimitMajorName: "Hovedfærdighedsniveau Grænse"
-lalLimitMajorDesc: "Indstiller det maksimale niveau for hovedfærdigheder"
+lalLimitMajorName: "Hovedfærdigheds niveau-grænse"
+lalLimitMajorDesc: "Sætter det maksimale niveau for hovedfærdigheder.\n\nAt sætte værdier over 100 vil ikke fjerne begrænsningen på dine færdigheder!"
 
-lalLimitMinorName: "Biproduktfærdighedsniveau Grænse"
-lalLimitMinorDesc: "Indstiller det maksimale niveau for biproduktfærdigheder"
+lalLimitMinorName: "Mindre færdigheds niveau-grænse"
+lalLimitMinorDesc: "Sætter det maksimale niveau for mindre færdigheder."
 
-lalLimitMiscName: "Forskelligartet Færdighedsniveau Grænse"
-lalLimitMiscDesc: "Indstiller det maksimale niveau for forskelligartede færdigheder"
+lalLimitMiscName: "Diverse færdigheds niveau-grænse"
+lalLimitMiscDesc: "Sætter det maksimale niveau for diverse færdigheder."
 
-lalSpecializationName: "Aktivér Klasse-Specialiseringsjustering"
-lalSpecializationDesc: "Når aktiveret, påvirkes dit maksimale færdighedsniveau af, om færdigheden matcher din klasse-specialisering. Færdigheder uden for din specialisering har et reduceret maksimalt niveau."
+lalSpecializationToggleName: "Aktivér klasse specialisering modifikator"
+lalSpecializationToggleDesc: "Når aktiveret påvirkes dit maksimale færdighedsniveau af, om færdigheden matcher din klasse specialisering.\n\nFærdigheder uden for din specialisering har et reduceret maksimalt niveau."
 
-lalSpecializationToggleName: "Aktivér Klasse-Specialiseringsjustering"
-lalSpecializationToggleDesc: "Når aktiveret, påvirkes dit maksimale færdighedsniveau af, om færdigheden matcher din klasse-specialisering. Færdigheder uden for din specialisering har et reduceret maksimalt niveau."
+lalSpecializationMalusName: "Klasse specialisering modifikator"
+lalSpecializationMalusDesc: "Det beløb hvormed det maksimale færdighedsniveau reduceres for færdigheder der ikke matcher din klasse specialisering."
 
-lalSpecializationMalusName: "Klasse-Specialiseringsmalus"
-lalSpecializationMalusDesc: "Det beløb, hvormed det maksimale færdighedsniveau reduceres for færdigheder, der ikke matcher din klasse-specialisering."
+lalFavoredAttributesToggleName: "Aktivér klasse foretrukne attributter modifikator"
+lalFavoredAttributesToggleDesc: "Når aktiveret påvirkes dit maksimale færdighedsniveau af, om færdigheden styres af dine foretrukne attributter.\n\nFærdigheder der ikke styres af dine foretrukne attributter har et reduceret maksimalt niveau."
 
-lalFavoredAttributesToggleName: "Aktivér Foretrukne Attributsjustering"
-lalFavoredAttributesToggleDesc: "Når aktiveret, påvirkes dit maksimale færdighedsniveau af, om færdigheden styres af dine foretrukne attributter. Færdigheder, der ikke styres af dine foretrukne attributter, har et reduceret maksimalt niveau."
+lalFavoredAttributesMalusName: "Foretrukne attributter modifikator"
+lalFavoredAttributesMalusDesc: "Det beløb hvormed det maksimale færdighedsniveau reduceres for færdigheder der ikke styres af dine foretrukne attributter."
 
-lalFavoredAttributesMalusName: "Foretrukne Attributsmalus"
-lalFavoredAttributesMalusDesc: "Det beløb, hvormed det maksimale færdighedsniveau reduceres for færdigheder, der ikke styres af dine foretrukne attributter."
+lalRacialSkillToggleName: "Aktivér race færdigheds modifikator"
+lalRacialSkillToggleDesc: "Når aktiveret påvirkes dit maksimale færdighedsniveau af, om færdigheden matcher færdighederne fra race bonussen.\n\nFærdigheder der ikke modtog en bonus fra din race har et reduceret maksimalt niveau.\n\nBonus mængden betyder ikke noget, kun om der overhovedet er en bonus for den færdighed."
 
-lalRacialSkillToggleName: "Aktiver Race-færdighedsmodifikator"
-lalRacialSkillToggleDesc: "Når aktiveret, påvirkes dit maksimale færdighedsniveau af, om færdigheden matcher bonusserne fra din race. Færdigheder, der ikke modtog en bonus fra din race, har et reduceret maksimumniveau. Bonusbeløbet er ligegyldigt, kun om der overhovedet er en bonus for den færdighed."
+lalRacialSkillMalusName: "Race færdigheds modifikator"
+lalRacialSkillMalusDesc: "Det beløb hvormed det maksimale færdighedsniveau reduceres for færdigheder der ikke matcher din race bonus."
 
-lalRacialSkillMalusName: "Race-færdighedsmalus"
-lalRacialSkillMalusDesc: "Den mængde hvormed det maksimale færdighedsniveau reduceres for færdigheder, der ikke matcher din racebonus."
+lalLevelProgressLimitToggleName: "Niveau fremskridt grænse"
+lalLevelProgressLimitToggleDesc: "Stopper fremskridt mod et nyt niveau når det definerede beløb er nået. (Standard ville være 10/10).
+\n\nKræver at have mindst færdighedsniveau-grænse muligheder eller færdighedserfaring muligheder aktiveret. Den faktiske effekt afhænger af hvilke muligheder der er sat.
+\n\nMed færdighedsniveau-grænse muligheder aktiveret stopper alle færdigheder med at stige i niveau når dit niveau fremskridt når den konfigurerede grænse.
+\n\nMed færdighedserfaring muligheder aktiveret stopper alle færdigheder med at få erfaring når dit niveau fremskridt når den konfigurerede grænse.
+\n\nHvis kun sidstnævnte er aktiveret vil færdigheder ikke få erfaring, men kan stadig øges ved hjælp af trænere og bøger."
 
-lalLevelProgressLimitToggleName: "Aktiver Level-op Fremskridtsgrænse"
-lalLevelProgressLimitToggleDesc: "Når aktiveret, stopper færdigheder med at stige i niveau, når din fremgang når den konfigurerede grænse."
+lalLevelProgressLimitName: "Niveau fremskridt grænse mængde"
+lalLevelProgressLimitDesc: "Den maksimale mængde niveau fremskridt tilladt før færdighedsstigninger stoppes."
 
-lalLevelProgressLimitName: "Level-op Fremskridtsgrænse"
-lalLevelProgressLimitDesc: "Den maksimale mængde level-op fremskridt tilladt før færdighedsforøgelse stoppes."
+levelUpFailTrainer: "På trods af dine anstrengelser giver træningen intet resultat."
+levelUpFailBook: "Viden i denne bog undgår dig."
 
-levelUpFailTrainer: "Trods dine anstrengelser, resulterer træningen i ingen fremskridt."
-levelUpFailBook: "Viden i denne bog er uden for din rækkevidde."
+settingsTitleXP: "Færdighedserfaring muligheder"
+settingsDescXP: "Muligheder for at ændre færdighedserfaring.\n\nInkompatibel med alle mods der manipulerer erfaring via Lua."
 
+lalXPToggleName: "Aktivér færdighedserfaring muligheder"
+lalXPToggleDesc: "Aktivér muligheder for færdighedserfaring."
+
+lalXPGlobalMultiplierName: "Global færdighedserfaring multiplikator"
+lalXPGlobalMultiplierDesc: "Al opnået erfaring vil blive multipliceret med denne multiplikator.
+\n\nEksempel: En multiplikator på 0,5 vil halvere al opnået færdighedserfaring. Værdier over 1 vil øge din færdighedsstigning!"
+
+lalXPDiminishingToggleName: "Aftagende afkast med stigende færdighedsniveauer"
+lalXPDiminishingToggleDesc: "Aktivér aftagende afkast på færdighedserfaring. Jo højere færdighedsniveauet er, desto mindre erfaring opnås for denne færdighed.\nVil blive anvendt efter den globale færdighedserfaring multiplikator.
+\n\nEksempel: En færdighed med færdighedsniveau 25 ville få en aftagende afkast multiplikator på 0,4!
+\nBeregningen ville være som følger:
+\n1 / ( Færdighedsniveau / 10 )
+\n\nDen beregnede multiplikator kan yderligere ændres af den aftagende afkast modifikator."
+
+lalXPDiminishingMultiplierName: "Aftagende afkast modifikator"
+lalXPDiminishingMultiplierDesc: "Tilføjer en multiplikator for at ændre de aftagende afkast.
+\n\nEksempel: Hvis sat til 0,5 ville en beregnet aftagende afkast multiplikator på 0,4 derefter blive 0,8, hvilket gør de aftagende afkast mindre alvorlige.
+\nHvis sat til 2 ville de aftagende afkast være endnu mere indflydelsesrige!"
+
+lalXPDisableToggleName: "Deaktivér færdighedsstigning"
+lalXPDisableToggleDesc: "Deaktivér al færdighedserfaring. At øge færdighedsniveauer via træning eller bøger er stadig muligt."
+
+lalDisableTrainingToggleName: "Deaktivér færdighedstræning"
+lalDisableTrainingToggleDesc: "Når aktiveret kan færdigheder ikke forbedres ved hjælp af en træner."
+
+lalDisableBooksToggleName: "Deaktivér færdighedsbøger"
+lalDisableBooksToggleDesc: "Når aktiveret kan færdigheder ikke forbedres ved hjælp af færdighedsbøger."
+
+settingsTitleY: "Flere muligheder!"
+settingsDescY: "Muligheder der påvirker både færdighedsniveau-grænser og færdighedserfaring muligheder."
+
+lalShowDebugInfoName: "Vis debug information"
+lalShowDebugInfoDesc: "Få mere indsigt i dine maksimale færdighedsniveauer og opnået erfaring. Udskrives til loggen når et save indlæses eller Lua genindlæses."

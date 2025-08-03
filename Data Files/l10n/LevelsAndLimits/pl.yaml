@@ -1,50 +1,86 @@
 name: "Levels & Limits"
 description:
-"Konfigurowalne limity poziomów umiejętności w zależności od tego, czy umiejętności są główne, drugorzędne, czy pozostałe.\n\n
-Dodatkowe limity można ustawić dla umiejętności, które nie pasują do specjalizacji klasy lub nie są rządzone przez ulubione atrybuty."
+"Opcje do ustawiania limitów poziomu umiejętności i modyfikowania zdobywania doświadczenia umiejętności."
 
-settingsTitle: "Opcje"
-settingsDesc: "Ustawienia dla tego modu"
+settingsTitle: "Opcje limitów poziomu umiejętności"
+settingsDesc: "Opcje do ustawiania limitów poziomu umiejętności i więcej."
 
-lalToggleName: "Włącz/Wyłącz Limity Poziomu Umiejętności"
-lalToggleDesc: "Włącz lub wyłącz limity dla postępu poziomu umiejętności."
+lalToggleName: "Włącz limity poziomu umiejętności"
+lalToggleDesc: "Włącza limity dla progresji poziomu twoich umiejętności."
 
-lalLimitMajorName: "Limit Poziomu Głównych Umiejętności"
-lalLimitMajorDesc: "Ustawia maksymalny poziom dla głównych umiejętności"
+lalLimitMajorName: "Limit poziomu umiejętności głównych"
+lalLimitMajorDesc: "Ustawia maksymalny poziom dla umiejętności głównych.\n\nUstawienie wartości powyżej 100 nie usunie limitów twoich umiejętności!"
 
-lalLimitMinorName: "Limit Poziomu Drugorzędnych Umiejętności"
-lalLimitMinorDesc: "Ustawia maksymalny poziom dla drugorzędnych umiejętności"
+lalLimitMinorName: "Limit poziomu umiejętności pomniejszych"
+lalLimitMinorDesc: "Ustawia maksymalny poziom dla umiejętności pomniejszych."
 
-lalLimitMiscName: "Limit Poziomu Pozostałych Umiejętności"
-lalLimitMiscDesc: "Ustawia maksymalny poziom dla pozostałych umiejętności"
+lalLimitMiscName: "Limit poziomu umiejętności różnych"
+lalLimitMiscDesc: "Ustawia maksymalny poziom dla umiejętności różnych."
 
-lalSpecializationName: "Włącz Modyfikator Specjalizacji Klasy"
-lalSpecializationDesc: "Gdy włączone, maksymalny poziom umiejętności jest zależny od tego, czy umiejętność pasuje do specjalizacji klasy. Umiejętności spoza specjalizacji mają obniżony maksymalny poziom."
+lalSpecializationToggleName: "Włącz modyfikator specjalizacji klasy"
+lalSpecializationToggleDesc: "Gdy włączone, twój maksymalny poziom umiejętności jest wpływany przez to, czy umiejętność pasuje do twojej specjalizacji klasy.\n\nUmiejętności poza twoją specjalizacją mają obniżony maksymalny poziom."
 
-lalSpecializationToggleName: "Włącz Modyfikator Specjalizacji Klasy"
-lalSpecializationToggleDesc: "Gdy włączone, maksymalny poziom umiejętności jest zależny od tego, czy umiejętność pasuje do specjalizacji klasy. Umiejętności spoza specjalizacji mają obniżony maksymalny poziom."
+lalSpecializationMalusName: "Modyfikator specjalizacji klasy"
+lalSpecializationMalusDesc: "Kwota o którą maksymalny poziom umiejętności jest obniżany dla umiejętności które nie pasują do twojej specjalizacji klasy."
 
-lalSpecializationMalusName: "Kara za Brak Specjalizacji Klasy"
-lalSpecializationMalusDesc: "Ilość, o którą maksymalny poziom umiejętności jest obniżany dla umiejętności, które nie pasują do specjalizacji klasy."
+lalFavoredAttributesToggleName: "Włącz modyfikator preferowanych atrybutów klasy"
+lalFavoredAttributesToggleDesc: "Gdy włączone, twój maksymalny poziom umiejętności jest wpływany przez to, czy umiejętność jest rządzona przez twoje preferowane atrybuty.\n\nUmiejętności nie rządzone przez twoje preferowane atrybuty mają obniżony maksymalny poziom."
 
-lalFavoredAttributesToggleName: "Włącz Modyfikator Ulubionych Atrybutów"
-lalFavoredAttributesToggleDesc: "Gdy włączone, maksymalny poziom umiejętności jest zależny od tego, czy umiejętność jest rządzona przez ulubione atrybuty. Umiejętności, które nie są rządzone przez ulubione atrybuty, mają obniżony maksymalny poziom."
+lalFavoredAttributesMalusName: "Modyfikator preferowanych atrybutów"
+lalFavoredAttributesMalusDesc: "Kwota o którą maksymalny poziom umiejętności jest obniżany dla umiejętności nie rządzonych przez twoje preferowane atrybuty."
 
-lalFavoredAttributesMalusName: "Kara za Brak Ulubionych Atrybutów"
-lalFavoredAttributesMalusDesc: "Ilość, o którą maksymalny poziom umiejętności jest obniżany dla umiejętności, które nie są rządzone przez ulubione atrybuty."
+lalRacialSkillToggleName: "Włącz modyfikator umiejętności rasowej"
+lalRacialSkillToggleDesc: "Gdy włączone, twój maksymalny poziom umiejętności jest wpływany przez to, czy umiejętność pasuje do umiejętności z bonusu rasowego.\n\nUmiejętności które nie otrzymały bonusu od twojej rasy mają obniżony maksymalny poziom.\n\nWysokość bonusu nie ma znaczenia, liczy się tylko czy w ogóle jest bonus dla tej umiejętności."
 
-lalRacialSkillToggleName: "Włącz Modyfikator Umiejętności Rasowych"
-lalRacialSkillToggleDesc: "Gdy włączone, maksymalny poziom umiejętności zależy od tego, czy umiejętność odpowiada bonusom rasowym. Umiejętności, które nie otrzymały bonusu od twojej rasy, mają obniżony poziom maksymalny. Wielkość bonusu nie ma znaczenia, liczy się tylko to, czy w ogóle jest bonus do danej umiejętności."
+lalRacialSkillMalusName: "Modyfikator umiejętności rasowej"
+lalRacialSkillMalusDesc: "Kwota o którą maksymalny poziom umiejętności jest obniżany dla umiejętności które nie pasują do twojego bonusu rasowego."
 
-lalRacialSkillMalusName: "Kara do Umiejętności Rasowych"
-lalRacialSkillMalusDesc: "Wartość, o jaką zostaje obniżony maksymalny poziom umiejętności dla umiejętności nieodpowiadających twojemu bonusowi rasowemu."
+lalLevelProgressLimitToggleName: "Limit postępu awansowania poziomu"
+lalLevelProgressLimitToggleDesc: "Zatrzymuje postęp w kierunku nowego poziomu gdy osiągnięta zostanie określona kwota. (Domyślnie byłoby to 10/10).
+\n\nWymaga włączenia przynajmniej Opcji Limitów Poziomu Umiejętności lub Opcji Doświadczenia Umiejętności. Rzeczywisty efekt zależy od tego które opcje są ustawione.
+\n\nZ włączonymi Opcjami Limitów Poziomu Umiejętności wszystkie umiejętności przestają awansować gdy twój postęp poziomu osiągnie skonfigurowany limit.
+\n\nZ włączonymi Opcjami Doświadczenia Umiejętności wszystkie umiejętności przestają zdobywać doświadczenie gdy twój postęp poziomu osiągnie skonfigurowany limit.
+\n\nJeśli tylko ta ostatnia jest włączona, umiejętności nie będą zdobywać doświadczenia, ale nadal mogą być zwiększane przy użyciu trenerów i książek."
 
-lalLevelProgressLimitToggleName: "Włącz Limit Postępu Poziomów"
-lalLevelProgressLimitToggleDesc: "Gdy włączone, zatrzymuje rozwój umiejętności, gdy twój postęp osiągnie skonfigurowany limit."
+lalLevelProgressLimitName: "Kwota limitu postępu awansowania poziomu"
+lalLevelProgressLimitDesc: "Maksymalna kwota postępu awansowania poziomu dozwolona zanim wzrosty umiejętności zostaną zatrzymane."
 
-lalLevelProgressLimitName: "Limit Postępu Poziomów"
-lalLevelProgressLimitDesc: "Maksymalna dozwolona ilość postępu poziomów przed zatrzymaniem rozwoju umiejętności."
+levelUpFailTrainer: "Pomimo twoich wysiłków, trening nie przynosi rezultatu."
+levelUpFailBook: "Wiedza w tej książce umyka ci."
 
-levelUpFailTrainer: "Pomimo starań, trening nie przynosi postępów."
-levelUpFailBook: "Wiedza w tej książce jest poza twoim zasięgiem."
+settingsTitleXP: "Opcje doświadczenia umiejętności"
+settingsDescXP: "Opcje do modyfikowania zdobywania doświadczenia umiejętności.\n\nNiekompatybilne z każdym modem który manipuluje zdobywaniem doświadczenia przez Lua."
 
+lalXPToggleName: "Włącz opcje doświadczenia umiejętności"
+lalXPToggleDesc: "Włącza opcje dla zdobywania doświadczenia umiejętności."
+
+lalXPGlobalMultiplierName: "Globalny mnożnik doświadczenia umiejętności"
+lalXPGlobalMultiplierDesc: "Każde zdobyte doświadczenie będzie pomnożone przez ten mnożnik.
+\n\nPrzykład: Mnożnik 0,5 zmniejszy o połowę całe zdobyte doświadczenie umiejętności. Wszystko powyżej 1 zwiększy twój postęp umiejętności!"
+
+lalXPDiminishingToggleName: "Malejące zyski z rosnącymi poziomami umiejętności"
+lalXPDiminishingToggleDesc: "Włącza malejące zyski w zdobywaniu doświadczenia umiejętności. Im wyższy poziom umiejętności, tym mniej doświadczenia jest zdobywane dla tej umiejętności.\nBędzie zastosowane po Globalnym Mnożniku Doświadczenia Umiejętności.
+\n\nPrzykład: Umiejętność z poziomem umiejętności 25 otrzymałaby mnożnik malejących zysków 0,4!
+\nObliczenie wyglądałoby następująco:
+\n1 / ( Poziom umiejętności / 10 )
+\n\nObliczony mnożnik może być dalej modyfikowany przez modyfikator malejących zysków."
+
+lalXPDiminishingMultiplierName: "Modyfikator malejących zysków"
+lalXPDiminishingMultiplierDesc: "Dodaje mnożnik do modyfikowania malejących zysków.
+\n\nPrzykład: Jeśli ustawione na 0,5, obliczony mnożnik malejących zysków 0,4 stałby się wtedy 0,8, czyniąc malejące zyski mniej dotkliwymi.
+\nJeśli ustawione na 2, malejące zyski byłyby jeszcze bardziej wpływowe!"
+
+lalXPDisableToggleName: "Wyłącz wzrost umiejętności"
+lalXPDisableToggleDesc: "Wyłącza każde zdobywanie doświadczenia umiejętności. Zwiększanie poziomów umiejętności przez trening lub książki jest nadal możliwe."
+
+lalDisableTrainingToggleName: "Wyłącz trening umiejętności"
+lalDisableTrainingToggleDesc: "Gdy włączone, umiejętności nie mogą być ulepszone przy użyciu trenera."
+
+lalDisableBooksToggleName: "Wyłącz książki umiejętności"
+lalDisableBooksToggleDesc: "Gdy włączone, umiejętności nie mogą być ulepszone przy użyciu książek umiejętności."
+
+settingsTitleY: "Więcej opcji!"
+settingsDescY: "Opcje które wpływają zarówno na Limity Poziomu Umiejętności jak i Opcje Doświadczenia Umiejętności."
+
+lalShowDebugInfoName: "Pokaż informacje debugowania"
+lalShowDebugInfoDesc: "Uzyskaj więcej wglądu w swoje maksymalne poziomy umiejętności i zdobyte doświadczenie. Wypisywane do logu przy ładowaniu zapisu lub przeładowaniu Lua."

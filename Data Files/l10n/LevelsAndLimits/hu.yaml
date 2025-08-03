@@ -1,50 +1,86 @@
-name: "Szintek és Korlátok"
+name: "Levels & Limits"
 description:
-"Beállítható képességszint-korlátok attól függően, hogy a képességek fő, másodlagos vagy egyéb kategóriába tartoznak.\n\n
-További korlátokat állíthat be olyan képességekre, amelyek nem felelnek meg osztályspecializációjának, vagy nem irányítanak a kedvelt attribútumai."
+"Lehetőségek a képesség szint korlátok beállítására és a képesség tapasztalat szerzés módosítására."
 
-settingsTitle: "Beállítások"
-settingsDesc: "Beállítások ehhez a módhoz"
+settingsTitle: "Képesség szint korlát lehetőségek"
+settingsDesc: "Lehetőségek a képesség szint korlátok beállítására és többre."
 
-lalToggleName: "Képességszint-korlátok Engedélyezése/Tiltása"
-lalToggleDesc: "Engedélyezze vagy tiltsa le a képességszintek fejlődésére vonatkozó korlátokat."
+lalToggleName: "Képesség szint korlátok engedélyezése"
+lalToggleDesc: "Engedélyezi a korlátokat a képesség szint fejlődéshez."
 
-lalLimitMajorName: "Fő Képesség Szintkorlát"
-lalLimitMajorDesc: "Állítsa be a fő képességek maximális szintjét"
+lalLimitMajorName: "Fő képesség szint korlát"
+lalLimitMajorDesc: "Beállítja a maximális szintet a fő képességekhez.\n\n100 feletti értékek beállítása nem fogja feloldani a képességeid korlátját!"
 
-lalLimitMinorName: "Másodlagos Képesség Szintkorlát"
-lalLimitMinorDesc: "Állítsa be a másodlagos képességek maximális szintjét"
+lalLimitMinorName: "Mellék képesség szint korlát"
+lalLimitMinorDesc: "Beállítja a maximális szintet a mellék képességekhez."
 
-lalLimitMiscName: "Egyéb Képesség Szintkorlát"
-lalLimitMiscDesc: "Állítsa be az egyéb képességek maximális szintjét"
+lalLimitMiscName: "Egyéb képesség szint korlát"
+lalLimitMiscDesc: "Beállítja a maximális szintet az egyéb képességekhez."
 
-lalSpecializationName: "Osztály Specializáció Módosító Engedélyezése"
-lalSpecializationDesc: "Amikor engedélyezve van, a maximális képességszint befolyásolja, hogy a képesség megegyezik-e az osztály specializációjával. Az osztály specializációjától eltérő képességek csökkentett maximális szinttel rendelkeznek."
+lalSpecializationToggleName: "Osztály specializáció módosító engedélyezése"
+lalSpecializationToggleDesc: "Ha engedélyezve van, a maximális képesség szintedet befolyásolja, hogy a képesség megegyezik-e az osztály specializációddal.\n\nA specializációdon kívüli képességek csökkentett maximális szinttel rendelkeznek."
 
-lalSpecializationToggleName: "Osztály Specializáció Módosító Engedélyezése"
-lalSpecializationToggleDesc: "Amikor engedélyezve van, a maximális képességszint befolyásolja, hogy a képesség megegyezik-e az osztály specializációjával. Az osztály specializációjától eltérő képességek csökkentett maximális szinttel rendelkeznek."
+lalSpecializationMalusName: "Osztály specializáció módosító"
+lalSpecializationMalusDesc: "Az a mennyiség, amellyel a maximális képesség szint csökken azon képességeknél, amelyek nem egyeznek meg az osztály specializációddal."
 
-lalSpecializationMalusName: "Osztály Specializáció Malusz"
-lalSpecializationMalusDesc: "Az összeg, amennyivel csökkentették a maximális képességszintet azoknak a képességeknek, amelyek nem egyeznek az osztály specializációjával."
+lalFavoredAttributesToggleName: "Osztály kedvelt tulajdonságok módosító engedélyezése"
+lalFavoredAttributesToggleDesc: "Ha engedélyezve van, a maximális képesség szintedet befolyásolja, hogy a képességet a kedvelt tulajdonságaid irányítják-e.\n\nAzon képességek, amelyeket nem a kedvelt tulajdonságaid irányítanak, csökkentett maximális szinttel rendelkeznek."
 
-lalFavoredAttributesToggleName: "Kedvelt Attribútumok Módosító Engedélyezése"
-lalFavoredAttributesToggleDesc: "Amikor engedélyezve van, a maximális képességszint befolyásolja, hogy a képesség irányítása a kedvelt attribútumai által történik-e. A kedvelt attribútumok által nem irányított képességek csökkentett maximális szinttel rendelkeznek."
+lalFavoredAttributesMalusName: "Kedvelt tulajdonságok módosító"
+lalFavoredAttributesMalusDesc: "Az a mennyiség, amellyel a maximális képesség szint csökken azon képességeknél, amelyeket nem a kedvelt tulajdonságaid irányítanak."
 
-lalFavoredAttributesMalusName: "Kedvelt Attribútumok Malusz"
-lalFavoredAttributesMalusDesc: "Az összeg, amennyivel csökkentették a maximális képességszintet azoknak a képességeknek, amelyek nem a kedvelt attribútumok által irányítottak."
+lalRacialSkillToggleName: "Faji képesség módosító engedélyezése"
+lalRacialSkillToggleDesc: "Ha engedélyezve van, a maximális képesség szintedet befolyásolja, hogy a képesség megegyezik-e a faji bónusz képességeivel.\n\nAzon képességek, amelyek nem kaptak bónuszt a fajodtól, csökkentett maximális szinttel rendelkeznek.\n\nA bónusz mennyisége nem számít, csak az, hogy van-e egyáltalán bónusz erre a képességre."
 
-lalRacialSkillToggleName: "Faji Képességmódosító Engedélyezése"
-lalRacialSkillToggleDesc: "Ha engedélyezve van, a maximális képességszintet befolyásolja, hogy a képesség egyezik-e a faji bónuszokkal. Azok a képességek, amelyek nem kaptak bónuszt a fajtól, csökkentett maximális szinttel rendelkeznek. A bónusz mértéke nem számít, csak az, hogy van-e egyáltalán bónusz az adott képességre."
+lalRacialSkillMalusName: "Faji képesség módosító"
+lalRacialSkillMalusDesc: "Az a mennyiség, amellyel a maximális képesség szint csökken azon képességeknél, amelyek nem egyeznek meg a faji bónuszoddal."
 
-lalRacialSkillMalusName: "Faji Képességmalusz"
-lalRacialSkillMalusDesc: "Az az érték, amennyivel csökken a maximális képességszint azoknál a képességeknél, amelyek nem egyeznek a faji bónuszokkal."
+lalLevelProgressLimitToggleName: "Szint fejlődés korlát"
+lalLevelProgressLimitToggleDesc: "Megállítja az új szint felé való haladást, amikor a meghatározott mennyiség elérésre kerül. (Az alapértelmezett 10/10 lenne).
+\n\nMegköveteli, hogy legalább a Képesség Szint Korlát Lehetőségek vagy a Képesség Tapasztalat Lehetőségek engedélyezve legyenek. A tényleges hatás attól függ, hogy mely beállítások vannak megadva.
+\n\nA Képesség Szint Korlát Lehetőségek engedélyezésével minden képesség abbahagyja a szintlépést, amikor a szint fejlődésed eléri a konfigurált korlátot.
+\n\nA Képesség Tapasztalat Lehetőségek engedélyezésével minden képesség abbahagyja a tapasztalat szerzést, amikor a szint fejlődésed eléri a konfigurált korlátot.
+\n\nHa csak az utóbbi van engedélyezve, a képességek nem szereznek tapasztalatot, de még mindig növelhetők edzők és könyvek használatával."
 
-lalLevelProgressLimitToggleName: "Szintlépési Korlát Engedélyezése"
-lalLevelProgressLimitToggleDesc: "Ha engedélyezve van, megállítja a képességek fejlődését, amikor a szintlépési haladás eléri a beállított határt."
+lalLevelProgressLimitName: "Szint fejlődés korlát mennyiség"
+lalLevelProgressLimitDesc: "A maximális szint fejlődés mennyiség, amely engedélyezett, mielőtt a képesség növekedések leállítódnak."
 
-lalLevelProgressLimitName: "Szintlépési Haladási Korlát"
-lalLevelProgressLimitDesc: "A maximálisan megengedett szintlépési haladás, mielőtt a képességfejlődés leáll."
+levelUpFailTrainer: "Erőfeszítéseid ellenére az edzés nem hoz eredményt."
+levelUpFailBook: "Ennek a könyvnek a tudása elkerül téged."
 
-levelUpFailTrainer: "Erőfeszítéseid ellenére a képzés nem eredményez előrelépést."
-levelUpFailBook: "A tudás ebben a könyvben túlmutat a felfogásodon."
+settingsTitleXP: "Képesség tapasztalat lehetőségek"
+settingsDescXP: "Lehetőségek a képesség tapasztalat szerzés módosítására.\n\nInkompatibilis minden móddal, amely Lua-n keresztül manipulálja a tapasztalat szerzést."
 
+lalXPToggleName: "Képesség tapasztalat lehetőségek engedélyezése"
+lalXPToggleDesc: "Engedélyezi a lehetőségeket a képesség tapasztalat szerzéshez."
+
+lalXPGlobalMultiplierName: "Globális képesség tapasztalat szorzó"
+lalXPGlobalMultiplierDesc: "Minden szerzett tapasztalat meg lesz szorozva ezzel a szorzóval.
+\n\nPélda: Egy 0,5-ös szorzó felére csökkenti az összes szerzett képesség tapasztalatot. Az 1 feletti értékek növelik a képesség fejlődésedet!"
+
+lalXPDiminishingToggleName: "Csökkenő hozam növekvő képesség szintekkel"
+lalXPDiminishingToggleDesc: "Engedélyezi a csökkenő hozamot a képesség tapasztalat szerzésben. Minél magasabb a képesség szint, annál kevesebb tapasztalat szerzésre kerül ehhez a képességhez.\nA Globális Képesség Tapasztalat Szorzó után kerül alkalmazásra.
+\n\nPélda: Egy 25-ös képesség szintű képesség 0,4-es csökkenő hozam szorzót kapna!
+\nA számítás a következő lenne:
+\n1 / ( Képesség szint / 10 )
+\n\nA kiszámított szorzó tovább módosítható a csökkenő hozam módosítóval."
+
+lalXPDiminishingMultiplierName: "Csökkenő hozam módosító"
+lalXPDiminishingMultiplierDesc: "Hozzáad egy szorzót a csökkenő hozam módosításához.
+\n\nPélda: Ha 0,5-re van állítva, egy 0,4-es kiszámított csökkenő hozam szorzó 0,8-ra változna, kevésbé súlyossá téve a csökkenő hozamot.
+\nHa 2-re van állítva, a csökkenő hozam még nagyobb hatású lenne!"
+
+lalXPDisableToggleName: "Képesség fejlődés letiltása"
+lalXPDisableToggleDesc: "Letiltja minden képesség tapasztalat szerzést. A képesség szintek növelése edzés vagy könyvek által továbbra is lehetséges."
+
+lalDisableTrainingToggleName: "Képesség edzés letiltása"
+lalDisableTrainingToggleDesc: "Ha engedélyezve van, a képességek nem javíthatók edző használatával."
+
+lalDisableBooksToggleName: "Képesség könyvek letiltása"
+lalDisableBooksToggleDesc: "Ha engedélyezve van, a képességek nem javíthatók képesség könyvek használatával."
+
+settingsTitleY: "További lehetőségek!"
+settingsDescY: "Lehetőségek, amelyek mind a Képesség Szint Korlátot, mind a Képesség Tapasztalat Lehetőségeket befolyásolják."
+
+lalShowDebugInfoName: "Debug információk megjelenítése"
+lalShowDebugInfoDesc: "Több betekintés a maximális képesség szintjeidbe és a szerzett tapasztalatba. A naplóba kerül kiírásra mentés betöltésekor vagy Lua újratöltésekor."

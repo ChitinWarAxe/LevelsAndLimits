@@ -1,50 +1,86 @@
-name: "技能等级与限制"
+name: "Levels & Limits"
 description:
-"根据技能是否为主要、次要或其他类别配置可调整的技能等级限制。\n\n
-还可以为不符合您职业专长或不受偏爱属性控制的技能配置额外限制。"
+"设置技能等级上限和修改技能经验获取的选项。"
 
-settingsTitle: "选项"
-settingsDesc: "此模组的设置"
+settingsTitle: "技能等级上限选项"
+settingsDesc: "设置技能等级上限和更多选项。"
 
-lalToggleName: "启用/禁用技能等级限制"
-lalToggleDesc: "启用或禁用技能等级进展的限制。"
+lalToggleName: "启用技能等级限制"
+lalToggleDesc: "为你的技能等级进展启用限制。"
 
 lalLimitMajorName: "主要技能等级上限"
-lalLimitMajorDesc: "设置主要技能的最大等级"
+lalLimitMajorDesc: "设置主要技能的最大等级。\n\n设置超过100的值不会解除你的技能上限！"
 
 lalLimitMinorName: "次要技能等级上限"
-lalLimitMinorDesc: "设置次要技能的最大等级"
+lalLimitMinorDesc: "设置次要技能的最大等级。"
 
-lalLimitMiscName: "其他技能等级上限"
-lalLimitMiscDesc: "设置其他技能的最大等级"
+lalLimitMiscName: "杂项技能等级上限"
+lalLimitMiscDesc: "设置杂项技能的最大等级。"
 
-lalSpecializationName: "启用职业专长调整器"
-lalSpecializationDesc: "启用后，您的最大技能等级将受到技能是否符合您的职业专长的影响。不符合专长的技能具有降低的最大等级。"
+lalSpecializationToggleName: "启用职业专精修正器"
+lalSpecializationToggleDesc: "启用后，你的最大技能等级会受到技能是否匹配你的职业专精的影响。\n\n专精之外的技能具有降低的最大等级。"
 
-lalSpecializationToggleName: "启用职业专长调整器"
-lalSpecializationToggleDesc: "启用后，您的最大技能等级将受到技能是否符合您的职业专长的影响。不符合专长的技能具有降低的最大等级。"
+lalSpecializationMalusName: "职业专精修正器"
+lalSpecializationMalusDesc: "不匹配你的职业专精的技能最大等级减少的数值。"
 
-lalSpecializationMalusName: "职业专长惩罚"
-lalSpecializationMalusDesc: "不符合您职业专长的技能最大等级降低的数量。"
+lalFavoredAttributesToggleName: "启用职业偏好属性修正器"
+lalFavoredAttributesToggleDesc: "启用后，你的最大技能等级会受到技能是否由你的偏好属性控制的影响。\n\n不由你的偏好属性控制的技能具有降低的最大等级。"
 
-lalFavoredAttributesToggleName: "启用偏爱属性调整器"
-lalFavoredAttributesToggleDesc: "启用后，您的最大技能等级将受到技能是否受您偏爱属性控制的影响。不受偏爱属性控制的技能具有降低的最大等级。"
+lalFavoredAttributesMalusName: "偏好属性修正器"
+lalFavoredAttributesMalusDesc: "不由你的偏好属性控制的技能最大等级减少的数值。"
 
-lalFavoredAttributesMalusName: "偏爱属性惩罚"
-lalFavoredAttributesMalusDesc: "不受您偏爱属性控制的技能最大等级降低的数量。"
+lalRacialSkillToggleName: "启用种族技能修正器"
+lalRacialSkillToggleDesc: "启用后，你的最大技能等级会受到技能是否匹配种族加成技能的影响。\n\n没有从你的种族获得加成的技能具有降低的最大等级。\n\n加成数值不重要，只要该技能有加成即可。"
 
-lalRacialSkillToggleName: "启用种族技能修正"
-lalRacialSkillToggleDesc: "启用后，你的最大技能等级将受到该技能是否与种族加成相匹配的影响。未从你的种族获得加成的技能将有较低的最大等级。加成数值不重要，只要该技能有加成即可。"
+lalRacialSkillMalusName: "种族技能修正器"
+lalRacialSkillMalusDesc: "不匹配你的种族加成的技能最大等级减少的数值。"
 
-lalRacialSkillMalusName: "种族技能减益"
-lalRacialSkillMalusDesc: "不符合你种族加成的技能，其最大技能等级降低的数值。"
+lalLevelProgressLimitToggleName: "升级进度限制"
+lalLevelProgressLimitToggleDesc: "当达到定义的数量时停止向新等级的进展。（默认为10/10）。
+\n\n需要至少启用技能等级上限选项或技能经验选项。实际效果取决于设置的选项。
+\n\n启用技能等级上限选项后，当你的等级进度达到配置的限制时，所有技能停止升级。
+\n\n启用技能经验选项后，当你的等级进度达到配置的限制时，所有技能停止获得经验。
+\n\n如果只启用后者，技能不会获得经验，但仍可以通过训练师和书籍提升。"
 
-lalLevelProgressLimitToggleName: "启用等级进度限制"
-lalLevelProgressLimitToggleDesc: "启用后，当你的进度达到配置的限制时，技能将停止升级。"
+lalLevelProgressLimitName: "升级进度限制数量"
+lalLevelProgressLimitDesc: "技能提升停止前允许的最大升级进度数量。"
 
-lalLevelProgressLimitName: "等级进度限制"
-lalLevelProgressLimitDesc: "在技能升级停止之前允许的最大等级进度。"
+levelUpFailTrainer: "尽管你努力了，训练没有产生任何结果。"
+levelUpFailBook: "这本书中的知识让你困惑不解。"
 
-levelUpFailTrainer: "尽管您努力了，训练未能取得进展。"
-levelUpFailBook: "这本书中的知识超出了您的理解能力。"
+settingsTitleXP: "技能经验选项"
+settingsDescXP: "修改技能经验获取的选项。\n\n与任何通过Lua操作经验获取的模组不兼容。"
 
+lalXPToggleName: "启用技能经验选项"
+lalXPToggleDesc: "启用技能经验获取的选项。"
+
+lalXPGlobalMultiplierName: "全局技能经验倍数"
+lalXPGlobalMultiplierDesc: "任何获得的经验将乘以此倍数。
+\n\n示例：0.5的倍数将使所有获得的技能经验减半。超过1的任何值将增加你的技能获取！"
+
+lalXPDiminishingToggleName: "技能等级增加的递减收益"
+lalXPDiminishingToggleDesc: "在技能经验获取上启用递减收益。技能等级越高，该技能获得的经验越少。\n将在全局技能经验倍数后应用。
+\n\n示例：技能等级25的技能将获得0.4的递减收益倍数！
+\n计算如下：
+\n1 /（技能等级 / 10）
+\n\n计算出的倍数可以通过递减收益修正器进一步修改。"
+
+lalXPDiminishingMultiplierName: "递减收益修正器"
+lalXPDiminishingMultiplierDesc: "添加一个倍数来修改递减收益。
+\n\n示例：如果设置为0.5，计算出的递减收益倍数0.4将变成0.8，使递减收益不那么严重。
+\n如果设置为2，递减收益将更加有影响力！"
+
+lalXPDisableToggleName: "禁用技能获取"
+lalXPDisableToggleDesc: "禁用任何技能经验获取。通过训练或书籍提升技能等级仍然可能。"
+
+lalDisableTrainingToggleName: "禁用技能训练"
+lalDisableTrainingToggleDesc: "启用后，技能无法使用训练师改进。"
+
+lalDisableBooksToggleName: "禁用技能书籍"
+lalDisableBooksToggleDesc: "启用后，技能无法使用技能书籍改进。"
+
+settingsTitleY: "更多选项！"
+settingsDescY: "影响技能等级上限和技能经验选项的选项。"
+
+lalShowDebugInfoName: "显示调试信息"
+lalShowDebugInfoDesc: "获得关于你最大技能等级和获得经验的更多信息。在加载存档或重载Lua时打印到日志。"

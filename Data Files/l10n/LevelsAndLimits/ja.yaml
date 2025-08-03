@@ -1,50 +1,86 @@
-name: "レベルと制限"
+name: "Levels & Limits"
 description:
-"スキルが主要、従属、またはその他のスキルかどうかに基づいて、設定可能なスキルレベルの制限。\n\n
-さらに、クラスの専門分野に一致しないスキルや、優先属性によって管理されていないスキルに対して追加の制限を設定できます。"
+"スキルレベル上限の設定とスキル経験値取得の変更を行うオプションです。"
 
-settingsTitle: "オプション"
-settingsDesc: "このMODの設定"
+settingsTitle: "スキルレベル上限オプション"
+settingsDesc: "スキルレベル上限の設定とその他のオプションです。"
 
-lalToggleName: "スキルレベルの制限の有効化/無効化"
-lalToggleDesc: "スキルレベルの進行に対する制限を有効または無効にします。"
+lalToggleName: "スキルレベル制限を有効化"
+lalToggleDesc: "スキルレベル進行の制限を有効にします。"
 
-lalLimitMajorName: "主要スキルレベルの制限"
-lalLimitMajorDesc: "主要スキルの最大レベルを設定します"
+lalLimitMajorName: "メジャースキルレベル上限"
+lalLimitMajorDesc: "メジャースキルの最大レベルを設定します。\n\n100を超える値を設定してもスキルの上限は解除されません！"
 
-lalLimitMinorName: "従属スキルレベルの制限"
-lalLimitMinorDesc: "従属スキルの最大レベルを設定します"
+lalLimitMinorName: "マイナースキルレベル上限"
+lalLimitMinorDesc: "マイナースキルの最大レベルを設定します。"
 
-lalLimitMiscName: "その他スキルレベルの制限"
-lalLimitMiscDesc: "その他のスキルの最大レベルを設定します"
+lalLimitMiscName: "その他スキルレベル上限"
+lalLimitMiscDesc: "その他のスキルの最大レベルを設定します。"
 
-lalSpecializationName: "クラス専門分野の修正を有効にする"
-lalSpecializationDesc: "有効にすると、スキルがクラスの専門分野に一致しているかどうかによって最大スキルレベルが影響を受けます。専門分野外のスキルは最大レベルが低くなります。"
+lalSpecializationToggleName: "クラス特化修正を有効化"
+lalSpecializationToggleDesc: "有効にすると、スキルがクラス特化に一致するかどうかで最大スキルレベルが影響を受けます。\n\n特化外のスキルは最大レベルが低下します。"
 
-lalSpecializationToggleName: "クラス専門分野の修正を有効にする"
-lalSpecializationToggleDesc: "有効にすると、スキルがクラスの専門分野に一致しているかどうかによって最大スキルレベルが影響を受けます。専門分野外のスキルは最大レベルが低くなります。"
+lalSpecializationMalusName: "クラス特化修正"
+lalSpecializationMalusDesc: "クラス特化に一致しないスキルの最大レベルが減少する値です。"
 
-lalSpecializationMalusName: "クラス専門分野のマイナス"
-lalSpecializationMalusDesc: "クラスの専門分野に一致しないスキルの最大スキルレベルがどれだけ減少するかの量を設定します。"
+lalFavoredAttributesToggleName: "クラス優遇ステータス修正を有効化"
+lalFavoredAttributesToggleDesc: "有効にすると、スキルが優遇ステータスによって管理されているかどうかで最大スキルレベルが影響を受けます。\n\n優遇ステータスによって管理されていないスキルは最大レベルが低下します。"
 
-lalFavoredAttributesToggleName: "優先属性の修正を有効にする"
-lalFavoredAttributesToggleDesc: "有効にすると、スキルが優先属性によって管理されているかどうかによって最大スキルレベルが影響を受けます。優先属性によって管理されていないスキルは最大レベルが低くなります。"
-
-lalFavoredAttributesMalusName: "優先属性のマイナス"
-lalFavoredAttributesMalusDesc: "優先属性によって管理されていないスキルの最大スキルレベルがどれだけ減少するかの量を設定します。"
+lalFavoredAttributesMalusName: "優遇ステータス修正"
+lalFavoredAttributesMalusDesc: "優遇ステータスによって管理されていないスキルの最大レベルが減少する値です。"
 
 lalRacialSkillToggleName: "種族スキル修正を有効化"
-lalRacialSkillToggleDesc: "有効にすると、スキルの最大レベルは種族ボーナスとの一致により影響を受けます。種族ボーナスを受けていないスキルは最大レベルが減少します。ボーナスの量は関係なく、そのスキルにボーナスがあるかどうかのみが重要です。"
+lalRacialSkillToggleDesc: "有効にすると、スキルが種族ボーナスのスキルに一致するかどうかで最大スキルレベルが影響を受けます。\n\n種族からボーナスを受けなかったスキルは最大レベルが低下します。\n\nボーナスの量は関係なく、そのスキルにボーナスがあるかどうかのみが重要です。"
 
-lalRacialSkillMalusName: "種族スキルペナルティ"
-lalRacialSkillMalusDesc: "種族ボーナスと一致しないスキルの最大レベルが減少する量です。"
+lalRacialSkillMalusName: "種族スキル修正"
+lalRacialSkillMalusDesc: "種族ボーナスに一致しないスキルの最大レベルが減少する値です。"
 
-lalLevelProgressLimitToggleName: "レベルアップ進行制限を有効化"
-lalLevelProgressLimitToggleDesc: "有効にすると、レベルアップの進行が設定された制限に達した時点でスキルの上昇を停止します。"
+lalLevelProgressLimitToggleName: "レベルアップ進行制限"
+lalLevelProgressLimitToggleDesc: "定義された量に達すると新しいレベルへの進行を停止します。（デフォルトは10/10です）。
+\n\nスキルレベル上限オプションまたはスキル経験値オプションのいずれかが有効になっている必要があります。実際の効果は設定されているオプションによって異なります。
+\n\nスキルレベル上限オプションが有効な場合、レベル進行が設定された制限に達すると全てのスキルのレベルアップが停止します。
+\n\nスキル経験値オプションが有効な場合、レベル進行が設定された制限に達すると全てのスキルの経験値取得が停止します。
+\n\n後者のみが有効な場合、スキルは経験値を取得しませんが、トレーナーや本によってレベルを上げることは可能です。"
 
-lalLevelProgressLimitName: "レベルアップ進行制限"
-lalLevelProgressLimitDesc: "スキルレベルの上昇が停止されるまでの最大レベルアップ進行量です。"
+lalLevelProgressLimitName: "レベルアップ進行制限値"
+lalLevelProgressLimitDesc: "スキル上昇が停止する前に許可される最大レベルアップ進行量です。"
 
-levelUpFailTrainer: "努力にもかかわらず、訓練は進歩しませんでした。"
-levelUpFailBook: "この本の知識はあなたには難しすぎます。"
+levelUpFailTrainer: "努力にも関わらず、訓練は結果をもたらしませんでした。"
+levelUpFailBook: "この本の知識はあなたの理解を逃れました。"
 
+settingsTitleXP: "スキル経験値オプション"
+settingsDescXP: "スキル経験値取得を変更するオプションです。\n\nLuaで経験値取得を操作するMODとは互換性がありません。"
+
+lalXPToggleName: "スキル経験値オプションを有効化"
+lalXPToggleDesc: "スキル経験値取得のオプションを有効にします。"
+
+lalXPGlobalMultiplierName: "グローバルスキル経験値倍率"
+lalXPGlobalMultiplierDesc: "取得した経験値はこの倍率で乗算されます。
+\n\n例：0.5の倍率では、取得したスキル経験値が半分になります。1を超える値はスキル上昇を増加させます！"
+
+lalXPDiminishingToggleName: "スキルレベル上昇による収穫逓減"
+lalXPDiminishingToggleDesc: "スキル経験値取得に収穫逓減を有効にします。スキルレベルが高いほど、そのスキルで取得される経験値が少なくなります。\nグローバルスキル経験値倍率の後に適用されます。
+\n\n例：スキルレベル25のスキルは収穫逓減倍率0.4を受けます！
+\n計算は以下の通りです：
+\n1 / ( スキルレベル / 10 )
+\n\n計算された倍率は収穫逓減修正によってさらに変更できます。"
+
+lalXPDiminishingMultiplierName: "収穫逓減修正"
+lalXPDiminishingMultiplierDesc: "収穫逓減を変更する倍率を追加します。
+\n\n例：0.5に設定すると、計算された収穫逓減倍率0.4は0.8になり、収穫逓減をより緩やかにします。
+\n2に設定すると、収穫逓減はより影響力が強くなります！"
+
+lalXPDisableToggleName: "スキル上昇を無効化"
+lalXPDisableToggleDesc: "全てのスキル経験値取得を無効にします。訓練や本によるスキルレベル上昇は可能です。"
+
+lalDisableTrainingToggleName: "スキル訓練を無効化"
+lalDisableTrainingToggleDesc: "有効にすると、トレーナーを使用してスキルを向上させることができません。"
+
+lalDisableBooksToggleName: "スキル本を無効化"
+lalDisableBooksToggleDesc: "有効にすると、スキル本を使用してスキルを向上させることができません。"
+
+settingsTitleY: "その他のオプション！"
+settingsDescY: "スキルレベル上限とスキル経験値オプションの両方に影響するオプションです。"
+
+lalShowDebugInfoName: "デバッグ情報を表示"
+lalShowDebugInfoDesc: "最大スキルレベルと取得経験値についてより詳しい情報を得られます。セーブの読み込み時またはLua再読み込み時にログに出力されます。"

@@ -1,50 +1,87 @@
 name: "Levels & Limits"
 description:
-"Aanpasbare vaardigheidsniveau limieten gebaseerd op of vaardigheden major, minor, of miscellaneous zijn.\n\n
-Aanvullende limieten kunnen worden ingesteld voor vaardigheden die niet overeenkomen met je klasse specialisatie of niet worden beheerd door je favoriete attributen."
+"Opties voor het instellen van vaardigheidsniveau-limieten en het wijzigen van vaardigheidsergaring."
 
-settingsTitle: "Opties"
-settingsDesc: "Instellingen voor deze mod"
+settingsTitle: "Vaardigheidsniveau-limiet opties"
+settingsDesc: "Opties voor het instellen van vaardigheidsniveau-limieten en meer."
 
-lalToggleName: "In-/Uitschakelen van Vaardigheidsniveaulimieten"
-lalToggleDesc: "Schakel de limieten voor je vaardigheidsniveau vooruitgang in of uit."
+lalToggleName: "Vaardigheidsniveau-limieten inschakelen"
+lalToggleDesc: "Schakelt limieten in voor de progressie van je vaardigheidsniveau."
 
-lalLimitMajorName: "Major Vaardigheidsniveau Limiet"
-lalLimitMajorDesc: "Stelt het maximum niveau in voor major vaardigheden"
+lalLimitMajorName: "Hoofdvaardigheidsniveau-limiet"
+lalLimitMajorDesc: "Stelt het maximale niveau in voor hoofdvaardigheden.\n\nWaarden boven 100 instellen zal de limiet van je vaardigheden niet opheffen!"
 
-lalLimitMinorName: "Minor Vaardigheidsniveau Limiet"
-lalLimitMinorDesc: "Stelt het maximum niveau in voor minor vaardigheden"
+lalLimitMinorName: "Ondervaardigheidsniveau-limiet"
+lalLimitMinorDesc: "Stelt het maximale niveau in voor ondervaardigheden."
 
-lalLimitMiscName: "Misc Vaardigheidsniveau Limiet"
-lalLimitMiscDesc: "Stelt het maximum niveau in voor overige vaardigheden"
+lalLimitMiscName: "Diverse vaardigheidsniveau-limiet"
+lalLimitMiscDesc: "Stelt het maximale niveau in voor diverse vaardigheden."
 
-lalSpecializationName: "Schakel Klasse Specialisatie Modificator In"
-lalSpecializationDesc: "Wanneer ingeschakeld, wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid overeenkomt met je klasse specialisatie. Vaardigheden buiten je specialisatie hebben een verlaagd maximum niveau."
+lalSpecializationToggleName: "Klassespecialisatie-modifier inschakelen"
+lalSpecializationToggleDesc: "Wanneer ingeschakeld wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid overeenkomt met je klassespecialisatie.\n\nVaardigheden buiten je specialisatie hebben een verlaagd maximaal niveau."
 
-lalSpecializationToggleName: "Schakel Klasse Specialisatie Modificator In"
-lalSpecializationToggleDesc: "Wanneer ingeschakeld, wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid overeenkomt met je klasse specialisatie. Vaardigheden buiten je specialisatie hebben een verlaagd maximum niveau."
+lalSpecializationMalusName: "Klassespecialisatie-modifier"
+lalSpecializationMalusDesc: "Het bedrag waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet overeenkomen met je klassespecialisatie."
 
-lalSpecializationMalusName: "Klasse Specialisatie Straf"
-lalSpecializationMalusDesc: "De hoeveelheid waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet overeenkomen met je klasse specialisatie."
+lalFavoredAttributesToggleName: "Klasse voorkeur attributen-modifier inschakelen"
+lalFavoredAttributesToggleDesc: "Wanneer ingeschakeld wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid wordt bestuurd door je voorkeur attributen.\n\nVaardigheden die niet worden bestuurd door je voorkeur attributen hebben een verlaagd maximaal niveau."
 
-lalFavoredAttributesToggleName: "Schakel Favoriete Attributen Modificator In"
-lalFavoredAttributesToggleDesc: "Wanneer ingeschakeld, wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid wordt beheerd door je favoriete attributen. Vaardigheden die niet worden beheerd door je favoriete attributen hebben een verlaagd maximum niveau."
+lalFavoredAttributesMalusName: "Voorkeur attributen-modifier"
+lalFavoredAttributesMalusDesc: "Het bedrag waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet worden bestuurd door je voorkeur attributen."
 
-lalFavoredAttributesMalusName: "Favoriete Attributen Straf"
-lalFavoredAttributesMalusDesc: "De hoeveelheid waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet worden beheerd door je favoriete attributen."
+lalRacialSkillToggleName: "Raciale vaardigheid-modifier inschakelen"
+lalRacialSkillToggleDesc: "Wanneer ingeschakeld wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid overeenkomt met de vaardigheden van de raciale bonus.\n\nVaardigheden die geen bonus van je ras hebben ontvangen hebben een verlaagd maximaal niveau.\n\nDe bonushoeveelheid maakt niet uit, alleen of er überhaupt een bonus is voor die vaardigheid."
 
-lalRacialSkillToggleName: "Rasvaardigheden Modificator Inschakelen"
-lalRacialSkillToggleDesc: "Wanneer ingeschakeld, wordt je maximale vaardigheidsniveau beïnvloed door of de vaardigheid overeenkomt met de bonussen van je ras. Vaardigheden die geen bonus van je ras hebben ontvangen, hebben een verlaagd maximumniveau. De hoeveelheid bonus maakt niet uit, alleen of er überhaupt een bonus voor die vaardigheid is."
+lalRacialSkillMalusName: "Raciale vaardigheid-modifier"
+lalRacialSkillMalusDesc: "Het bedrag waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet overeenkomen met je raciale bonus."
 
-lalRacialSkillMalusName: "Rasvaardigheden Malus"
-lalRacialSkillMalusDesc: "De hoeveelheid waarmee het maximale vaardigheidsniveau wordt verlaagd voor vaardigheden die niet overeenkomen met je rasbonus."
+lalLevelProgressLimitToggleName: "Niveau-opgang voortgangslimiet"
+lalLevelProgressLimitToggleDesc: "Stopt voortgang naar een nieuw niveau zodra het gedefinieerde bedrag is bereikt. (De standaard zou 10/10 zijn).
+\n\nVereist dat je ten minste Vaardigheidsniveau-limiet Opties of Vaardigheidsergaring Opties hebt ingeschakeld. Het werkelijke effect hangt af van welke opties zijn ingesteld.
+\n\nMet Vaardigheidsniveau-limiet Opties ingeschakeld stoppen alle vaardigheden met niveau-opgang zodra je niveau-voortgang de geconfigureerde limiet bereikt.
+\n\nMet Vaardigheidsergaring Opties ingeschakeld stoppen alle vaardigheden met het verkrijgen van ervaring zodra je niveau-voortgang de geconfigureerde limiet bereikt.
+\n\nAls alleen de laatste is ingeschakeld zullen vaardigheden geen ervaring verkrijgen, maar kunnen nog steeds worden verhoogd met trainers en boeken."
 
-lalLevelProgressLimitToggleName: "Niveau Vooruitgangslimiet Inschakelen"
-lalLevelProgressLimitToggleDesc: "Wanneer ingeschakeld, stopt vaardigheden met stijgen zodra je vooruitgang de geconfigureerde limiet bereikt."
+lalLevelProgressLimitName: "Niveau-opgang voortgangslimiet bedrag"
+lalLevelProgressLimitDesc: "Het maximale bedrag niveau-opgang voortgang dat is toegestaan voordat vaardigheidsverhogingen worden gestopt."
 
-lalLevelProgressLimitName: "Niveau Vooruitgangslimiet"
-lalLevelProgressLimitDesc: "De maximale hoeveelheid niveau-vooruitgang toegestaan voordat vaardigheidsstijging wordt gestopt."
+levelUpFailTrainer: "Ondanks je inspanningen levert de training geen resultaat op."
+levelUpFailBook: "De kennis in dit boek ontgaat je."
 
-levelUpFailTrainer: "Ondanks je inspanningen boekt de training geen vooruitgang."
-levelUpFailBook: "De kennis in dit boek is te hoog gegrepen."
+settingsTitleXP: "Vaardigheidsergaring opties"
+settingsDescXP: "Opties voor het wijzigen van vaardigheidsergaring.\n\nOnverenigbaar met elke mod die ervaringswinst manipuleert via Lua."
+
+lalXPToggleName: "Vaardigheidsergaring opties inschakelen"
+lalXPToggleDesc: "Schakelt opties in voor vaardigheidsergaring."
+
+lalXPGlobalMultiplierName: "Globale vaardigheidsergaring vermenigvuldiger"
+lalXPGlobalMultiplierDesc: "Alle verkregen ervaring zal worden vermenigvuldigd met deze vermenigvuldiger.
+\n\nVoorbeeld: Een vermenigvuldiger van 0,5 zal alle verkregen vaardigheidsergaring halveren. Alles boven 1 zal je vaardigheidswinst verhogen!"
+
+lalXPDiminishingToggleName: "Afnemende opbrengsten met toenemende vaardigheidsniveaus"
+lalXPDiminishingToggleDesc: "Schakelt afnemende opbrengsten in op vaardigheidsergaring. Hoe hoger het vaardigheidsniveau, hoe minder ervaring wordt verkregen voor deze vaardigheid.\nWordt toegepast na de Globale Vaardigheidsergaring Vermenigvuldiger.
+\n\nVoorbeeld: Een vaardigheid met vaardigheidsniveau 25 zou een afnemende opbrengsten vermenigvuldiger van 0,4 krijgen!
+\nDe berekening zou als volgt zijn:
+\n1 / ( Vaardigheidsniveau / 10 )
+\n\nDe berekende vermenigvuldiger kan verder worden gewijzigd door de afnemende opbrengsten modifier."
+
+lalXPDiminishingMultiplierName: "Afnemende opbrengsten modifier"
+lalXPDiminishingMultiplierDesc: "Voegt een vermenigvuldiger toe om de afnemende opbrengsten te wijzigen.
+\n\nVoorbeeld: Indien ingesteld op 0,5 zou een berekende afnemende opbrengsten vermenigvuldiger van 0,4 dan 0,8 worden, waardoor de afnemende opbrengsten minder zwaar worden.
+\nIndien ingesteld op 2 zouden de afnemende opbrengsten nog invloedrijker zijn!"
+
+lalXPDisableToggleName: "Vaardigheidswinst uitschakelen"
+lalXPDisableToggleDesc: "Schakelt alle vaardigheidsergaring uit. Het verhogen van vaardigheidsniveaus via training of boeken is nog steeds mogelijk."
+
+lalDisableTrainingToggleName: "Vaardigheidsraining uitschakelen"
+lalDisableTrainingToggleDesc: "Wanneer ingeschakeld kunnen vaardigheden niet worden verbeterd met een trainer."
+
+lalDisableBooksToggleName: "Vaardigheidsboeken uitschakelen"
+lalDisableBooksToggleDesc: "Wanneer ingeschakeld kunnen vaardigheden niet worden verbeterd met vaardigheidsboeken."
+
+settingsTitleY: "Meer opties!"
+settingsDescY: "Opties die zowel Vaardigheidsniveau-limieten als Vaardigheidsergaring Opties beïnvloeden."
+
+lalShowDebugInfoName: "Debug-informatie weergeven"
+lalShowDebugInfoDesc: "Verkrijg meer inzicht in je maximale vaardigheidsniveaus en verkregen ervaring. Wordt naar het logboek geschreven bij het laden van een opgeslagen spel of het herladen van Lua."
 

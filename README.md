@@ -1,6 +1,6 @@
 # Levels & Limits
 
-Configurable maximum skill levels.
+Skill level cap and experience options.
 
 ![Two n'wahs pondering their class choices](images/nwahs.png "Two n'wahs pondering their class choices")
 
@@ -10,7 +10,7 @@ This mod lets you make your playthrough more challenging by setting skill caps, 
 
 ## Features
 
-**Skill Cap Options** Set skill level caps for your major, minor, and miscellaneous skills. You can also have your maximum skill levels reduced based on your class, favored attributes, and race!
+**Skill Level Cap Options** Set skill level caps for your major, minor, and miscellaneous skills. You can also have your maximum skill levels reduced based on your class, favored attributes, and race!
 
 **Skill Experience Options** Modify skill experience gain. You can decrease or increase the gained skill experience!
 

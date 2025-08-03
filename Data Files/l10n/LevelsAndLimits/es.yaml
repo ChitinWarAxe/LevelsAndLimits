@@ -1,50 +1,86 @@
-name: "Niveles y Límites"
+name: "Levels & Limits"
 description:
-"Límites de nivel de habilidad configurables según si las habilidades son mayores, menores o misceláneas.\n\n
-Se pueden configurar límites adicionales para las habilidades que no coinciden con la especialización de tu clase o no están gobernadas por tus atributos favoritos."
+"Opciones para establecer límites de nivel de habilidades y modificar la ganancia de experiencia de habilidades."
 
-settingsTitle: "Opciones"
-settingsDesc: "Configuración para este mod"
+settingsTitle: "Opciones de límite de nivel de habilidades"
+settingsDesc: "Opciones para establecer límites de nivel de habilidades y más."
 
-lalToggleName: "Activar/Desactivar Límites de Nivel de Habilidad"
-lalToggleDesc: "Activa o desactiva los límites para la progresión de nivel de habilidad."
+lalToggleName: "Activar límites de nivel de habilidades"
+lalToggleDesc: "Activa los límites para la progresión de tu nivel de habilidades."
 
-lalLimitMajorName: "Límite de Nivel de Habilidad Mayor"
-lalLimitMajorDesc: "Establece el nivel máximo para las habilidades mayores"
+lalLimitMajorName: "Límite de nivel de habilidades principales"
+lalLimitMajorDesc: "Establece el nivel máximo para las habilidades principales.\n\n¡Establecer valores por encima de 100 no eliminará el límite de tus habilidades!"
 
-lalLimitMinorName: "Límite de Nivel de Habilidad Menor"
-lalLimitMinorDesc: "Establece el nivel máximo para las habilidades menores"
+lalLimitMinorName: "Límite de nivel de habilidades menores"
+lalLimitMinorDesc: "Establece el nivel máximo para las habilidades menores."
 
-lalLimitMiscName: "Límite de Nivel de Habilidad Miscelánea"
-lalLimitMiscDesc: "Establece el nivel máximo para las habilidades misceláneas"
+lalLimitMiscName: "Límite de nivel de habilidades diversas"
+lalLimitMiscDesc: "Establece el nivel máximo para las habilidades diversas."
 
-lalSpecializationName: "Habilitar Modificador de Especialización de Clase"
-lalSpecializationDesc: "Cuando está habilitado, tu nivel máximo de habilidad se ve influenciado por si la habilidad coincide con la especialización de tu clase. Las habilidades fuera de tu especialización tienen un nivel máximo reducido."
+lalSpecializationToggleName: "Activar modificador de especialización de clase"
+lalSpecializationToggleDesc: "Cuando está activado, tu nivel máximo de habilidad se ve influenciado por si la habilidad coincide con tu especialización de clase.\n\nLas habilidades fuera de tu especialización tienen un nivel máximo reducido."
 
-lalSpecializationToggleName: "Habilitar Modificador de Especialización de Clase"
-lalSpecializationToggleDesc: "Cuando está habilitado, tu nivel máximo de habilidad se ve influenciado por si la habilidad coincide con la especialización de tu clase. Las habilidades fuera de tu especialización tienen un nivel máximo reducido."
+lalSpecializationMalusName: "Modificador de especialización de clase"
+lalSpecializationMalusDesc: "La cantidad por la cual se reduce el nivel máximo de habilidad para las habilidades que no coinciden con tu especialización de clase."
 
-lalSpecializationMalusName: "Malus de Especialización de Clase"
-lalSpecializationMalusDesc: "La cantidad por la cual se reduce el nivel máximo de habilidad para las habilidades que no coinciden con la especialización de tu clase."
+lalFavoredAttributesToggleName: "Activar modificador de atributos favorecidos de clase"
+lalFavoredAttributesToggleDesc: "Cuando está activado, tu nivel máximo de habilidad se ve influenciado por si la habilidad está regida por tus atributos favorecidos.\n\nLas habilidades no regidas por tus atributos favorecidos tienen un nivel máximo reducido."
 
-lalFavoredAttributesToggleName: "Habilitar Modificador de Atributos Favoritos"
-lalFavoredAttributesToggleDesc: "Cuando está habilitado, tu nivel máximo de habilidad se ve influenciado por si la habilidad está gobernada por tus atributos favoritos. Las habilidades que no están gobernadas por tus atributos favoritos tienen un nivel máximo reducido."
+lalFavoredAttributesMalusName: "Modificador de atributos favorecidos"
+lalFavoredAttributesMalusDesc: "La cantidad por la cual se reduce el nivel máximo de habilidad para las habilidades no regidas por tus atributos favorecidos."
 
-lalFavoredAttributesMalusName: "Malus de Atributos Favoritos"
-lalFavoredAttributesMalusDesc: "La cantidad por la cual se reduce el nivel máximo de habilidad para las habilidades que no están gobernadas por tus atributos favoritos."
+lalRacialSkillToggleName: "Activar modificador de habilidad racial"
+lalRacialSkillToggleDesc: "Cuando está activado, tu nivel máximo de habilidad se ve influenciado por si la habilidad coincide con las habilidades del bono racial.\n\nLas habilidades que no recibieron un bono por tu raza tienen un nivel máximo reducido.\n\nLa cantidad del bono no importa, solo si hay un bono para esa habilidad."
 
-lalRacialSkillToggleName: "Activar Modificador de Habilidad Racial"
-lalRacialSkillToggleDesc: "Cuando está activado, tu nivel máximo de habilidad está influenciado por si la habilidad coincide con las bonificaciones raciales. Las habilidades que no recibieron bonificación por tu raza tienen un nivel máximo reducido. La cantidad del bono no importa, solo si hay un bono para esa habilidad."
+lalRacialSkillMalusName: "Modificador de habilidad racial"
+lalRacialSkillMalusDesc: "La cantidad por la cual se reduce el nivel máximo de habilidad para las habilidades que no coinciden con tu bono racial."
 
-lalRacialSkillMalusName: "Penalización de Habilidad Racial"
-lalRacialSkillMalusDesc: "La cantidad en que se reduce el nivel máximo de habilidad para las habilidades que no coinciden con tu bonificación racial."
+lalLevelProgressLimitToggleName: "Límite de progreso de subida de nivel"
+lalLevelProgressLimitToggleDesc: "Detiene el progreso hacia un nuevo nivel una vez que se alcanza la cantidad definida. (El valor predeterminado sería 10/10).
+\n\nRequiere tener al menos las opciones de límite de nivel de habilidades o las opciones de experiencia de habilidades activadas. El efecto real depende de qué opciones estén configuradas.
+\n\nCon las opciones de límite de nivel de habilidades activadas, todas las habilidades dejan de subir de nivel una vez que tu progreso de nivel alcanza el límite configurado.
+\n\nCon las opciones de experiencia de habilidades activadas, todas las habilidades dejan de ganar experiencia una vez que tu progreso de nivel alcanza el límite configurado.
+\n\nSi solo esta última está activada, las habilidades no ganarán experiencia, pero aún pueden aumentarse usando entrenadores y libros."
 
-lalLevelProgressLimitToggleName: "Activar Límite de Progreso de Nivel"
-lalLevelProgressLimitToggleDesc: "Cuando está activado, impide que las habilidades suban de nivel una vez que tu progreso alcanza el límite configurado."
+lalLevelProgressLimitName: "Cantidad del límite de progreso de subida de nivel"
+lalLevelProgressLimitDesc: "La cantidad máxima de progreso de subida de nivel permitida antes de que se detengan los aumentos de habilidades."
 
-lalLevelProgressLimitName: "Límite de Progreso de Nivel"
-lalLevelProgressLimitDesc: "La cantidad máxima de progreso de nivel permitida antes de que se detenga la subida de nivel de habilidad."
+levelUpFailTrainer: "A pesar de tus esfuerzos, el entrenamiento no da ningún resultado."
+levelUpFailBook: "El conocimiento de este libro se te escapa."
 
-levelUpFailTrainer: "A pesar de tus esfuerzos, el entrenamiento no produce ningún progreso."
-levelUpFailBook: "El conocimiento en este libro está fuera de tu alcance."
+settingsTitleXP: "Opciones de experiencia de habilidades"
+settingsDescXP: "Opciones para modificar la ganancia de experiencia de habilidades.\n\nIncompatible con cualquier mod que manipule la ganancia de experiencia a través de Lua."
 
+lalXPToggleName: "Activar opciones de experiencia de habilidades"
+lalXPToggleDesc: "Activa las opciones para la ganancia de experiencia de habilidades."
+
+lalXPGlobalMultiplierName: "Multiplicador global de experiencia de habilidades"
+lalXPGlobalMultiplierDesc: "Cualquier experiencia ganada será multiplicada por este multiplicador.
+\n\nEjemplo: Un multiplicador de 0.5 reducirá a la mitad toda la experiencia de habilidades ganada. ¡Cualquier valor por encima de 1 aumentará tu ganancia de habilidades!"
+
+lalXPDiminishingToggleName: "Rendimientos decrecientes con niveles de habilidad crecientes"
+lalXPDiminishingToggleDesc: "Activa rendimientos decrecientes en la ganancia de experiencia de habilidades. Mientras más alto sea el nivel de habilidad, menos experiencia se gana para esta habilidad.\nSe aplicará después del multiplicador global de experiencia de habilidades.
+\n\nEjemplo: ¡Una habilidad con nivel de habilidad 25 obtendría un multiplicador de rendimientos decrecientes de 0.4!
+\nEl cálculo sería el siguiente:
+\n1 / ( Nivel de habilidad / 10 )
+\n\nEl multiplicador calculado puede ser modificado adicionalmente por el modificador de rendimientos decrecientes."
+
+lalXPDiminishingMultiplierName: "Modificador de rendimientos decrecientes"
+lalXPDiminishingMultiplierDesc: "Añade un multiplicador para modificar los rendimientos decrecientes.
+\n\nEjemplo: Si se establece en 0.5, un multiplicador de rendimientos decrecientes calculado de 0.4 se convertiría entonces en 0.8, haciendo los rendimientos decrecientes menos severos.
+\n¡Si se establece en 2, los rendimientos decrecientes serían aún más impactantes!"
+
+lalXPDisableToggleName: "Desactivar ganancia de habilidades"
+lalXPDisableToggleDesc: "Desactiva cualquier ganancia de experiencia de habilidades. Aumentar los niveles de habilidades a través de entrenamiento o libros sigue siendo posible."
+
+lalDisableTrainingToggleName: "Desactivar entrenamiento de habilidades"
+lalDisableTrainingToggleDesc: "Cuando está activado, las habilidades no pueden ser mejoradas usando un entrenador."
+
+lalDisableBooksToggleName: "Desactivar libros de habilidades"
+lalDisableBooksToggleDesc: "Cuando está activado, las habilidades no pueden ser mejoradas usando libros de habilidades."
+
+settingsTitleY: "¡Más opciones!"
+settingsDescY: "Opciones que afectan tanto a los límites de nivel de habilidades como a las opciones de experiencia de habilidades."
+
+lalShowDebugInfoName: "Mostrar información de depuración"
+lalShowDebugInfoDesc: "Obtén más información sobre tus niveles máximos de habilidades y experiencia ganada. Se imprime en el registro al cargar una partida guardada o recargar Lua."

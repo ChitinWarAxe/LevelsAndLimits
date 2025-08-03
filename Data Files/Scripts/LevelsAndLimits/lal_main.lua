@@ -7,7 +7,7 @@ local function skillLevelUpHandler(skillid, options)
 
     if I.lalUtil.getLaLToggle() then
     
-        print(I.lalUtil.isSkillLevelUpPossible(skillid, options))
+        -- print(I.lalUtil.isSkillLevelUpPossible(skillid, options))
         local skillLevelUpPossible = I.lalUtil.isSkillLevelUpPossible(skillid, options)
         
         if skillLevelUpPossible == false then
@@ -27,7 +27,7 @@ local function skillUsedHandler(skillid, params)
 
         if I.lalUtil.isSkillGainPossible() then
             params.skillGain = I.lalUtil.getModifiedSkillGain(skillid, params.skillGain)
-            print(params.skillGain)
+            -- print(params.skillGain)
         else
             return false
         end

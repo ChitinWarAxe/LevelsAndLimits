@@ -1,50 +1,86 @@
-name: "Livelli e Limiti"
+name: "Levels & Limits"
 description:
-"Limiti di livello delle abilità configurabili in base al fatto che le abilità siano maggiori, minori o varie.\n\n
-Si possono configurare limiti aggiuntivi per le abilità che non corrispondono alla specializzazione della tua classe o che non sono governate dai tuoi attributi preferiti."
+"Opzioni per impostare i limiti di livello delle abilità e modificare il guadagno di esperienza delle abilità."
 
-settingsTitle: "Opzioni"
-settingsDesc: "Impostazioni per questo mod"
+settingsTitle: "Opzioni limite livello abilità"
+settingsDesc: "Opzioni per impostare i limiti di livello delle abilità e altro."
 
-lalToggleName: "Abilita/Disabilita i Limiti di Livello di Abilità"
-lalToggleDesc: "Abilita o disabilita i limiti per la progressione del livello di abilità."
+lalToggleName: "Abilita limiti livello abilità"
+lalToggleDesc: "Abilita i limiti per la progressione del tuo livello di abilità."
 
-lalLimitMajorName: "Limite di Livello delle Abilità Maggiori"
-lalLimitMajorDesc: "Imposta il livello massimo per le abilità maggiori"
+lalLimitMajorName: "Limite livello abilità principali"
+lalLimitMajorDesc: "Imposta il livello massimo per le abilità principali.\n\nImpostare valori sopra 100 non rimuoverà il limite delle tue abilità!"
 
-lalLimitMinorName: "Limite di Livello delle Abilità Minori"
-lalLimitMinorDesc: "Imposta il livello massimo per le abilità minori"
+lalLimitMinorName: "Limite livello abilità minori"
+lalLimitMinorDesc: "Imposta il livello massimo per le abilità minori."
 
-lalLimitMiscName: "Limite di Livello delle Abilità Varie"
-lalLimitMiscDesc: "Imposta il livello massimo per le abilità varie"
+lalLimitMiscName: "Limite livello abilità varie"
+lalLimitMiscDesc: "Imposta il livello massimo per le abilità varie."
 
-lalSpecializationName: "Abilita Modificatore di Specializzazione di Classe"
-lalSpecializationDesc: "Quando abilitato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità corrisponda o meno alla specializzazione della tua classe. Le abilità al di fuori della tua specializzazione hanno un livello massimo ridotto."
+lalSpecializationToggleName: "Abilita modificatore specializzazione classe"
+lalSpecializationToggleDesc: "Quando abilitato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità corrisponda alla tua specializzazione di classe.\n\nLe abilità al di fuori della tua specializzazione hanno un livello massimo ridotto."
 
-lalSpecializationToggleName: "Abilita Modificatore di Specializzazione di Classe"
-lalSpecializationToggleDesc: "Quando abilitato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità corrisponda o meno alla specializzazione della tua classe. Le abilità al di fuori della tua specializzazione hanno un livello massimo ridotto."
+lalSpecializationMalusName: "Modificatore specializzazione classe"
+lalSpecializationMalusDesc: "La quantità di cui viene ridotto il livello massimo di abilità per le abilità che non corrispondono alla tua specializzazione di classe."
 
-lalSpecializationMalusName: "Malus di Specializzazione di Classe"
-lalSpecializationMalusDesc: "La quantità di cui si riduce il livello massimo di abilità per le abilità che non corrispondono alla specializzazione della tua classe."
+lalFavoredAttributesToggleName: "Abilita modificatore attributi favoriti classe"
+lalFavoredAttributesToggleDesc: "Quando abilitato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità sia governata dai tuoi attributi favoriti.\n\nLe abilità non governate dai tuoi attributi favoriti hanno un livello massimo ridotto."
 
-lalFavoredAttributesToggleName: "Abilita Modificatore di Attributi Preferiti"
-lalFavoredAttributesToggleDesc: "Quando abilitato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità sia governata dai tuoi attributi preferiti. Le abilità che non sono governate dai tuoi attributi preferiti hanno un livello massimo ridotto."
+lalFavoredAttributesMalusName: "Modificatore attributi favoriti"
+lalFavoredAttributesMalusDesc: "La quantità di cui viene ridotto il livello massimo di abilità per le abilità non governate dai tuoi attributi favoriti."
 
-lalFavoredAttributesMalusName: "Malus di Attributi Preferiti"
-lalFavoredAttributesMalusDesc: "La quantità di cui si riduce il livello massimo di abilità per le abilità che non sono governate dai tuoi attributi preferiti."
+lalRacialSkillToggleName: "Abilita modificatore abilità razziale"
+lalRacialSkillToggleDesc: "Quando abilitato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità corrisponda alle abilità del bonus razziale.\n\nLe abilità che non hanno ricevuto un bonus dalla tua razza hanno un livello massimo ridotto.\n\nLa quantità del bonus non importa, solo se c'è un bonus per quell'abilità."
 
-lalRacialSkillToggleName: "Attiva Modificatore Abilità Razziale"
-lalRacialSkillToggleDesc: "Quando attivato, il tuo livello massimo di abilità è influenzato dal fatto che l'abilità corrisponda ai bonus della razza. Le abilità che non hanno ricevuto un bonus dalla tua razza hanno un livello massimo ridotto. L'importo del bonus non conta, solo se esiste un bonus per quell'abilità."
-
-lalRacialSkillMalusName: "Malus Abilità Razziale"
+lalRacialSkillMalusName: "Modificatore abilità razziale"
 lalRacialSkillMalusDesc: "La quantità di cui viene ridotto il livello massimo di abilità per le abilità che non corrispondono al tuo bonus razziale."
 
-lalLevelProgressLimitToggleName: "Attiva Limite Progressione Livello"
-lalLevelProgressLimitToggleDesc: "Quando attivato, impedisce alle abilità di aumentare di livello una volta che la progressione raggiunge il limite configurato."
+lalLevelProgressLimitToggleName: "Limite progresso salita livello"
+lalLevelProgressLimitToggleDesc: "Ferma il progresso verso un nuovo livello una volta raggiunta la quantità definita. (Il valore predefinito sarebbe 10/10).
+\n\nRichiede di avere almeno le Opzioni Limite Livello Abilità o le Opzioni Esperienza Abilità abilitate. L'effetto reale dipende da quali opzioni sono impostate.
+\n\nCon le Opzioni Limite Livello Abilità abilitate, tutte le abilità smettono di salire di livello una volta che il tuo progresso di livello raggiunge il limite configurato.
+\n\nCon le Opzioni Esperienza Abilità abilitate, tutte le abilità smettono di guadagnare esperienza una volta che il tuo progresso di livello raggiunge il limite configurato.
+\n\nSe solo quest'ultima è abilitata, le abilità non guadagneranno esperienza, ma possono ancora essere aumentate usando addestratori e libri."
 
-lalLevelProgressLimitName: "Limite Progressione Livello"
-lalLevelProgressLimitDesc: "La quantità massima di progressione di livello consentita prima che l'aumento delle abilità venga interrotto."
+lalLevelProgressLimitName: "Quantità limite progresso salita livello"
+lalLevelProgressLimitDesc: "La quantità massima di progresso salita livello consentita prima che gli aumenti di abilità vengano fermati."
 
-levelUpFailTrainer: "Nonostante i tuoi sforzi, l'allenamento non porta alcun progresso."
-levelUpFailBook: "La conoscenza in questo libro è fuori dalla tua portata."
+levelUpFailTrainer: "Nonostante i tuoi sforzi, l'addestramento non produce alcun risultato."
+levelUpFailBook: "La conoscenza in questo libro ti sfugge."
 
+settingsTitleXP: "Opzioni esperienza abilità"
+settingsDescXP: "Opzioni per modificare il guadagno di esperienza delle abilità.\n\nIncompatibile con qualsiasi mod che manipoli il guadagno di esperienza tramite Lua."
+
+lalXPToggleName: "Abilita opzioni esperienza abilità"
+lalXPToggleDesc: "Abilita le opzioni per il guadagno di esperienza delle abilità."
+
+lalXPGlobalMultiplierName: "Moltiplicatore globale esperienza abilità"
+lalXPGlobalMultiplierDesc: "Qualsiasi esperienza guadagnata sarà moltiplicata per questo moltiplicatore.
+\n\nEsempio: Un moltiplicatore di 0,5 dimezzerà tutta l'esperienza di abilità guadagnata. Qualsiasi valore sopra 1 aumenterà il tuo guadagno di abilità!"
+
+lalXPDiminishingToggleName: "Rendimenti decrescenti con livelli abilità crescenti"
+lalXPDiminishingToggleDesc: "Abilita rendimenti decrescenti sul guadagno di esperienza delle abilità. Più alto è il livello di abilità, meno esperienza viene guadagnata per questa abilità.\nSarà applicato dopo il Moltiplicatore Globale Esperienza Abilità.
+\n\nEsempio: Un'abilità con livello di abilità 25 otterrebbe un moltiplicatore di rendimenti decrescenti di 0,4!
+\nIl calcolo sarebbe il seguente:
+\n1 / ( Livello abilità / 10 )
+\n\nIl moltiplicatore calcolato può essere ulteriormente modificato dal modificatore di rendimenti decrescenti."
+
+lalXPDiminishingMultiplierName: "Modificatore rendimenti decrescenti"
+lalXPDiminishingMultiplierDesc: "Aggiunge un moltiplicatore per modificare i rendimenti decrescenti.
+\n\nEsempio: Se impostato a 0,5, un moltiplicatore di rendimenti decrescenti calcolato di 0,4 diventerebbe allora 0,8, rendendo i rendimenti decrescenti meno severi.
+\nSe impostato a 2, i rendimenti decrescenti sarebbero ancora più impattanti!"
+
+lalXPDisableToggleName: "Disabilita guadagno abilità"
+lalXPDisableToggleDesc: "Disabilita qualsiasi guadagno di esperienza delle abilità. Aumentare i livelli di abilità tramite addestramento o libri è ancora possibile."
+
+lalDisableTrainingToggleName: "Disabilita addestramento abilità"
+lalDisableTrainingToggleDesc: "Quando abilitato, le abilità non possono essere migliorate usando un addestratore."
+
+lalDisableBooksToggleName: "Disabilita libri abilità"
+lalDisableBooksToggleDesc: "Quando abilitato, le abilità non possono essere migliorate usando libri di abilità."
+
+settingsTitleY: "Altre opzioni!"
+settingsDescY: "Opzioni che influenzano sia i Limiti Livello Abilità che le Opzioni Esperienza Abilità."
+
+lalShowDebugInfoName: "Mostra informazioni debug"
+lalShowDebugInfoDesc: "Ottieni maggiori informazioni sui tuoi livelli massimi di abilità e sull'esperienza guadagnata. Stampato nel log quando si carica un salvataggio o si ricarica Lua."

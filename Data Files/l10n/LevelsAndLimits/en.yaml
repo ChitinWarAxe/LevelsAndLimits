@@ -9,7 +9,7 @@ lalToggleName: "Enable Skill Level Limits"
 lalToggleDesc: "Enable limits for your skill level progression."
 
 lalLimitMajorName: "Major Skill Level Cap"
-lalLimitMajorDesc: "Sets the maximum level for major skills.\n\n! Setting values above 100 won't uncap your skills!"
+lalLimitMajorDesc: "Sets the maximum level for major skills.\n\nSetting values above 100 won't uncap your skills!"
 
 lalLimitMinorName: "Minor Skill Level Cap"
 lalLimitMinorDesc: "Sets the maximum level for minor skills."

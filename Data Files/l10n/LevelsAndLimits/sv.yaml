@@ -1,50 +1,86 @@
-name: "Nivåer & Gränser"
+name: "Levels & Limits"
 description:
-"Konfigurerbara begränsningar för färdighetsnivåer baserat på om färdigheter är huvud-, bi- eller övriga.\n\n
-Ytterligare begränsningar kan ställas in för färdigheter som inte matchar din klassspecialisering eller inte styrs av dina favoritattribut."
+"Alternativ för att sätta färdighetsnivågränser och modifiera färdighetsupplevelsehämtning."
 
-settingsTitle: "Alternativ"
-settingsDesc: "Inställningar för denna mod"
+settingsTitle: "Färdighetsnivågräns alternativ"
+settingsDesc: "Alternativ för att sätta färdighetsnivågränser och mer."
 
-lalToggleName: "Aktivera/Inaktivera gränser för färdighetsnivåer"
-lalToggleDesc: "Aktivera eller inaktivera gränser för progression av färdighetsnivåer."
+lalToggleName: "Aktivera färdighetsnivågränser"
+lalToggleDesc: "Aktiverar gränser för din färdighetsnivåprogression."
 
-lalLimitMajorName: "Maximal nivå för huvudfärdigheter"
-lalLimitMajorDesc: "Ställer in den maximala nivån för huvudfärdigheter"
+lalLimitMajorName: "Huvudfärdighetsnivågräns"
+lalLimitMajorDesc: "Sätter den maximala nivån för huvudfärdigheter.\n\nAtt sätta värden över 100 kommer inte att ta bort gränserna för dina färdigheter!"
 
-lalLimitMinorName: "Maximal nivå för bifärdigheter"
-lalLimitMinorDesc: "Ställer in den maximala nivån för bifärdigheter"
+lalLimitMinorName: "Mindre färdighetsnivågräns"
+lalLimitMinorDesc: "Sätter den maximala nivån för mindre färdigheter."
 
-lalLimitMiscName: "Maximal nivå för övriga färdigheter"
-lalLimitMiscDesc: "Ställer in den maximala nivån för övriga färdigheter"
-
-lalSpecializationName: "Aktivera klassspecialiseringsmodifierare"
-lalSpecializationDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten matchar din klassspecialisering. Färdigheter utanför din specialisering har en reducerad maximal nivå."
+lalLimitMiscName: "Diverse färdighetsnivågräns"
+lalLimitMiscDesc: "Sätter den maximala nivån för diverse färdigheter."
 
 lalSpecializationToggleName: "Aktivera klassspecialiseringsmodifierare"
-lalSpecializationToggleDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten matchar din klassspecialisering. Färdigheter utanför din specialisering har en reducerad maximal nivå."
+lalSpecializationToggleDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten matchar din klassspecialisering.\n\nFärdigheter utanför din specialisering har en reducerad maximal nivå."
 
-lalSpecializationMalusName: "Klassspecialiseringsmalus"
-lalSpecializationMalusDesc: "Summan med vilken den maximala färdighetsnivån minskas för färdigheter som inte matchar din klassspecialisering."
+lalSpecializationMalusName: "Klassspecialiseringsmodifierare"
+lalSpecializationMalusDesc: "Mängden med vilken den maximala färdighetsnivån reduceras för färdigheter som inte matchar din klassspecialisering."
 
-lalFavoredAttributesToggleName: "Aktivera favoritattributsmodifierare"
-lalFavoredAttributesToggleDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten styrs av dina favoritattribut. Färdigheter som inte styrs av dina favoritattribut har en reducerad maximal nivå."
+lalFavoredAttributesToggleName: "Aktivera klassgynnade attribut modifierare"
+lalFavoredAttributesToggleDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten styrs av dina gynnade attribut.\n\nFärdigheter som inte styrs av dina gynnade attribut har en reducerad maximal nivå."
 
-lalFavoredAttributesMalusName: "Favoritattributsmalus"
-lalFavoredAttributesMalusDesc: "Summan med vilken den maximala färdighetsnivån minskas för färdigheter som inte styrs av dina favoritattribut."
+lalFavoredAttributesMalusName: "Gynnade attribut modifierare"
+lalFavoredAttributesMalusDesc: "Mängden med vilken den maximala färdighetsnivån reduceras för färdigheter som inte styrs av dina gynnade attribut."
 
-lalRacialSkillToggleName: "Aktivera Rasbaserad Färdighetsmodifierare"
-lalRacialSkillToggleDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten matchar bonusarna från din ras. Färdigheter som inte fick någon bonus från din ras har en reducerad maxnivå. Bonusbeloppet spelar ingen roll, bara om det finns en bonus för den färdigheten."
+lalRacialSkillToggleName: "Aktivera rasfärdighetsmodifierare"
+lalRacialSkillToggleDesc: "När aktiverad påverkas din maximala färdighetsnivå av om färdigheten matchar färdigheterna från rasbonusen.\n\nFärdigheter som inte fick en bonus från din ras har en reducerad maximal nivå.\n\nBonusmängden spelar ingen roll, bara om det finns en bonus för den färdigheten överhuvudtaget."
 
-lalRacialSkillMalusName: "Rasbaserad Färdighetsmalus"
-lalRacialSkillMalusDesc: "Mängden som den maximala färdighetsnivån reduceras med för färdigheter som inte matchar din rasbonus."
+lalRacialSkillMalusName: "Rasfärdighetsmodifierare"
+lalRacialSkillMalusDesc: "Mängden med vilken den maximala färdighetsnivån reduceras för färdigheter som inte matchar din rasbonus."
 
-lalLevelProgressLimitToggleName: "Aktivera Nivåframstegsgräns"
-lalLevelProgressLimitToggleDesc: "När aktiverad stoppar färdigheter från att öka i nivå när din framstegsmätare når den konfigurerade gränsen."
+lalLevelProgressLimitToggleName: "Nivåframstegsgräns"
+lalLevelProgressLimitToggleDesc: "Stoppar framsteg mot en ny nivå när den definierade mängden nås. (Standard skulle vara 10/10).
+\n\nKräver att ha åtminstone Färdighetsnivågräns Alternativ eller Färdighetsupplevelse Alternativ aktiverade. Den faktiska effekten beror på vilka alternativ som är satta.
+\n\nMed Färdighetsnivågräns Alternativ aktiverade slutar alla färdigheter att nivåa upp när ditt nivåframsteg når den konfigurerade gränsen.
+\n\nMed Färdighetsupplevelse Alternativ aktiverade slutar alla färdigheter att få upplevelse när ditt nivåframsteg når den konfigurerade gränsen.
+\n\nOm endast den senare är aktiverad kommer färdigheter inte att få upplevelse, men kan fortfarande ökas med tränare och böcker."
 
-lalLevelProgressLimitName: "Nivåframstegsgräns"
-lalLevelProgressLimitDesc: "Den maximala mängden nivåframsteg som tillåts innan färdighetsutvecklingen stoppas."
+lalLevelProgressLimitName: "Nivåframstegsgränsmängd"
+lalLevelProgressLimitDesc: "Den maximala mängden nivåframsteg som tillåts innan färdighetsökningar stoppas."
 
-levelUpFailTrainer: "Trots dina ansträngningar ger träningen inga framsteg."
-levelUpFailBook: "Kunskapen i denna bok överstiger din förmåga att förstå den."
+levelUpFailTrainer: "Trots dina ansträngningar ger träningen inget resultat."
+levelUpFailBook: "Kunskapen i denna bok undgår dig."
 
+settingsTitleXP: "Färdighetsupplevelse alternativ"
+settingsDescXP: "Alternativ för att modifiera färdighetsupplevelseinhämtning.\n\nInkompatibel med alla mods som manipulerar upplevelseinhämtning via Lua."
+
+lalXPToggleName: "Aktivera färdighetsupplevelse alternativ"
+lalXPToggleDesc: "Aktiverar alternativ för färdighetsupplevelseinhämtning."
+
+lalXPGlobalMultiplierName: "Global färdighetsupplevelse multiplikator"
+lalXPGlobalMultiplierDesc: "All inhämtad upplevelse kommer att multipliceras med denna multiplikator.
+\n\nExempel: En multiplikator på 0,5 kommer att halvera all inhämtad färdighetsupplevelse. Allt över 1 kommer att öka din färdighetstillväxt!"
+
+lalXPDiminishingToggleName: "Minskande avkastning med ökande färdighetsnivåer"
+lalXPDiminishingToggleDesc: "Aktiverar minskande avkastning på färdighetsupplevelseinhämtning. Ju högre färdighetsnivån är, desto mindre upplevelse inhämtas för denna färdighet.\nKommer att tillämpas efter den Globala Färdighetsupplevelse Multiplikatorn.
+\n\nExempel: En färdighet med färdighetsnivå 25 skulle få en minskande avkastning multiplikator på 0,4!
+\nBeräkningen skulle vara följande:
+\n1 / ( Färdighetsnivå / 10 )
+\n\nDen beräknade multiplikatorn kan vidare modifieras av den minskande avkastning modifieraren."
+
+lalXPDiminishingMultiplierName: "Minskande avkastning modifierare"
+lalXPDiminishingMultiplierDesc: "Lägger till en multiplikator för att modifiera den minskande avkastningen.
+\n\nExempel: Om satt till 0,5 skulle en beräknad minskande avkastning multiplikator på 0,4 då bli 0,8, vilket gör den minskande avkastningen mindre allvarlig.
+\nOm satt till 2 skulle den minskande avkastningen vara ännu mer påverkande!"
+
+lalXPDisableToggleName: "Inaktivera färdighetstillväxt"
+lalXPDisableToggleDesc: "Inaktiverar all färdighetsupplevelseinhämtning. Att öka färdighetsnivåer via träning eller böcker är fortfarande möjligt."
+
+lalDisableTrainingToggleName: "Inaktivera färdighetsträning"
+lalDisableTrainingToggleDesc: "När aktiverad kan färdigheter inte förbättras med en tränare."
+
+lalDisableBooksToggleName: "Inaktivera färdighetsböcker"
+lalDisableBooksToggleDesc: "När aktiverad kan färdigheter inte förbättras med färdighetsböcker."
+
+settingsTitleY: "Fler alternativ!"
+settingsDescY: "Alternativ som påverkar både Färdighetsnivågränser och Färdighetsupplevelse Alternativ."
+
+lalShowDebugInfoName: "Visa felsökningsinformation"
+lalShowDebugInfoDesc: "Få mer insikt i dina maximala färdighetsnivåer och inhämtad upplevelse. Skrivs ut till loggen när ett sparat spel laddas eller Lua laddas om."
