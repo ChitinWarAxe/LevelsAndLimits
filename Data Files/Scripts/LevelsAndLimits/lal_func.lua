@@ -6,6 +6,7 @@ local storage = require('openmw.storage')
 local settings = storage.playerSection("SettingsLevelsAndLimits")
 local settingsXP = storage.playerSection("SettingsLevelsAndLimitsXP")
 local settingsY = storage.playerSection("SettingsLevelsAndLimitsY")
+local Actor = types.Actor
 
 local L = core.l10n("LevelsAndLimits")
 
@@ -198,15 +199,15 @@ local function getModifiedSkillMaximum(skillid, skillMaximum)
     
 end
 
-local function isSkillLevelUpPossible(skillid, options)
+local function isSkillLevelUpPossible(skillid, source, options)
 
-    if getDisableTrainingToggle() and options == 'trainer' then
-        -- print('training disabled, trainer used!')
+    if getDisableTrainingToggle() and source == 'trainer' then
+        print('training disabled, trainer used!')
         return false
     end
     
-    if getDisableBooksToggle() and options == 'book' then
-        -- print('books disabled, book used!')
+    if getDisableBooksToggle() and source == 'book' then
+        print('books disabled, book used!')
         return false
     end
 
@@ -220,8 +221,20 @@ local function isSkillLevelUpPossible(skillid, options)
     local skillStat = types.NPC.stats.skills[skillid](self)
     local skillLevel = skillStat.base
     
-    -- print('skill level: '.. skillLevel .. ' max skill lvl: ' .. getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) )
+    for id, params in pairs(Actor.activeSpells(self)) do        
+        for _, effect in pairs(params.effects) do
+        
+            if (effect.affectedSkill == skillid) then
+                -- print('affected...........................................!')
+                skillLevel = skillLevel - effect.magnitudeThisFrame
+            end
+        
+        end
+    end
+    
+    print('skill level: '.. skillLevel .. ' max skill lvl: ' .. getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) )
     if skillLevel >= getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) then
+        print ('skill up not possible!')
         return false
     end
 
@@ -236,6 +249,19 @@ local function getSkillGainMultiplier(skillid)
     
     if getXPDiminishingToggle() then
         local skillLevel = types.NPC.stats.skills[skillid](self).base
+        
+        for id, params in pairs(Actor.activeSpells(self)) do        
+            for _, effect in pairs(params.effects) do
+            
+                if (effect.affectedSkill == skillid) then
+                    -- print('affected...........................................!')
+                    skillLevel = skillLevel - effect.magnitudeThisFrame
+                end
+            
+            end
+        end
+        
+        -- print('so: ' .. skillid .. ' ' .. types.NPC.stats.skills[skillid](self).base)
         local diminishMultiplier = 1 / math.max(1, (skillLevel / 10) * getXPDiminishingMultiplier()) 
         finalMultiplier = globalMultiplier * diminishMultiplier
     end
@@ -282,6 +308,7 @@ local function isSkillGainPossible()
 end
 
 local function printDebugInfo()
+
  
     local printout = '\n--- LEVELS AND LIMITS DEBUG INFO---'
     

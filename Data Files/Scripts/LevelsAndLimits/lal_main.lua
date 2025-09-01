@@ -3,12 +3,12 @@ local types = require('openmw.types')
 local core = require('openmw.core')
 local I = require('openmw.interfaces')
 
-local function skillLevelUpHandler(skillid, options)
+local function skillLevelUpHandler(skillid, source, options)
 
     if I.lalUtil.getLaLToggle() then
     
-        -- print(I.lalUtil.isSkillLevelUpPossible(skillid, options))
-        local skillLevelUpPossible = I.lalUtil.isSkillLevelUpPossible(skillid, options)
+        print(I.lalUtil.isSkillLevelUpPossible(skillid, options))
+        local skillLevelUpPossible = I.lalUtil.isSkillLevelUpPossible(skillid, source, options)
         
         if skillLevelUpPossible == false then
             I.lalUtil.resetSkillExperience(skillid)
