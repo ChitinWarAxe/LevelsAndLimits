@@ -224,9 +224,12 @@ local function isSkillLevelUpPossible(skillid, source, options)
     for id, params in pairs(Actor.activeSpells(self)) do        
         for _, effect in pairs(params.effects) do
         
-            if (effect.affectedSkill == skillid) then
-                -- print('affected...........................................!')
+            if (effect.affectedSkill == skillid and skillStat.base == skillStat.modified) then
+                
+                print('affected, ability bonus!! .....................................................')            
+                
                 skillLevel = skillLevel - effect.magnitudeThisFrame
+                
             end
         
         end
@@ -241,6 +244,30 @@ local function isSkillLevelUpPossible(skillid, source, options)
     return true
 end
 
+local function getActualSkillBaseValue(skillid)
+
+    local skillStat = types.NPC.stats.skills[skillid](self)
+    local skillBaseLevel = skillStat.base
+    local skillModiLevel = skillStat.modified
+    local skillCalcLevel = skillBaseLevel
+    
+    print('skill: ' .. skillid .. ' base: ' .. skillBaseLevel .. ' modified: ' .. skillModiLevel)
+    
+        for id, params in pairs(Actor.activeSpells(self)) do        
+        for _, effect in pairs(params.effects) do
+        
+            if (effect.affectedSkill == skillid and skillStat.base == skillStat.modified) then
+                
+                print('affected, ability bonus!! .....................................................')            
+                
+                skillCalcLevel = skillCalcLevel - effect.magnitudeThisFrame
+                
+            end
+        
+        end
+    end
+
+end
 
 
 local function getSkillGainMultiplier(skillid)
@@ -254,7 +281,7 @@ local function getSkillGainMultiplier(skillid)
             for _, effect in pairs(params.effects) do
             
                 if (effect.affectedSkill == skillid) then
-                    -- print('affected...........................................!')
+                    print('affected...........................................!')
                     skillLevel = skillLevel - effect.magnitudeThisFrame
                 end
             
