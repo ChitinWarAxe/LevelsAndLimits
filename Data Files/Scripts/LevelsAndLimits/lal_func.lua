@@ -226,7 +226,7 @@ local function isSkillLevelUpPossible(skillid, source, options)
         
             if (effect.affectedSkill == skillid and skillStat.base == skillStat.modified) then
                 
-                print('affected, ability bonus!! .....................................................')            
+                -- print('affected, ability bonus!! .....................................................')            
                 
                 skillLevel = skillLevel - effect.magnitudeThisFrame
                 
@@ -235,9 +235,9 @@ local function isSkillLevelUpPossible(skillid, source, options)
         end
     end
     
-    print('skill level: '.. skillLevel .. ' max skill lvl: ' .. getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) )
+    -- print('skill level: '.. skillLevel .. ' max skill lvl: ' .. getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) )
     if skillLevel >= getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) then
-        print ('skill up not possible!')
+        -- print ('skill up not possible!')
         return false
     end
 
@@ -251,14 +251,14 @@ local function getActualSkillBaseValue(skillid)
     local skillModiLevel = skillStat.modified
     local skillCalcLevel = skillBaseLevel
     
-    print('skill: ' .. skillid .. ' base: ' .. skillBaseLevel .. ' modified: ' .. skillModiLevel)
+    --print('skill: ' .. skillid .. ' base: ' .. skillBaseLevel .. ' modified: ' .. skillModiLevel)
     
-        for id, params in pairs(Actor.activeSpells(self)) do        
+    for id, params in pairs(Actor.activeSpells(self)) do        
         for _, effect in pairs(params.effects) do
         
             if (effect.affectedSkill == skillid and skillStat.base == skillStat.modified) then
                 
-                print('affected, ability bonus!! .....................................................')            
+                -- print('affected, ability bonus!! .....................................................')            
                 
                 skillCalcLevel = skillCalcLevel - effect.magnitudeThisFrame
                 
@@ -266,6 +266,8 @@ local function getActualSkillBaseValue(skillid)
         
         end
     end
+    
+    return skillCalcLevel
 
 end
 
@@ -275,13 +277,13 @@ local function getSkillGainMultiplier(skillid)
     local finalMultiplier = globalMultiplier
     
     if getXPDiminishingToggle() then
-        local skillLevel = types.NPC.stats.skills[skillid](self).base
+        local skillLevel = getActualSkillBaseValue(skillid)
         
         for id, params in pairs(Actor.activeSpells(self)) do        
             for _, effect in pairs(params.effects) do
             
                 if (effect.affectedSkill == skillid) then
-                    print('affected...........................................!')
+                    -- print('affected...........................................!')
                     skillLevel = skillLevel - effect.magnitudeThisFrame
                 end
             
@@ -351,7 +353,12 @@ local function printDebugInfo()
     
         local multiplier = tonumber(string.format("%.3f", getSkillGainMultiplier(skill.id)))
         
-        printout = printout .. '\n ' .. skill.id .. ', maximum skill level: ' 
+        printout = printout .. '\n ' .. skill.id
+          .. ', base: '
+          .. types.NPC.stats.skills[skill.id](self).base
+          .. ', actual base: '
+          .. getActualSkillBaseValue(skill.id)
+          .. ', max skill level: ' 
           .. getModifiedSkillMaximum(skill.id, getSkillMaximum(skill.id) ) 
           .. ', xp gain multiplier: ' 
           .. multiplier .. 'x'
