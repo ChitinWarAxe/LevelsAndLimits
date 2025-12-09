@@ -199,51 +199,6 @@ local function getModifiedSkillMaximum(skillid, skillMaximum)
     
 end
 
-local function isSkillLevelUpPossible(skillid, source, options)
-
-    if getDisableTrainingToggle() and source == 'trainer' then
-        print('training disabled, trainer used!')
-        return false
-    end
-    
-    if getDisableBooksToggle() and source == 'book' then
-        print('books disabled, book used!')
-        return false
-    end
-
-    if getLevelProgressLimitToggle() then
-        if ( isLevelUpProgressLimitReached(types.Actor.stats.level(self).progress) ) then
-            -- print('Progress Limit reached, no further skill ups possible until rested!')
-            return false
-        end
-    end
-    
-    local skillStat = types.NPC.stats.skills[skillid](self)
-    local skillLevel = skillStat.base
-    
-    for id, params in pairs(Actor.activeSpells(self)) do        
-        for _, effect in pairs(params.effects) do
-        
-            if (effect.affectedSkill == skillid and skillStat.base == skillStat.modified) then
-                
-                -- print('affected, ability bonus!! .....................................................')            
-                
-                skillLevel = skillLevel - effect.magnitudeThisFrame
-                
-            end
-        
-        end
-    end
-    
-    -- print('skill level: '.. skillLevel .. ' max skill lvl: ' .. getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) )
-    if skillLevel >= getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) then
-        -- print ('skill up not possible!')
-        return false
-    end
-
-    return true
-end
-
 local function getActualSkillBaseValue(skillid)
 
     local skillStat = types.NPC.stats.skills[skillid](self)
@@ -269,6 +224,33 @@ local function getActualSkillBaseValue(skillid)
     
     return skillCalcLevel
 
+end
+
+local function isSkillLevelUpPossible(skillid, source, options)
+
+    if getDisableTrainingToggle() and source == 'trainer' then
+        print('training disabled, trainer used!')
+        return false
+    end
+    
+    if getDisableBooksToggle() and source == 'book' then
+        print('books disabled, book used!')
+        return false
+    end
+
+    if getLevelProgressLimitToggle() then
+        if ( isLevelUpProgressLimitReached(types.Actor.stats.level(self).progress) ) then
+            print('Progress Limit reached, no further skill ups possible until rested!')
+            return false
+        end
+    end
+    
+    if getActualSkillBaseValue(skillid) >= getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) then
+        -- print ('skill up not possible!')
+        return false
+    end
+
+    return true
 end
 
 
