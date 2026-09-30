@@ -126,10 +126,10 @@ local function resetSkillExperience(skillid)
     end
 end
 
-local function showFailedSkillLevelUpMessage(method)
-    if method == 'trainer' then
+local function showFailedSkillLevelUpMessage(source)
+    if source == 'trainer' then
         ui.showMessage(string.format(L("levelUpFailTrainer")))
-    elseif method == 'book' then
+    elseif source == 'book' then
         ui.showMessage(string.format(L("levelUpFailBook")))
     end
 end
@@ -246,9 +246,16 @@ local function isSkillLevelUpPossible(skillid, source, options)
     end
     
     if getActualSkillBaseValue(skillid) >= getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) then
-        -- print ('skill up not possible!')
+        print ('skill up not possible!')
         return false
     end
+    
+    if getActualSkillBaseValue(skillid) <= 0 then 
+        print ('eh, its that niche engine bug. skill up not possible!')
+        return false
+    end
+
+    -- print ('skill up possible! getModifiedSkillMaximum: ' .. getModifiedSkillMaximum(skillid, getSkillMaximum(skillid) ) .. ' getActualSkillBaseValue: ' .. getActualSkillBaseValue(skillid) )
 
     return true
 end
@@ -284,13 +291,14 @@ local function getModifiedSkillGain(skillid, skillGain)
     
     if getDebugInfoToggle() then
         print('-----------------------------------------')
-        print(skillid .. ': Initital Skillgain: ' .. skillGain )
+        print(skillid .. ': Initial Skillgain: ' .. skillGain )
     end
     
     skillGain = skillGain * getSkillGainMultiplier(skillid)
     
     if getDebugInfoToggle() then
         print('Calculated Skillgain:' .. skillGain .. ' skillgain multiplier: ' .. getSkillGainMultiplier(skillid))
+        print('skillmaximum: ' .. getSkillMaximum(skillid))
         print('-----------------------------------------')
         print('')
     end

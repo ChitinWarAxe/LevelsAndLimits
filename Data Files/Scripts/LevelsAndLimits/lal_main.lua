@@ -7,12 +7,12 @@ local function skillLevelUpHandler(skillid, source, options)
 
     if I.lalUtil.getLaLToggle() then
     
-        print(I.lalUtil.isSkillLevelUpPossible(skillid, options))
+        -- print(I.lalUtil.isSkillLevelUpPossible(skillid, source, options))
         local skillLevelUpPossible = I.lalUtil.isSkillLevelUpPossible(skillid, source, options)
         
         if skillLevelUpPossible == false then
             I.lalUtil.resetSkillExperience(skillid)
-            I.lalUtil.showFailedSkillLevelUpMessage(options)
+            I.lalUtil.showFailedSkillLevelUpMessage(source)
         end
     
         return skillLevelUpPossible
