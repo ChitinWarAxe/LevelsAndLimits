@@ -229,24 +229,24 @@ end
 local function isSkillLevelUpPossible(skillid, source, options)
 
     if getDisableTrainingToggle() and source == 'trainer' then
-        print('training disabled, trainer used!')
+        -- print('training disabled, trainer used!')
         return false
     end
     
     if getDisableBooksToggle() and source == 'book' then
-        print('books disabled, book used!')
+        -- print('books disabled, book used!')
         return false
     end
 
     if getLevelProgressLimitToggle() then
         if ( isLevelUpProgressLimitReached(types.Actor.stats.level(self).progress) ) then
-            print('Progress Limit reached, no further skill ups possible until rested!')
+            -- print('Progress Limit reached, no further skill ups possible until rested!')
             return false
         end
     end
     
     if getActualSkillBaseValue(skillid) >= getModifiedSkillMaximum(skillid, getSkillMaximum(skillid)) then
-        print ('skill up not possible!')
+        -- print ('skill up not possible!')
         return false
     end
     
